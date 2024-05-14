@@ -1,85 +1,103 @@
-/* style.css */
-
 .home-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Ensure overflow is hidden for the slide */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 280px;
+  left: 100px; /* Align to the right */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  animation: slideInText 0.5s ease forwards; /* Apply animation to slide in text */
+  height: 50px;
+}
+
+.overlay-text {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: normal; /* Set font weight to normal */
+  width: 150%; /* Adjust width as needed */
+  margin-top: 10px; /* Add top margin for spacing */
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navigation button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 5px;
+  height: 100px;
+  margin-top: 30px;
+  color: aliceblue;
+
+}
+
+.navigation button:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* Animation keyframes */
+
+@keyframes slideInText {
+  from {
+    transform: translateX(-100%); /* Slide in from the left */
   }
-  
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease;
+  to {
+    transform: translateX(0); /* Slide to the original position */
   }
-  
-  .slide {
-    position: relative;
-    flex: 0 0 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden; /* Ensure overflow is hidden for the slide */
-  }
-  
+}
+
+/* Media Queries */
+@media (max-width: 540px) {
   .overlay {
-    position: absolute;
-    bottom: 280px;
-    left: 100px; /* Align to the right */
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    animation: slideInText 0.5s ease forwards; /* Apply animation to slide in text */
-    height: 50px;
-  }
-  
-  .overlay-text {
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: normal; /* Set font weight to normal */
-    width: 150%; /* Adjust width as needed */
-    margin-top: 10px; /* Add top margin for spacing */
-  }
-  
-  .navigation {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    left: 20px; /* Adjust overlay position for smaller screens */
+    bottom: 150px; /* Adjust overlay position for smaller screens */
   }
   
   .navigation button {
-    background: rgba(255, 255, 255, 0.281);
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
-    border-radius: 5px;
-    height: 100px;
-    margin-top: 40px;
-    color: aliceblue;
+    font-size: 20px; /* Reduce button font size for smaller screens */
+    height: 80px; /* Reduce button height for smaller screens */
+  }
+}
 
+@media (max-width: 414px) {
+  /* Add more specific styles for even smaller screens as needed */
+  .overlay-text {
+    font-size: 30px; /* Adjust font size for smaller screens */
   }
-  
-  .navigation button:hover {
-    background: rgba(255, 255, 255, 0.8);
-  }
-
-  
-  
-  /* Animation keyframes */
-  
-  @keyframes slideInText {
-    from {
-      transform: translateX(-100%); /* Slide in from the left */
-    }
-    to {
-      transform: translateX(0); /* Slide to the original position */
-    }
-  }
+}
   
   
   

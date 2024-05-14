@@ -1,119 +1,109 @@
-/* Navbar container */
+/* Default styles for navbar */
 .navbar {
-    display: flex;
-    flex-direction: column;
-    background-color: #4B850D;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* Ensure the navbar stays above other content */
-  }
-  
-  /* Upper part styles */
-  .upper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    background-color: #4B850D;
-  }
-  
-  /* Contact information styles */
-  .contact-info {
-    color: #ffffff;
-    font-size: 16px;
-  }
-  
-  /* Social links styles */
-  .social-links a {
-    color: #ffffff;
-    font-size: 20px;
-    margin-left: 10px;
-  }
-  
-  /* Lower part styles */
-  .lower {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #FAF38E;
-  }
-  
-  /* Logo styles */
-  .logo img {
-    width: 50px;
-  }
-  
-  /* Navigation links styles */
-  .navigation-links {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Navigation link item styles */
-  .navigation-links a {
-    color: #4B850D;
-    font-size: 12px;
-    text-decoration: none;
-    padding: 8px 12px;
-    margin-left: 10px;
-    transition: color 0.3s ease;
-    position: relative;
-  }
-  
-  /* Navigation link item pseudo-element styles */
-  .navigation-links a::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -5px;
-    width: 2px;
-    height: 80%;
-    background-color: #4B850D;
-    transform: translateY(-50%);
-  }
-  
-  /* Navigation link hover effect */
-  .navigation-links a:hover {
-    color: #4B850D;
-  }
-  
-  /* Dropdown container styles */
-  .dropdown {
-    position: relative;
-  }
-  
-  /* Dropdown content styles */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-  }
-  
-  /* Dropdown content link styles */
-  .dropdown-content a {
-    display: block;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: #4B850D;
-    font-size: 12px;
-    background-color: #ffffff7e; /* Set background color for dropdown items */
-    width: 130px;
-  }
-  
-  /* Dropdown content link hover effect */
-  .dropdown-content a:hover {
-    background-color: #FAF38E; /* Change background color on hover */
-  }
-  
-  /* Show dropdown content on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  display: flex;
+  flex-direction: column;
+  background-color: #4B850D;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #4B850D;
+}
+
+.contact-info {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #FAF38E;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.navigation-links {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-links a {
+  color: #4B850D;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 8px 12px;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navigation-links a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  width: 2px;
+  height: 80%;
+  background-color: #4B850D;
+  transform: translateY(-50%);
+}
+
+.navigation-links a:hover {
+  color: #4B850D;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #4B850D;
+  font-size: 12px;
+  background-color: #ffffff7e;
+  width: 130px;
+}
+
+.dropdown-content a:hover {
+  background-color: #FAF38E;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Media queries for responsiveness */
+
+
   
   
   
