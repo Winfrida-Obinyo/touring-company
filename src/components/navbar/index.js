@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css'; // Import your CSS file for styling
 import { FaFacebook, FaTwitter, FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
@@ -6,6 +6,25 @@ const Navbar = () => {
   const [showImagineMenu, setShowImagineMenu] = useState(false);
   const [showDestinationMenu, setShowDestinationMenu] = useState(false);
   const [showExploreMenu, setShowExploreMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    // return () => {
+    //     window.removeEventListener('scroll', handleScroll);
+    // };
+}, []);
 
   const handleImagineMenuToggle = () => {
     setShowImagineMenu(!showImagineMenu);
@@ -22,7 +41,7 @@ const Navbar = () => {
   return (
     <nav className="navbar fixed-navbar">
       {/* Upper Part (Green) */}
-      <div className="upper">
+      <div className={`upper ${isScrolled ? 'hidden' : ''}`}>
         <div className="contact-info">
           <span>Get in touch: +1 123 456 7890</span>
         </div>

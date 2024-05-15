@@ -16,6 +16,14 @@
   align-items: center;
   padding: 10px 50px;
   background-color: #4B850D;
+  transition: top 0.3s ease, opacity 0.3s ease; /* Smooth transition for hiding */
+}
+
+.upper.hidden {
+  /* top: 0; */
+  opacity: 0;
+  background-color: transparent;
+  display: none;
 }
 
 .contact-info {
@@ -35,6 +43,8 @@
   align-items: center;
   padding: 20px 50px;
   background-color: #FAF38E;
+  /* position: relative; */
+  transition: top 0.3s ease; /* Smooth transition for adjustments */
 }
 
 .logo img {
@@ -89,7 +99,7 @@
   text-decoration: none;
   color: #4B850D;
   font-size: 12px;
-  background-color: #ffffff7e;
+  background-color: rgba(255, 255, 255, 0.50588);
   width: 130px;
 }
 
@@ -102,7 +112,83 @@
 }
 
 /* Media queries for responsiveness */
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .upper, .lower {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
 
+  .contact-info, .social-links, .logo img, .navigation-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .navigation-links {
+    flex-direction: column;
+  }
+
+  .navigation-links a {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navigation-links a::after {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .upper, .lower {
+    flex-direction: column;
+    padding: 10px 30px;
+  }
+
+  .contact-info, .social-links, .logo img, .navigation-links a {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+
+  .navigation-links {
+    flex-direction: column;
+  }
+
+  .navigation-links a {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navigation-links a::after {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 900px and up) */
+@media (min-width: 901px) {
+  .upper, .lower {
+    flex-direction: row;
+    padding: 10px 50px;
+  }
+
+  .contact-info, .social-links, .logo img, .navigation-links a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+
+  .navigation-links {
+    flex-direction: row;
+  }
+
+  .navigation-links a {
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+
+  .navigation-links a::after {
+    display: block;
+  }
+}
 
   
   

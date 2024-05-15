@@ -146,3 +146,91 @@
 
   
 
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .clients-container {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+
+    .content-overlay {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-content, .right-content {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .testimonial {
+        margin-bottom: 10px;
+    }
+
+    .client-details {
+        font-size: 12px;
+    }
+
+    .read-more-button {
+        padding: 8px 16px;
+    }
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .clients-container {
+        height: 60vh; /* Adjust height for medium screens */
+    }
+
+    .content-overlay {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .left-content, .right-content {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .testimonial {
+        margin-bottom: 15px;
+    }
+
+    .client-details {
+        font-size: 13px;
+    }
+
+    .read-more-button {
+        padding: 9px 18px;
+    }
+}
+
+/* Large devices (laptops/desktops, 900px and up) */
+@media (min-width: 901px) {
+    .clients-container {
+        height: 70vh; /* Maintain height for larger screens */
+    }
+
+    .content-overlay {
+        flex-direction: row;
+        padding: 50px;
+    }
+
+    .left-content, .right-content {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .testimonial {
+        margin-bottom: 20px;
+    }
+
+    .client-details {
+        font-size: 14px;
+    }
+
+    .read-more-button {
+        padding: 10px 20px;
+    }
+}
