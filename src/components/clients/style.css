@@ -1,40 +1,46 @@
-/* Clients.css */
-
 .clients-container {
     position: relative;
     overflow: hidden;
+    width: 100%; /* Ensure full width */
+    height: 70vh; /* Set container height to viewport height */
+    background-image: url('/public/images/dubai5.jpg'); /* Specify the background image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* Adjust background opacity */
 }
 
-.background-image {
-    background-image: url(/public/images/dubai5.jpg);
+/* Added border style for clients-container */
+.clients-container::after {
+    content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    opacity: 0.5; /* Adjust opacity as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px; /* Adjust border thickness */
+    height: 100%; /* Make the border span the full height of the container */
+    background-color: #fff; /* Adjust border color */
+    margin-left: -50px;
 }
+
 
 .content-overlay {
     position: relative;
-    z-index: 1;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    color: #fff; /* Text color for content */
 }
 
 .left-content {
     flex: 1;
     text-align: left;
-    color: #fff;
 }
 
 .right-content {
     flex: 1;
     text-align: right;
-    color: #fff;
 }
 
 .testimonial {
@@ -76,3 +82,4 @@
 .navigation-dot.active {
     opacity: 1;
 }
+

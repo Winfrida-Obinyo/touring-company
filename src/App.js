@@ -13,7 +13,7 @@ function App(){
      <Home/>
      <GreenAdd/>
      <Specialty/>
-     {/* <Clients/> */}
+     <Clients/>
     
 
     
