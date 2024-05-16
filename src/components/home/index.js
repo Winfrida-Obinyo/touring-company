@@ -35,7 +35,7 @@ const Home = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      handleNext(); // Move to the next image
+      // handleNext(); // Move to the next image
     }, 5000); // Change image every 5 seconds (adjust as needed)
 
     return () => {
