@@ -63,6 +63,22 @@
 .subtopic-button:hover {
     background-color: #5baa06;
 }
+@media (max-width: 768px) {
+    .subtopics {
+      flex-direction: column; /* Stack subtopics vertically on small screens */
+      align-items: center; /* Center align subtopics horizontally */
+    }
+  
+    .subtopic {
+      width: 100%; /* Make subtopics full width on small screens */
+      margin-bottom: 10px; /* Reduce margin for better spacing */
+      text-align: center; /* Center align subtopic content */
+    }
+  
+    .subtopic h3, .subtopic-description, .subtopic-button {
+      margin-left: 0; /* Remove left margin for centered content */
+    }
+  }
 
 
 

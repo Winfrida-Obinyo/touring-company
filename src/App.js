@@ -4,6 +4,8 @@ import Home from "./components/home";
 import GreenAdd from "./components/green";
 import Specialty from "./components/speciality";
 import Clients from "./components/clients";
+import Subscribers from "./components/subscribers";
+import Footer from "./components/footer";
 
 
 function App(){
@@ -14,6 +16,8 @@ function App(){
      <GreenAdd/>
      <Specialty/>
      <Clients/>
+     <Subscribers/>
+     <Footer/>
     
 
     
