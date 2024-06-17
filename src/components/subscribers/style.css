@@ -1,0 +1,175 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Ensure vertical scrolling only */
+}
+
+.subscribers-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Ensure spacing between left and right content */
+    align-items: center;
+    padding: 50px;
+    height: 70vh; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(75, 133, 13, 0.384); 
+}
+
+.left-content {
+    position: relative;
+    flex: 1;
+    text-align: left;
+    padding: 40px; /* Increased padding */
+    z-index: 1;
+}
+
+.left-content h2 {
+    margin-right: 20px; /* Reduced margin */
+    white-space: nowrap; /* Ensure the header is on one line */
+    font-weight: 200; /* Lighter font weight */
+    font-size: xx-large; /* Adjusted font size */
+    margin-top: 20px; /* Reduced margin top */
+}
+
+.left-content p {
+    font-weight: 300; /* Lighter font weight for paragraphs */
+    color: rgba(255, 255, 255, 0.9); /* Lighter color */
+    margin-top: 20px; /* Reduced margin top */
+    font-size: large; /* Adjusted font size */
+    line-height: 1.5; /* Increased line height for readability */
+}
+
+.separator-line {
+    width: 1cm;
+    height: 2px;
+    background-color: #fff;
+    margin: 10px 0;
+    margin-top: 30px; /* Reduced margin top */
+    margin-left: 50px;
+}
+
+.right-content {
+    position: relative;
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    z-index: 4;
+    display: flex; /* Ensure it behaves as a flex container */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: space-between; /* Align items with space between them */
+}
+
+.subscription-title {
+    margin-bottom: 20px; /* Add space between title and form */
+}
+
+.subscription-form {
+    flex: 1; /* Fill remaining space in .right-content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    justify-content: space-between; /* Align items with space between them */
+    margin-left: -100px; /* Adjust margin as needed */
+}
+
+.subscription-form h4 {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.7); /* Lighter color */
+    font-weight: 100; /* Lighter font weight */
+    text-align: center; /* Center align the header */
+    font-size: large; /* Adjusted font size */
+}
+
+.subscription-form input, .subscription-form select, .subscription-form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%; /* Make inputs and select 100% width */
+    max-width: 300px; /* Limit maximum width for responsiveness */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.subscription-form button {
+    background-color: #faf38e70;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make button 100% width */
+    max-width: 130px; /* Limit maximum width for responsiveness */
+}
+
+.subscription-form button:hover {
+    background-color: #faf38e70;
+}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    .subscribers-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-content, .right-content {
+        padding: 10px;
+        text-align: center;
+        font-size: 5px;
+    }
+
+    .subscription-form {
+        align-items: center;
+        margin-left: 0; /* Reset margin for small screens */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .subscribers-container {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .left-content, .right-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .subscription-form {
+        align-items: center;
+        margin-left: 0; /* Reset margin for medium screens */
+    }
+}
+
+@media (min-width: 901px) {
+    .subscribers-container {
+        flex-direction: row;
+        padding: 50px;
+    }
+
+    .left-content {
+        text-align: left;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .right-content {
+        text-align: left;
+        padding: 20px;
+    }
+}
+
+

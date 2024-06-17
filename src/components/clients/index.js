@@ -5,7 +5,7 @@ const Clients = () => {
     const testimonials = [
         {
           text: "My experience with this company was truly remarkable. From the moment I first contacted them, I was impressed by their exceptional service. They were incredibly helpful and knowledgeable, answering all my questions patiently and thoroughly. Throughout the entire process, they exceeded my expectations in every way. They provided personalized recommendations that perfectly aligned with my needs and interests, ensuring a trip I'll never forget.",
-          clientName: "John Doe",
+          clientName: "John Doe -",
           clientCountry: "USA",
         },
         {
