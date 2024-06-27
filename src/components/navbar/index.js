@@ -57,7 +57,7 @@ const Navbar = () => {
       {/* Lower Part (Gold) */}
       <div className="lower">
         <div className="logo">
-          <img src="path_to_your_logo" alt="Logo" />
+        <img src="/images/jewelaremoved bg new.png" alt="Logo" />
         </div>
         <div className="navigation-links">
           <a href="#">HOME</a>

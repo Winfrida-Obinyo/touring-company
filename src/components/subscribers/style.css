@@ -11,7 +11,7 @@ body, html {
     justify-content: space-between; /* Ensure spacing between left and right content */
     align-items: center;
     padding: 50px;
-    height: 70vh; /* Adjust height as needed */
+    height: 53vh; /* Adjust height as needed */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -67,9 +67,11 @@ body, html {
     padding: 20px;
     z-index: 4;
     display: flex; /* Ensure it behaves as a flex container */
-    flex-direction: column; /* Arrange children in a column */
-    justify-content: space-between; /* Align items with space between them */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Make the background fill the entire width */
 }
+
 
 .subscription-title {
     margin-bottom: 20px; /* Add space between title and form */

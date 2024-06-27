@@ -58,24 +58,8 @@ const Home = () => {
         <button onClick={handlePrev}><FaArrowLeft /></button>
         <button onClick={handleNext}><FaArrowRight /></button>
       </div>
-
-      {/* New Section with Green Background and Content */}
-
     </div>
   );
 };
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
