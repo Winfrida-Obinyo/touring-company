@@ -1,5 +1,5 @@
 .specialty-container {
-    background-color: #FAF38E;
+    background-color: #f19007;
     text-align: center;
     padding: 20px;
 }
@@ -7,12 +7,12 @@
 .section-header {
     font-size: 24px;
     font-weight: bold;
-    color: #4B850D;
+    color: white;
 }
 
 .section-subheader {
     font-size: 20px;
-    color: #4B850D;
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -32,7 +32,7 @@
 
 .subtopic h3 {
     font-size: 16px;
-    color: #4B850D;
+    color: white;
     margin-bottom: 10px;
     margin-left: 70px;
 }
@@ -47,12 +47,12 @@
 
 .subtopic-description {
     font-size: 14px;
-    color: #4B850D;
+    color: white;
 }
 .subtopic-button {
     background-color: rgba(0, 123, 255, 0); /* Transparent background */
-    color: #4B850D;
-    border: 1px solid #4B850D; /* Black border */
+    color: white;
+    border: 1px solid white; /* Black border */
     padding: 12px 40px;
     border-radius: 5px;
     cursor: pointer;
@@ -61,7 +61,7 @@
     margin-left: 70px;
 }
 .subtopic-button:hover {
-    background-color: #5baa06;
+    background-color: #536535;
 }
 @media (max-width: 768px) {
     .subtopics {
