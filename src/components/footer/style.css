@@ -1,11 +1,11 @@
 .footerWrapper {
     background-color: #536535;
-    color: #f5f5f5; /* Light color for all text */
+    color: #f5f5f5; 
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-weight: 300; /* Light font weight for all text */
+    font-weight: 300; 
   }
   
   .footerSection {
@@ -13,19 +13,19 @@
     min-width: 200px;
     margin: 10px;
     position: relative;
-    padding-top: 20px; /* Space for the top line */
-    padding-bottom: 20px; /* Space for the bottom line */
+    padding-top: 20px; 
+    padding-bottom: 20px; 
   }
   
   .footerSection h2 {
-    font-size: 1em; /* Reduced font size for headings */
+    font-size: 1em; 
     margin: 0;
-    color: #f5f5f5; /* Light color for headings */
-    font-weight: 300; /* Light font weight for headings */
+    color: #f5f5f5; 
+    font-weight: 300; 
     text-align: center;
     position: relative;
-    z-index: 1; /* Ensure header is above the lines */
-    padding: 10px 0; /* Add padding to the header */
+    z-index: 1; 
+    padding: 10px 0; 
   }
   
   .footerSection h2::before,
@@ -40,15 +40,15 @@
   }
   
   .footerSection h2::before {
-    top: 0; /* Adjust as needed for spacing */
+    top: 0; 
   }
   
   .footerSection h2::after {
-    bottom: 0; /* Adjust as needed for spacing */
+    bottom: 0; 
   }
   
   .footerSectionContent {
-    padding: 10px; /* Add padding to the content below the header */
+    padding: 10px; 
   }
   
   .dropdownMenu {
@@ -66,7 +66,7 @@
     cursor: pointer;
     width: 110%;
     text-align: left;
-    font-weight: 300; /* Light font weight for dropdown button */
+    font-weight: 300; 
     border-radius: 5px;
     margin-left: 60px;
 
@@ -88,7 +88,7 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    font-weight: 300; /* Light font weight for dropdown links */
+    font-weight: 300; 
   }
   
   .dropdownContent a:hover {
@@ -105,15 +105,15 @@
   .socialIcons {
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Align items to the bottom */
+    align-items: flex-end;
     margin-top: 30px;
   }
   
   .socialIcons a {
     margin-right: 10px;
-    color: #f5f5f5; /* Light color for social media links */
+    color: #f5f5f5; 
     text-decoration: none;
-    font-weight: 300; /* Light font weight for social media links */
+    font-weight: 300; 
   }
   
   
@@ -130,20 +130,20 @@
   .quickLinks li,
   .offersList li {
     margin-bottom: 5px;
-    color: #f5f5f5; /* Light color for list items */
-    font-weight: 300; /* Light font weight for list items */
+    color: #f5f5f5; 
+    font-weight: 300; 
   }
   .quickLinks {
-    list-style-type: none; /* Remove default list styles */
+    list-style-type: none; 
     padding: 0;
   }
   
   .quickLinks li {
-    position: relative; /* Position relative for absolute positioning of circles */
-    padding-left: 20px; /* Space for the circle */
+    position: relative; 
+    padding-left: 20px; 
     margin-bottom: 5px;
-    color: #f5f5f5; /* Light color for list items */
-    font-weight: 300; /* Light font weight for list items */
+    color: #f5f5f5; 
+    font-weight: 300; 
   }
   
   .quickLinks li::before {
@@ -154,57 +154,53 @@
     transform: translateY(-50%);
     width: 8px;
     height: 8px;
-    background-color: white; /* Circle color */
+    background-color: white;
     border-radius: 50%;
   }
   
   
   .offersList {
     list-style-type: none;
-    padding: 10px; /* Add units (e.g., px) to the padding value */
+    padding: 10px; 
   }
   
   .offersList li {
-    margin-bottom: 0; /* Adjusted margin to move text closer */
-    color: #f5f5f5; /* Light color for list items */
-    font-weight: 300; /* Light font weight for list items */
+    margin-bottom: 0; 
+    color: #f5f5f5; 
+    font-weight: 300; 
     display: flex;
-    flex-direction: column; /* Change flex direction to column */
-    align-items: center; /* Align items horizontally center */
-    text-align: 50px; /* Align text content center */
+    flex-direction: column;
+    align-items: center; 
+    text-align: 50px; 
   }
   
   .offersList img {
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    margin-bottom: 10px; /* Increased space between image and text */
+    width: 50px; 
+    height: 50px; 
+    margin-bottom: 10px; 
     border-radius: 5px;
   }
   
   .offersList .location {
-    font-size: 0.9em; /* Adjust font size as needed */
-    color: #bbb; /* Lighter color for location text */
+    font-size: 0.9em;
+    color: #bbb;
   }
   
   
-  
-  
-  
-  /* Add styles for the Contact Us section */
   .footerSection p {
     margin: 5px 0;
-    color: #f5f5f5; /* Light color for paragraphs */
-    font-weight: 300; /* Light font weight for paragraphs */
+    color: #f5f5f5; 
+    font-weight: 300; 
   }
   @media screen and (max-width: 768px) {
     .footerSection {
-        flex: 1 0 auto;  /* Allow sections to shrink instead of growing */
-        min-width: auto;  /* Remove minimum width on smaller screens */
-        flex-wrap: wrap; /* Allow sections to wrap on smaller lines */
+        flex: 1 0 auto;  
+        min-width: auto; 
+        flex-wrap: wrap; 
     }
     }
     .socialIcons {
-      justify-content: space-between; /* Align social icons horizontally on smaller screens */
+      justify-content: space-between;
     }
   
 

@@ -2,19 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #536535; /* Green background */
+  background-color: #536535; 
   color: #ffffff;
   padding: 40px;
-  position: relative; /* Ensure positioning for the separator */
+  position: relative; 
   font-family: poppins;
 }
 
 .left-section {
-  width: 40%; /* Adjust width as needed */
+  width: 40%; 
 }
 
 .right-section {
-  width: 55%; /* Adjust width as needed */
+  width: 55%; 
   padding-left: 20px;
   
 }
@@ -30,11 +30,11 @@
 
 .separator {
   position: absolute;
-  top: 20px; /* Adjust top position to start below padding */
-  bottom: 20px; /* Adjust bottom position to end above padding */
-  left: 40%; /* Adjust position to align with the end of left-section */
-  width: 2px; /* Adjust thickness of the vertical border */
-  background-color: #ffffff; /* White vertical line */
+  top: 20px; 
+  bottom: 20px; 
+  left: 40%; 
+  width: 2px; 
+  background-color: #ffffff; 
 }
 
 .subtitle {
@@ -44,14 +44,14 @@
 }
 
 h2 {
-  font-size: 36px; /* Increase font size for h2 */
-  padding-bottom: 10px; /* Add spacing below h2 */
-  margin-bottom: 20px; /* Add margin to separate from subtitle */
+  font-size: 36px; 
+  padding-bottom: 10px; 
+  margin-bottom: 20px; 
 }
 
 p {
-  font-size: 18px; /* Set font size for paragraphs */
-  margin-bottom: 10px; /* Add spacing between paragraphs */
+  font-size: 18px; 
+  margin-bottom: 10px; 
 }
 
 .client-say-button {
@@ -59,7 +59,7 @@ p {
   font-size: 16px;
   background-color: transparent;
   color: #ffffff;
-  border: 2px solid #ffffff; /* White border */
+  border: 2px solid #ffffff; 
   border-radius: 5px;
   cursor: pointer;
   margin-top: 40px;
@@ -73,34 +73,32 @@ p {
 /* Media Queries */
 @media (max-width: 768px) {
   .additional-content {
-    flex-direction: column; /* Stack sections on smaller screens */
+    flex-direction: column; 
     align-items: flex-start;
     padding: 20px;
   }
   
   .left-section,
   .right-section {
-    width: 100%; /* Make sections full width on smaller screens */
+    width: 100%; 
   }
   
   .separator {
-    display: none; /* Hide separator on smaller screens */
+    display: none; 
   }
   
   .client-say-button {
-    margin-top: 20px; /* Adjust button margin for better spacing */
+    margin-top: 20px; 
   }
 }
 
-/* Add media queries for even smaller screens (optional) */
 @media (max-width: 540px) {
-  /* Adjust styles for screens below 540px width */
   h2,
   .subtitle {
-    font-size: 28px; /* Reduce font size for headings */
+    font-size: 28px; 
   }
   
   p {
-    font-size: 16px; /* Reduce font size for paragraphs */
+    font-size: 16px; 
   }
 }

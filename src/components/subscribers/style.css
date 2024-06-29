@@ -1,17 +1,17 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Ensure vertical scrolling only */
+    overflow-x: hidden; 
+    overflow-y: auto; 
 }
 
 .subscribers-container {
     position: relative;
     display: flex;
-    justify-content: space-between; /* Ensure spacing between left and right content */
+    justify-content: space-between; 
     align-items: center;
     padding: 50px;
-    height: 53vh; /* Adjust height as needed */
+    height: 53vh; 
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -31,24 +31,24 @@ body, html {
     position: relative;
     flex: 1;
     text-align: left;
-    padding: 40px; /* Increased padding */
+    padding: 40px; 
     z-index: 1;
 }
 
 .left-content h2 {
-    margin-right: 20px; /* Reduced margin */
-    white-space: nowrap; /* Ensure the header is on one line */
-    font-weight: 200; /* Lighter font weight */
-    font-size: xx-large; /* Adjusted font size */
-    margin-top: 20px; /* Reduced margin top */
+    margin-right: 20px;
+    white-space: nowrap; 
+    font-weight: 200; 
+    font-size: xx-large; 
+    margin-top: 20px; 
 }
 
 .left-content p {
-    font-weight: 300; /* Lighter font weight for paragraphs */
-    color: rgba(255, 255, 255, 0.9); /* Lighter color */
-    margin-top: 20px; /* Reduced margin top */
-    font-size: large; /* Adjusted font size */
-    line-height: 1.5; /* Increased line height for readability */
+    font-weight: 300; 
+    color: rgba(255, 255, 255, 0.9); 
+    margin-top: 20px; 
+    font-size: large; 
+    line-height: 1.5; 
 }
 
 .separator-line {
@@ -56,7 +56,7 @@ body, html {
     height: 2px;
     background-color: #fff;
     margin: 10px 0;
-    margin-top: 30px; /* Reduced margin top */
+    margin-top: 30px; 
     margin-left: 50px;
 }
 
@@ -66,40 +66,40 @@ body, html {
     text-align: left;
     padding: 20px;
     z-index: 4;
-    display: flex; /* Ensure it behaves as a flex container */
+    display: flex; 
     flex-direction: column;
     justify-content: space-between;
-    width: 100%; /* Make the background fill the entire width */
+    width: 100%; 
 }
 
 
 .subscription-title {
-    margin-bottom: 20px; /* Add space between title and form */
+    margin-bottom: 20px; 
 }
 
 .subscription-form {
-    flex: 1; /* Fill remaining space in .right-content */
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align items horizontally */
-    justify-content: space-between; /* Align items with space between them */
-    margin-left: -100px; /* Adjust margin as needed */
+    align-items: center; 
+    justify-content: space-between; 
+    margin-left: -100px; 
 }
 
 .subscription-form h4 {
     margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.7); /* Lighter color */
-    font-weight: 100; /* Lighter font weight */
-    text-align: center; /* Center align the header */
-    font-size: large; /* Adjusted font size */
+    color: rgba(255, 255, 255, 0.7); 
+    font-weight: 100; 
+    text-align: center; 
+    font-size: large; 
 }
 
 .subscription-form input, .subscription-form select, .subscription-form button {
     margin-bottom: 15px;
     padding: 10px;
     font-size: 16px;
-    width: 100%; /* Make inputs and select 100% width */
-    max-width: 300px; /* Limit maximum width for responsiveness */
+    width: 100%;
+    max-width: 300px; 
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid #ccc;
     color: #333;
@@ -111,33 +111,47 @@ body, html {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%; /* Make button 100% width */
-    max-width: 130px; /* Limit maximum width for responsiveness */
+    width: 100%; 
+    max-width: 130px;
 }
 
 .subscription-form button:hover {
     background-color: #faf38e70;
 }
 
-/* Media Queries */
 
 @media (max-width: 600px) {
     .subscribers-container {
-        flex-direction: column;
-        padding: 20px;
+      flex-direction: column;
+      padding: 20px;
     }
-
-    .left-content, .right-content {
-        padding: 10px;
-        text-align: center;
-        font-size: 5px;
+  
+    .left-content,
+    .right-content {
+      padding: 10px;
+      text-align: center;
+      /* Adjust font-size for better readability on small screens */
+      font-size: 16px;  /* Example value, adjust as needed */
     }
-
+  
     .subscription-form {
-        align-items: center;
-        margin-left: 0; /* Reset margin for small screens */
+      align-items: center;
+      margin-left: 0; 
     }
-}
+  
+    .left-content h2 {
+      font-size: 1.5rem; 
+    }
+  
+    .subscription-form input,
+    .subscription-form select,
+    .subscription-form button {
+      width: calc(100% - 20px);  
+    }
+    .subscription-form {
+        justify-content: flex-start; 
+      }
+  }
 
 @media (min-width: 601px) and (max-width: 900px) {
     .subscribers-container {
@@ -152,8 +166,11 @@ body, html {
 
     .subscription-form {
         align-items: center;
-        margin-left: 0; /* Reset margin for medium screens */
+        margin-left: 0; 
     }
+    .subscription-form {
+        justify-content: flex-start; 
+      }
 }
 
 @media (min-width: 901px) {
@@ -172,6 +189,10 @@ body, html {
         text-align: left;
         padding: 20px;
     }
+    .subscription-form {
+        /* Existing styles... */
+        justify-content: flex-start; /* Change justify-content to flex-start */
+      }
 }
 
 

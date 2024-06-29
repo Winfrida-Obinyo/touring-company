@@ -37,8 +37,7 @@ const Clients = () => {
       setCurrentTestimonialIndex((prevIndex) =>
         (prevIndex + 1) % testimonials.length
       );
-    }, 5000); // Change the interval value (in milliseconds) to adjust transition speed
-
+    }, 5000); 
     return () => clearInterval(intervalId);
   }, [testimonials.length]);
 
