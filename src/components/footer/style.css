@@ -1,213 +1,311 @@
+/* Reset for body and html */
+body,
+html {
+  margin: 10;
+  padding: 20;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+/* Styling for the footer wrapper */
 .footerWrapper {
-    background-color: #536535;
-    color: #f5f5f5; /* Light color for all text */
-    padding: 20px;
-    display: flex;
+  background-color: #536535;
+  color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-weight: 300;
+  min-height: 50vh;
+}
+
+/* Styling for each section in the footer */
+.footerSection {
+  min-width: 200px;
+  margin: 5px;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex: 1 0 30%;
+}
+
+/* Styling for section headings */
+.footerSection h2 {
+  font-size: 1em;
+  margin: 0;
+  color: #f5f5f5;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 5px 0;
+}
+
+.footerSection h2::before,
+.footerSection h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.1px;
+  background-color: #f5f5f5;
+  position: absolute;
+  left: 0;
+}
+
+.footerSection h2::before {
+  top: 0;
+}
+
+.footerSection h2::after {
+  bottom: 0;
+}
+
+.footerSectionContent {
+  padding: 5px;
+}
+
+.dropdownMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  margin-top: 30px;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-weight: 300;
+  border-radius: 5px;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f942;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 100%;
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  font-weight: 300;
+}
+
+.dropdownContent a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdownMenu:hover .dropdownContent {
+  display: block;
+}
+
+.connect {
+  padding-top: 80px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+.socialIcons a {
+  margin-right: 5px;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.socialIcons a:hover {
+  text-decoration: underline;
+}
+
+.quickLinks,
+.offersList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quickLinks li,
+.offersList li {
+  margin-bottom: 3px;
+  color: #f5f5f5;
+  font-weight: 300;
+}
+
+/* Ensure consistent padding for all list items */
+.quickLinks li,
+.offersList li {
+  padding: 5px;
+}
+
+/* Quick Links specific styling */
+.quickLinks li {
+  position: relative;
+  padding-left: 15px;
+  color: #f5f5f5;
+  font-weight: 300;
+}
+
+.quickLinks li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Latest Offers specific styling */
+.offersList {
+  padding: 5px;
+}
+
+.offersList li {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offersList img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.offersList .location {
+  font-size: 0.8em;
+  color: #bbb;
+}
+
+.footerSection p {
+  margin: 3px 0;
+  color: #f5f5f5;
+  font-weight: 300;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .footerWrapper {
     flex-wrap: wrap;
-    justify-content: space-between;
-    font-weight: 300; /* Light font weight for all text */
   }
-  
+
   .footerSection {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-    position: relative;
-    padding-top: 20px; /* Space for the top line */
-    padding-bottom: 20px; /* Space for the bottom line */
-  }
-  
-  .footerSection h2 {
-    font-size: 1em; /* Reduced font size for headings */
-    margin: 0;
-    color: #f5f5f5; /* Light color for headings */
-    font-weight: 300; /* Light font weight for headings */
-    text-align: center;
-    position: relative;
-    z-index: 1; /* Ensure header is above the lines */
-    padding: 10px 0; /* Add padding to the header */
-  }
-  
-  .footerSection h2::before,
-  .footerSection h2::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 0.1px;
-    background-color: #f5f5f5;
-    position: absolute;
-    left: 0;
-  }
-  
-  .footerSection h2::before {
-    top: 0; /* Adjust as needed for spacing */
-  }
-  
-  .footerSection h2::after {
-    bottom: 0; /* Adjust as needed for spacing */
-  }
-  
-  .footerSectionContent {
-    padding: 10px; /* Add padding to the content below the header */
-  }
-  
-  .dropdownMenu {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdownButton {
-    margin-top: 60px;
-    background-color: white;
-    color: black;
+    flex: 1 0 45%;
     padding: 10px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width: 110%;
-    text-align: left;
-    font-weight: 300; /* Light font weight for dropdown button */
-    border-radius: 5px;
-    margin-left: 60px;
-
   }
-  
+
+  .dropdownButton,
   .dropdownContent {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f942;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-left: 60px;
-    width: 110%;
+    width: 100%;
   }
-  
-  .dropdownContent a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-weight: 300; /* Light font weight for dropdown links */
-  }
-  
-  .dropdownContent a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .dropdownMenu:hover .dropdownContent {
-    display: block;
-  }
-  .connect{
-    padding-top: 160px;
-  }
-  
-  .socialIcons {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Align items to the bottom */
-    margin-top: 30px;
-  }
-  
-  .socialIcons a {
-    margin-right: 10px;
-    color: #f5f5f5; /* Light color for social media links */
-    text-decoration: none;
-    font-weight: 300; /* Light font weight for social media links */
-  }
-  
-  
-  .socialIcons a:hover {
-    text-decoration: underline;
-  }
-  
-  .quickLinks,
-  .offersList {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .quickLinks li,
-  .offersList li {
-    margin-bottom: 5px;
-    color: #f5f5f5; /* Light color for list items */
-    font-weight: 300; /* Light font weight for list items */
-  }
-  .quickLinks {
-    list-style-type: none; /* Remove default list styles */
-    padding: 0;
-  }
-  
-  .quickLinks li {
-    position: relative; /* Position relative for absolute positioning of circles */
-    padding-left: 20px; /* Space for the circle */
-    margin-bottom: 5px;
-    color: #f5f5f5; /* Light color for list items */
-    font-weight: 300; /* Light font weight for list items */
-  }
-  
-  .quickLinks li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    background-color: white; /* Circle color */
-    border-radius: 50%;
-  }
-  
-  
-  .offersList {
-    list-style-type: none;
-    padding: 10px; /* Add units (e.g., px) to the padding value */
-  }
-  
-  .offersList li {
-    margin-bottom: 0; /* Adjusted margin to move text closer */
-    color: #f5f5f5; /* Light color for list items */
-    font-weight: 300; /* Light font weight for list items */
-    display: flex;
-    flex-direction: column; /* Change flex direction to column */
-    align-items: center; /* Align items horizontally center */
-    text-align: 50px; /* Align text content center */
-  }
-  
-  .offersList img {
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    margin-bottom: 10px; /* Increased space between image and text */
-    border-radius: 5px;
-  }
-  
-  .offersList .location {
-    font-size: 0.9em; /* Adjust font size as needed */
-    color: #bbb; /* Lighter color for location text */
-  }
-  
-  
-  
-  
-  
-  /* Add styles for the Contact Us section */
-  .footerSection p {
-    margin: 5px 0;
-    color: #f5f5f5; /* Light color for paragraphs */
-    font-weight: 300; /* Light font weight for paragraphs */
-  }
-  @media screen and (max-width: 768px) {
-    .footerSection {
-        flex: 1 0 auto;  /* Allow sections to shrink instead of growing */
-        min-width: auto;  /* Remove minimum width on smaller screens */
-        flex-wrap: wrap; /* Allow sections to wrap on smaller lines */
-    }
-    }
-    .socialIcons {
-      justify-content: space-between; /* Align social icons horizontally on smaller screens */
-    }
-  
+}
 
-  
-  
-  
+@media screen and (max-width: 912px) {
+  .footerSection {
+    flex: 1 0 45%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footerSection {
+    flex: 1 0 45%;
+    padding: 10px;
+  }
+
+  .socialIcons {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footerSection h2 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footerSection {
+    flex: 1 0 100%;
+    padding: 5px;
+  }
+
+  .footerSection h2 {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .footerSection {
+    flex: 1 0 100%;
+    padding: 5px;
+  }
+
+  .footerSection h2 {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .footerSection {
+    flex: 1 0 100%;
+    padding: 5px;
+  }
+
+  .footerSection h2 {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .footerSection {
+    flex: 1 0 100%;
+    padding: 5px;
+  }
+
+  .footerSection h2 {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .footerSection {
+    flex: 1 0 100%;
+    padding: 5px;
+  }
+
+  .footerSection h2 {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footerSection {
+    flex: 1 0 auto;
+    min-width: auto;
+    padding: 20px;
+  }
+}

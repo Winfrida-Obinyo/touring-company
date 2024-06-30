@@ -1,30 +1,9 @@
 import React from 'react';
-import './style.css'; // Make sure to create and import a CSS file for styling
+import './style.css'; 
 
 const Footer = () => {
     return (
         <footer className="footerWrapper">
-            <div className="footerSection">
-                <h2 >Special Offers</h2>
-                <div className="dropdownMenu">
-                    <button className="dropdownButton">Select Categories</button>
-                    <div className="dropdownContent">
-                        <a href="#non-resident-offers">Non Resident Offers</a>
-                        <a href="#resident-offers">Resident Offers</a>
-                    </div>
-                </div>
-                <div className='connect'>
-                    <h2 className='connect'>Let's Connect</h2>
-                    <div className="socialIcons">
-                        <a href="#facebook">Facebook</a>
-                        <a href="#twitter">Twitter</a>
-                        <a href="#instagram">Instagram</a>
-                    </div>
-
-                </div>
-            </div>
-
-
             <div className="footerSection">
                 <h2>Quick Connect</h2>
                 <ul className="quickLinks">
@@ -85,10 +64,27 @@ const Footer = () => {
                         </div>
                         <span className="location">Maasai Mara, KENYA</span>
                     </li>
-
                 </ul>
             </div>
 
+            <div className="footerSection">
+                <h2>Special Offers</h2>
+                <div className="dropdownMenu">
+                    <button className="dropdownButton">Select Categories</button>
+                    <div className="dropdownContent">
+                        <a href="#non-resident-offers">Non Resident Offers</a>
+                        <a href="#resident-offers">Resident Offers</a>
+                    </div>
+                </div>
+                <div className="connect">
+                    <h2>Let's Connect</h2>
+                    <div className="socialIcons">
+                        <a href="#facebook">Facebook</a>
+                        <a href="#twitter">Twitter</a>
+                        <a href="#instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
 
             <div className="footerSection">
                 <h2>Contact Us</h2>
@@ -96,7 +92,6 @@ const Footer = () => {
                 <p>Email: info@example.com</p>
                 <p>Address: 123 Main St, Anytown, USA</p>
             </div>
-
         </footer>
     );
 };

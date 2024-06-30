@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './style.css'; // Import your CSS file for styling
+import './style.css'; 
 import { FaFacebook, FaTwitter, FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -7,7 +7,6 @@ const Navbar = () => {
   const [showDestinationMenu, setShowDestinationMenu] = useState(false);
   const [showExploreMenu, setShowExploreMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +19,10 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener on component unmount
-    // return () => {
-    //     window.removeEventListener('scroll', handleScroll);
-    // };
-}, []);
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleImagineMenuToggle = () => {
     setShowImagineMenu(!showImagineMenu);
@@ -39,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar fixed-navbar">
+    <nav className="navbar">
       {/* Upper Part (Green) */}
       <div className={`upper ${isScrolled ? 'hidden' : ''}`}>
         <div className="contact-info">
@@ -56,8 +54,13 @@ const Navbar = () => {
 
       {/* Lower Part (Gold) */}
       <div className="lower">
-        <div className="logo">
-        <img src="/images/jewelaremoved bg new.png" alt="Logo" />
+        <div className="logos">
+          <div className="left-image">
+            <img src="/images/jewelaremoved bg words_prev_ui.png" alt="Left Image" />
+          </div>
+          <div className="right-image">
+            <img src="/images/jewelaremoved bg newafrica img-Photoroom.png" alt="Logo" />
+          </div>
         </div>
         <div className="navigation-links">
           <a href="home">HOME</a>
@@ -108,6 +111,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-

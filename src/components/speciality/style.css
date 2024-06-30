@@ -24,10 +24,10 @@
 }
 
 .subtopic {
-    width: 30%; /* Adjust width based on desired layout */
+    width: 30%; 
     margin-bottom: 20px;
-    position: relative; /* Ensure relative positioning for containing absolutely positioned image */
-    text-align: left; /* Align subtopic content to the left */
+    position: relative; 
+    text-align: left; 
 }
 
 .subtopic h3 {
@@ -38,9 +38,9 @@
 }
 
 .subtopic-image {
-    width: 100%; /* Ensures the image occupies full width of its container */
-    height: 200px; /* Set a fixed height for consistent image heights */
-    object-fit: cover; /* Ensure image covers the specified dimensions */
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -50,9 +50,9 @@
     color: white;
 }
 .subtopic-button {
-    background-color: rgba(0, 123, 255, 0); /* Transparent background */
+    background-color: rgba(0, 123, 255, 0); 
     color: white;
-    border: 1px solid white; /* Black border */
+    border: 1px solid white; 
     padding: 12px 40px;
     border-radius: 5px;
     cursor: pointer;
@@ -64,21 +64,21 @@
     background-color: #536535;
 }
 @media (max-width: 768px) {
-    .subtopics {
-      flex-direction: column; /* Stack subtopics vertically on small screens */
-      align-items: center; /* Center align subtopics horizontally */
-    }
-  
     .subtopic {
-      width: 100%; /* Make subtopics full width on small screens */
-      margin-bottom: 10px; /* Reduce margin for better spacing */
-      text-align: center; /* Center align subtopic content */
+        width: 100%;  /* Full width on small screens */
     }
-  
-    .subtopic h3, .subtopic-description, .subtopic-button {
-      margin-left: 0; /* Remove left margin for centered content */
+    .subtopic h3 {
+        margin-left: 20px;  /* Adjust heading margin for smaller screens */
     }
-  }
+    .subtopic-button {
+        margin-left: 20px;  /* Adjust button margin for smaller screens */
+    }
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .subtopic {
+      width: 45%; /* Adjust width for medium screens */
+    }
+}
 
 

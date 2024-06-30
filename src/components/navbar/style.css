@@ -1,58 +1,63 @@
-/* Default styles for navbar */
 .navbar {
-  display: flex;
-  flex-direction: column;
-  background-color: #536535;
+  width: 100%;
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
 }
 
+
 .upper {
+  background-color: #536535;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
-  background-color: #536535;
-  transition: top 0.3s ease, opacity 0.3s ease; /* Smooth transition for hiding */
 }
 
-.upper.hidden {
-  /* top: 0; */
-  opacity: 0;
-  background-color: transparent;
+.hidden {
   display: none;
 }
 
 .contact-info {
-  color: #ffffff;
-  font-size: 16px;
+  color: white;
 }
 
 .social-links a {
-  color: #ffffff;
-  font-size: 20px;
-  margin-left: 10px;
+  color: white;
+  margin: 0 10px;
 }
 
 .lower {
+  background-color: #f19007;
+  padding: 0px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 30px; /* Reduced top and bottom padding */
-  background-color: #f19007;
-  /* position: relative; */
-  transition: top 0.3s ease; /* Smooth transition for adjustments */
 }
 
+.logos {
+  display: flex;
+  align-items: center;
+  gap: 0;
 
-.logo img {
-  width: 10vw; /* 50% of the viewport width */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 50%; /* Ensure it doesn't exceed the container's width */
-  size: 2em;
+}
+
+.left-image img {
+  width: 10vw; 
+  height: 5vw;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.right-image img {
+  width: 6vw; 
+  /* height: auto; */
+  max-height: 6vw;
+  margin-right: 10px;
 }
 
 .navigation-links {
@@ -61,28 +66,9 @@
 }
 
 .navigation-links a {
+  margin: 0 15px;
   color: #536535;
-  font-size: 12px;
   text-decoration: none;
-  padding: 8px 12px;
-  margin-left: 10px;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.navigation-links a::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -5px;
-  width: 2px;
-  height: 80%;
-  background-color: #4B850D;
-  transform: translateY(-50%);
-}
-
-.navigation-links a:hover {
-  color: #536535;
 }
 
 .dropdown {
@@ -92,111 +78,26 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 8px 12px;
-  text-decoration: none;
-  color: #536535;
-  font-size: 12px;
-  background-color: rgba(255, 255, 255, 0.50588);
-  width: 130px;
-}
-
-.dropdown-content a:hover {
-  background-color: #F89D1B;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.274);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-weight: lighter;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Media queries for responsiveness */
-/* Small devices (phones, 600px and down) */
-@media (max-width: 600px) {
-  .upper, .lower {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  .contact-info, .social-links, .logo img, .navigation-links a {
-    font-size: 14px;
-    padding: 6px 8px;
-  }
-
-  .navigation-links {
-    flex-direction: column;
-  }
-
-  .navigation-links a {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .navigation-links a::after {
-    display: none;
-  }
+.dropdown-content a {
+  color: white;
+  padding: 8px 12px; 
+  text-decoration: none;
+  display: block;
+  font-weight: 300;
+  font-size: 13px; 
 }
 
-/* Medium devices (tablets, 600px to 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-  .upper, .lower {
-    flex-direction: column;
-    padding: 10px 30px;
-  }
-
-  .contact-info, .social-links, .logo img, .navigation-links a {
-    font-size: 15px;
-    padding: 8px 10px;
-  }
-
-  .navigation-links {
-    flex-direction: column;
-  }
-
-  .navigation-links a {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .navigation-links a::after {
-    display: none;
-  }
+.dropdown-content a:hover {
+  background-color: #536535;
 }
-
-/* Large devices (laptops/desktops, 900px and up) */
-@media (min-width: 901px) {
-  .upper, .lower {
-    flex-direction: row;
-    padding: 10px 50px;
-  }
-
-  .contact-info, .social-links, .logo img, .navigation-links a {
-    font-size: 16px;
-    padding: 8px 12px;
-  }
-
-  .navigation-links {
-    flex-direction: row;
-  }
-
-  .navigation-links a {
-    margin-left: 10px;
-    margin-bottom: 0;
-  }
-
-  .navigation-links a::after {
-    display: block;
-  }
-}
-
-  
-  
-  
-  
-  
-  

@@ -1,134 +1,176 @@
+/* Base styles for .clients-container */
 .clients-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%; /* Ensure full width */
-    height: 70vh; /* Set container height to viewport height */
-    background-image: url('/public/images/dubai5.jpg'); /* Specify the background image URL */
-    background-size: cover;
-    background-position: center;
-    opacity: 1; /* Adjust background opacity */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 70vh;
+  background-image: url('/public/images/dubai5.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
 }
 
-/* Added border style for clients-container */
 .clients-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px; /* Adjust border thickness */
-    height: 100%; /* Make the border span the full height of the container */
-    background-color: #fff; /* Adjust border color */
-    margin-left: -50px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  margin-left: -1px; /* Adjusted for centering */
 }
 
-
+/* Base styles for .content-overlay */
 .content-overlay {
-    position: relative;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    color: #fff; /* Text color for content */
-    margin-top: 70px;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  color: #fff;
+  margin-top: 70px; /* Ensure this margin is sufficient to prevent overlap with navbar */
 }
+
+/* Navigation arrows */
 .navigation-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.3); /* Arrow button background color */
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navigation-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Darker background on hover */
-  }
-  
-  .navigation-arrow.previous {
-    left: 60px;
-  }
-  
-  .navigation-arrow.next {
-    right: 60px;
-  }
-
-.left-content {
-    flex: 1;
-    text-align: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.navigation-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navigation-arrow.previous {
+  left: 60px;
+}
+
+.navigation-arrow.next {
+  right: 60px;
+}
+
+/* Testimonial and client details */
+.left-content,
 .right-content {
-    flex: 1;
-    text-align: left;
+  flex: 1;
+  text-align: left;
 }
 
 .testimonial {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-  
-  .testimonial p {
-    text-align: left; /* Align paragraphs to the left */
-  }
-  
+.testimonial p {
+  text-align: left;
+}
 
 .client-details {
-    margin-top: 10px;
-    font-size: 14px;
-    margin-left: 25px;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-left: 25px;
 }
 
+/* Read more button */
 .read-more-button {
-    background-color: transparent; /* Set background color to transparent */
-    color: white; /* Text color */
-    border: 3px solid #F89D1B; /* Border color same as text color */
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Add transition effect */
-    margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  border: 3px solid #f89d1b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
 .read-more-button:hover {
-    background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+  background-color: rgba(0, 123, 255, 0.1);
 }
 
-
+/* Testimonial navigation dots */
 .testimonial-navigation {
-    position: absolute;
-    bottom: 20px;
-    margin-left: 25%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center; /* Center the navigation dots horizontally */
-    gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
-
 
 .navigation-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: white;
-    opacity: 0.5;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .navigation-dot.active {
-    opacity: 1;
+  opacity: 1;
 }
-@media (max-width: 768px) {
-    .content-overlay {
-      padding: 1px;
-      justify-content: space-between;
-      flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
-    }
 
+/* Media queries */
+@media (max-width: 1024px) {
+  .content-overlay {
+    padding: 30px;
   }
+
+  .left-content,
+  .right-content {
+    flex: 1.5;
+  }
+
+  .client-details {
+    margin-left: 15px;
+  }
+
+  .testimonial-navigation {
+    margin-left: 0;
+  }
+
+  .clients-container::after {
+    display: none; /* Hide white line */
+  }
+}
+
+@media (max-width: 768px) {
+  .content-overlay {
+    padding: 15px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .left-content,
+  .right-content {
+    flex: 100%;
+    text-align: center;
+  }
+
+  .testimonial {
+    margin-bottom: 10px;
+  }
+
+  .testimonial-navigation {
+    margin: 0 auto;
+    bottom: 10px;
+  }
+
+  .clients-container::after {
+    display: none; /* Hide white line */
+  }
+}
+

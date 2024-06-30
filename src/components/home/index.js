@@ -10,17 +10,17 @@ const Home = () => {
     '/images/image5.jpg',
     '/images/image6.jpg',
     '/images/image7.jpg',
-    '/images/image8.jpg'
+    '/images/image17.jpg'
   ];
 
   const textContent = [
-    "BEAUTIFUL MOUNTAIN LANDSCAPE",
-    "SERENE OCEAN SUNSET",
-    "CITYSCAPE AT NIGHT",
-    "LUSH GREEN FOREST",
-    "ELEGANT ARCHITECTURE",
-    "GOLDEN HOUR ON THE BEACH",
-    "VIBRANT CITY LIGHTS"
+    "Tropical beach with sunbeds under swaying palm trees", // image11.jpg
+    "Lions intrigued by their reflection in a roadside puddle", // image3.jpg
+    "Majestic elephants roaming the African savanna", // image8.jpg
+    "Beachside romance with two cozy chairs under twinkling city lights", // image5.jpg
+    "Awaiting adventure: Grand architecture bathed in warm light", // image6.jpg
+    "Golden hour sunset painting the beach in a magical glow", // image7.jpg
+    "Road trip adventure: Car cruising along a scenic highway", // image8.jpg (use a different image for this one)
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,22 +35,20 @@ const Home = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // handleNext(); // Move to the next image
-    }, 5000); // Change image every 5 seconds (adjust as needed)
+      handleNext(); 
+    }, 5000); 
 
     return () => {
-      clearInterval(intervalId); // Clean up interval on component unmount
+      clearInterval(intervalId); 
     };
-  }, [currentIndex]); // Re-run effect when currentIndex changes
+  }, [currentIndex]); 
 
   return (
     <div className="home-container">
       <div className="carousel" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {images.map((image, index) => (
           <div key={index} className="slide" style={{ backgroundImage: `url(${image})` }}>
-            <div className="overlay">
-              <p className="overlay-text">{textContent[index]}</p>
-            </div>
+            <p className="slide-text">{textContent[index]}</p>
           </div>
         ))}
       </div>
