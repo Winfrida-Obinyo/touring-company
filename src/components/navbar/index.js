@@ -36,19 +36,13 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleDropdownToggle = (setShowMenu) => {
-    setShowMenu((prevState) => !prevState);
-  };
-
-  const handleMouseEnter = (setShowMenu) => {
-    if (!isMobile) {
-      setShowMenu(true);
-    }
-  };
-
-  const handleMouseLeave = (setShowMenu) => {
-    if (!isMobile) {
-      setShowMenu(false);
+  const handleDropdownToggle = (setShowMenu, menuState) => {
+    if (isMobile) {
+      // For mobile, toggle directly
+      setShowMenu(!menuState);
+    } else {
+      // For desktop, toggle on hover logic (handled by CSS)
+      setShowMenu((prevState) => !prevState);
     }
   };
 
@@ -80,15 +74,10 @@ const Navbar = () => {
           <a href="home">HOME</a>
           <div 
             className="dropdown" 
-            onMouseEnter={() => handleMouseEnter(setShowImagineMenu)} 
-            onMouseLeave={() => handleMouseLeave(setShowImagineMenu)} 
+            onClick={() => handleDropdownToggle(setShowImagineMenu, showImagineMenu)} 
           >
             <button 
               className="dropdown-toggle"
-              onClick={(e) => {
-                e.preventDefault();
-                handleDropdownToggle(setShowImagineMenu);
-              }}
             >
               IMAGINE-EXPERIENCE
             </button>
@@ -111,15 +100,10 @@ const Navbar = () => {
           </div>
           <div 
             className="dropdown" 
-            onMouseEnter={() => handleMouseEnter(setShowDestinationMenu)} 
-            onMouseLeave={() => handleMouseLeave(setShowDestinationMenu)} 
+            onClick={() => handleDropdownToggle(setShowDestinationMenu, showDestinationMenu)} 
           >
             <button 
               className="dropdown-toggle"
-              onClick={(e) => {
-                e.preventDefault();
-                handleDropdownToggle(setShowDestinationMenu);
-              }}
             >
               DESTINATION
             </button>
@@ -132,15 +116,10 @@ const Navbar = () => {
           </div>
           <div 
             className="dropdown" 
-            onMouseEnter={() => handleMouseEnter(setShowExploreMenu)} 
-            onMouseLeave={() => handleMouseLeave(setShowExploreMenu)} 
+            onClick={() => handleDropdownToggle(setShowExploreMenu, showExploreMenu)} 
           >
             <button 
               className="dropdown-toggle"
-              onClick={(e) => {
-                e.preventDefault();
-                handleDropdownToggle(setShowExploreMenu);
-              }}
             >
               EXPLORE
             </button>
@@ -167,7 +146,7 @@ const Navbar = () => {
           <div className="dropdown">
             <button 
               className="dropdown-toggle" 
-              onClick={() => handleDropdownToggle(setShowImagineMenu)}
+              onClick={() => handleDropdownToggle(setShowImagineMenu, showImagineMenu)}
             >
               IMAGINE-EXPERIENCE
             </button>
@@ -191,7 +170,7 @@ const Navbar = () => {
           <div className="dropdown">
             <button 
               className="dropdown-toggle" 
-              onClick={() => handleDropdownToggle(setShowDestinationMenu)}
+              onClick={() => handleDropdownToggle(setShowDestinationMenu, showDestinationMenu)}
             >
               DESTINATION
             </button>
@@ -205,7 +184,7 @@ const Navbar = () => {
           <div className="dropdown">
             <button 
               className="dropdown-toggle" 
-              onClick={() => handleDropdownToggle(setShowExploreMenu)}
+              onClick={() => handleDropdownToggle(setShowExploreMenu, showExploreMenu)}
             >
               EXPLORE
             </button>

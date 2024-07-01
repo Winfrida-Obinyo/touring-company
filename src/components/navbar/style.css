@@ -129,24 +129,6 @@
   background-color: #f19007;
 }
 
-/* Update the style for dropdown-toggle buttons to resemble links */
-.dropdown-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  color: #536535;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-/* Style for dropdown-toggle buttons on hover */
-.dropdown-toggle:hover {
-  text-decoration: underline;
-}
-
-
 @media (max-width: 768px) {
   .navigation-links {
     display: none;
