@@ -9,7 +9,6 @@
   flex-direction: column;
 }
 
-
 .upper {
   background-color: #536535;
   padding: 10px;
@@ -43,7 +42,6 @@
   display: flex;
   align-items: center;
   gap: 0;
-
 }
 
 .left-image img {
@@ -55,7 +53,6 @@
 
 .right-image img {
   width: 6vw; 
-  /* height: auto; */
   max-height: 6vw;
   margin-right: 10px;
 }
@@ -100,4 +97,66 @@
 
 .dropdown-content a:hover {
   background-color: #536535;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #f19007;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1001;
+}
+
+.mobile-menu a {
+  padding: 10px 20px;
+  color: #536535;
+  text-decoration: none;
+  display: block;
+}
+
+.mobile-menu .dropdown-content {
+  position: static;
+  box-shadow: none;
+  background-color: #f19007;
+}
+
+/* Update the style for dropdown-toggle buttons to resemble links */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: #536535;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+/* Style for dropdown-toggle buttons on hover */
+.dropdown-toggle:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .navigation-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
 }
