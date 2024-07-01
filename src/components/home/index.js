@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './style.css'; // Import your CSS file for styling
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
@@ -20,28 +20,28 @@ const Home = () => {
     "Beachside romance with two cozy chairs under twinkling city lights", // image5.jpg
     "Awaiting adventure: Grand architecture bathed in warm light", // image6.jpg
     "Golden hour sunset painting the beach in a magical glow", // image7.jpg
-    "Road trip adventure: Car cruising along a scenic highway", // image8.jpg (use a different image for this one)
+    "Road trip adventure: Car cruising along a scenic highway", // image17.jpg
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNext = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);
-  };
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  }, [images.length]);
 
-  const handlePrev = () => {
-    setCurrentIndex((currentIndex - 1 + images.length) % images.length);
-  };
+  const handlePrev = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  }, [images.length]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      handleNext(); 
-    }, 5000); 
+      handleNext();
+    }, 5000);
 
     return () => {
-      clearInterval(intervalId); 
-    };// eslint-disable-next-line
-  }, [currentIndex]); 
+      clearInterval(intervalId);
+    };
+  }, [handleNext]);
 
   return (
     <div className="home-container">
