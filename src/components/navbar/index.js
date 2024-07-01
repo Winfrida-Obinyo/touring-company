@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import './style.css'; 
-import { FaFacebook, FaTwitter, FaLinkedin, FaWhatsapp, FaInstagram, FaBars } from 'react-icons/fa';
+import { FaFacebook, FaWhatsapp, FaInstagram, FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
   const [showImagineMenu, setShowImagineMenu] = useState(false);
   const [showDestinationMenu, setShowDestinationMenu] = useState(false);
   const [showExploreMenu, setShowExploreMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true);
@@ -19,26 +24,32 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  const handleImagineMenuToggle = () => {
-    setShowImagineMenu(!showImagineMenu);
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleDestinationMenuToggle = () => {
-    setShowDestinationMenu(!showDestinationMenu);
+  const handleDropdownToggle = (setShowMenu) => {
+    setShowMenu((prevState) => !prevState);
   };
 
-  const handleExploreMenuToggle = () => {
-    setShowExploreMenu(!showExploreMenu);
+  const handleMouseEnter = (setShowMenu) => {
+    if (!isMobile) {
+      setShowMenu(true);
+    }
   };
 
-  const handleHamburgerMenuToggle = () => {
-    setShowHamburgerMenu(!showHamburgerMenu);
+  const handleMouseLeave = (setShowMenu) => {
+    if (!isMobile) {
+      setShowMenu(false);
+    }
   };
 
   return (
@@ -49,11 +60,9 @@ const Navbar = () => {
           <span>Get in touch: +1 123 456 7890</span>
         </div>
         <div className="social-links">
-          <a href="#"><FaFacebook /></a>
-          <a href="#"><FaTwitter /></a>
-          <a href="#"><FaLinkedin /></a>
-          <a href="#"><FaWhatsapp /></a>
-          <a href="#"><FaInstagram /></a>
+          <a href="facebook"><FaFacebook /></a>
+          <a href="whatsapp"><FaWhatsapp /></a>
+          <a href="instagram"><FaInstagram /></a>
         </div>
       </div>
 
@@ -61,92 +70,130 @@ const Navbar = () => {
       <div className="lower">
         <div className="logos">
           <div className="left-image">
-            <img src="/images/jewelaremoved bg words_prev_ui.png" alt="Left Image" />
+            <img src="/images/jewelaremoved bg words_prev_ui.png" alt="Logo" />
           </div>
           <div className="right-image">
             <img src="/images/jewelaremoved bg newafrica img-Photoroom.png" alt="Logo" />
           </div>
         </div>
-        <div className="navigation-links">
-          <a href="#">HOME</a>
-          <div className={`dropdown ${showImagineMenu ? 'active' : ''}`} onMouseEnter={handleImagineMenuToggle} onMouseLeave={handleImagineMenuToggle}>
-            <a href="#">IMAGINE-EXPERIENCE</a>
-            <div className="dropdown-content">
-              <a href="#">GAME DRIVES</a>
-              <a href="#">AIR SAFARIS</a>
-              <a href="#">BALLOON TOURS</a>
-              <a href="#">BEACH HOLIDAYS</a>
-              <a href="#">SIGHTSEEING</a>
-              <a href="#">CULTURAL VISITS</a>
-              <a href="#">HISTORICAL VISITS</a>
-              <a href="#">HONEYMOONERS</a>
-              <a href="#">GORILLA TRACKING</a>
-              <a href="#">MOUNTAIN CLIMBING</a>
-              <a href="#">HORSE RIDING</a>
-              <a href="#">FAMILY GATEWAYS</a>
-            </div>
+        <div className={`navigation-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          <a href="home">HOME</a>
+          <div 
+            className="dropdown" 
+            onMouseEnter={() => handleMouseEnter(setShowImagineMenu)} 
+            onMouseLeave={() => handleMouseLeave(setShowImagineMenu)} 
+            onClick={(e) => {
+              e.preventDefault();
+              handleDropdownToggle(setShowImagineMenu);
+            }}
+          >
+            <button className="dropdown-toggle">IMAGINE-EXPERIENCE</button>
+            {showImagineMenu && (
+              <div className="dropdown-content">
+                <a href="game-drives">GAME DRIVES</a>
+                <a href="air-safaris">AIR SAFARIS</a>
+                <a href="balloon-tours">BALLOON TOURS</a>
+                <a href="beach-holidays">BEACH HOLIDAYS</a>
+                <a href="sightseeing">SIGHTSEEING</a>
+                <a href="cultural-visits">CULTURAL VISITS</a>
+                <a href="historical-visits">HISTORICAL VISITS</a>
+                <a href="honeymooners">HONEYMOONERS</a>
+                <a href="gorilla-tracking">GORILLA TRACKING</a>
+                <a href="mountain-climbing">MOUNTAIN CLIMBING</a>
+                <a href="horse-riding">HORSE RIDING</a>
+                <a href="family-getaways">FAMILY GATEWAYS</a>
+              </div>
+            )}
           </div>
-          <div className={`dropdown ${showDestinationMenu ? 'active' : ''}`} onMouseEnter={handleDestinationMenuToggle} onMouseLeave={handleDestinationMenuToggle}>
-            <a href="#">DESTINATION</a>
-            <div className="dropdown-content">
-              <a href="#">AFRICAN SAFARIS</a>
-              <a href="#">OUTBOUND HOLIDAYS</a>
-            </div>
+          <div 
+            className="dropdown" 
+            onMouseEnter={() => handleMouseEnter(setShowDestinationMenu)} 
+            onMouseLeave={() => handleMouseLeave(setShowDestinationMenu)} 
+            onClick={(e) => {
+              e.preventDefault();
+              handleDropdownToggle(setShowDestinationMenu);
+            }}
+          >
+            <button className="dropdown-toggle">DESTINATION</button>
+            {showDestinationMenu && (
+              <div className="dropdown-content">
+                <a href="african-safaris">AFRICAN SAFARIS</a>
+                <a href="outbound-holidays">OUTBOUND HOLIDAYS</a>
+              </div>
+            )}
           </div>
-          <div className={`dropdown ${showExploreMenu ? 'active' : ''}`} onMouseEnter={handleExploreMenuToggle} onMouseLeave={handleExploreMenuToggle}>
-            <a href="#">EXPLORE</a>
-            <div className="dropdown-content">
-              <a href="#">AIR TRAVEL</a>
-              <a href="#">SPECIAL OFFERS</a>
-              <a href="#">SAMPLE PACKAGES</a>
-              <a href="#">TESTIMONIALS</a>
-              <a href="#">ENQUIRIES</a>
-            </div>
+          <div 
+            className="dropdown" 
+            onMouseEnter={() => handleMouseEnter(setShowExploreMenu)} 
+            onMouseLeave={() => handleMouseLeave(setShowExploreMenu)} 
+            onClick={(e) => {
+              e.preventDefault();
+              handleDropdownToggle(setShowExploreMenu);
+            }}
+          >
+            <button className="dropdown-toggle">EXPLORE</button>
+            {showExploreMenu && (
+              <div className="dropdown-content">
+                <a href="air-travel">AIR TRAVEL</a>
+                <a href="special-offers">SPECIAL OFFERS</a>
+                <a href="sample-packages">SAMPLE PACKAGES</a>
+                <a href="testimonials">TESTIMONIALS</a>
+                <a href="enquiries">ENQUIRIES</a>
+              </div>
+            )}
           </div>
         </div>
-        <div className="hamburger-menu">
-          <FaBars onClick={handleHamburgerMenuToggle} />
-          {showHamburgerMenu && (
-            <div className="hamburger-dropdown">
-              <a href="#">HOME</a>
-              <div className={`dropdown ${showImagineMenu ? 'active' : ''}`}>
-                <a href="#" onClick={handleImagineMenuToggle}>IMAGINE-EXPERIENCE</a>
-                <div className="dropdown-content">
-                  <a href="#">GAME DRIVES</a>
-                  <a href="#">AIR SAFARIS</a>
-                  <a href="#">BALLOON TOURS</a>
-                  <a href="#">BEACH HOLIDAYS</a>
-                  <a href="#">SIGHTSEEING</a>
-                  <a href="#">CULTURAL VISITS</a>
-                  <a href="#">HISTORICAL VISITS</a>
-                  <a href="#">HONEYMOONERS</a>
-                  <a href="#">GORILLA TRACKING</a>
-                  <a href="#">MOUNTAIN CLIMBING</a>
-                  <a href="#">HORSE RIDING</a>
-                  <a href="#">FAMILY GATEWAYS</a>
-                </div>
-              </div>
-              <div className={`dropdown ${showDestinationMenu ? 'active' : ''}`}>
-                <a href="#" onClick={handleDestinationMenuToggle}>DESTINATION</a>
-                <div className="dropdown-content">
-                  <a href="#">AFRICAN SAFARIS</a>
-                  <a href="#">OUTBOUND HOLIDAYS</a>
-                </div>
-              </div>
-              <div className={`dropdown ${showExploreMenu ? 'active' : ''}`}>
-                <a href="#" onClick={handleExploreMenuToggle}>EXPLORE</a>
-                <div className="dropdown-content">
-                  <a href="#">AIR TRAVEL</a>
-                  <a href="#">SPECIAL OFFERS</a>
-                  <a href="#">SAMPLE PACKAGES</a>
-                  <a href="#">TESTIMONIALS</a>
-                  <a href="#">ENQUIRIES</a>
-                </div>
-              </div>
-            </div>
-          )}
+        <div className="hamburger-menu" onClick={handleMobileMenuToggle}>
+          <FaBars />
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu">
+          <a href="home">HOME</a>
+          <div className="dropdown">
+            <button className="dropdown-toggle" onClick={() => handleDropdownToggle(setShowImagineMenu)}>IMAGINE-EXPERIENCE</button>
+            {showImagineMenu && (
+              <div className="dropdown-content">
+                <a href="game-drives">GAME DRIVES</a>
+                <a href="air-safaris">AIR SAFARIS</a>
+                <a href="balloon-tours">BALLOON TOURS</a>
+                <a href="beach-holidays">BEACH HOLIDAYS</a>
+                <a href="sightseeing">SIGHTSEEING</a>
+                <a href="cultural-visits">CULTURAL VISITS</a>
+                <a href="historical-visits">HISTORICAL VISITS</a>
+                <a href="honeymooners">HONEYMOONERS</a>
+                <a href="gorilla-tracking">GORILLA TRACKING</a>
+                <a href="mountain-climbing">MOUNTAIN CLIMBING</a>
+                <a href="horse-riding">HORSE RIDING</a>
+                <a href="family-getaways">FAMILY GATEWAYS</a>
+              </div>
+            )}
+          </div>
+          <div className="dropdown">
+            <button className="dropdown-toggle" onClick={() => handleDropdownToggle(setShowDestinationMenu)}>DESTINATION</button>
+            {showDestinationMenu && (
+              <div className="dropdown-content">
+                <a href="african-safaris">AFRICAN SAFARIS</a>
+                <a href="outbound-holidays">OUTBOUND HOLIDAYS</a>
+              </div>
+            )}
+          </div>
+          <div className="dropdown">
+            <button className="dropdown-toggle" onClick={() => handleDropdownToggle(setShowExploreMenu)}>EXPLORE</button>
+            {showExploreMenu && (
+              <div className="dropdown-content">
+                <a href="air-travel">AIR TRAVEL</a>
+                <a href="special-offers">SPECIAL OFFERS</a>
+                <a href="sample-packages">SAMPLE PACKAGES</a>
+                <a href="testimonials">TESTIMONIALS</a>
+                <a href="enquiries">ENQUIRIES</a>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

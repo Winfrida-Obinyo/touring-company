@@ -53,7 +53,6 @@
 
 .right-image img {
   width: 6vw; 
-  /* height: auto; */
   max-height: 6vw;
   margin-right: 10px;
 }
@@ -101,43 +100,63 @@
 }
 
 .hamburger-menu {
-  display: none; /* Hide by default */
-  position: relative;
+  display: none;
   cursor: pointer;
+  font-size: 24px;
 }
 
-.hamburger-menu .hamburger-dropdown {
-  display: none; /* Hide by default */
-  position: absolute;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+.mobile-menu {
+  display: none;
   flex-direction: column;
+  background-color: #f19007;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1001;
 }
 
-.hamburger-menu .hamburger-dropdown a {
+.mobile-menu a {
+  padding: 10px 20px;
   color: #536535;
-  padding: 8px 12px;
   text-decoration: none;
   display: block;
 }
 
-.hamburger-menu .hamburger-dropdown a:hover {
-  background-color: #f1f1f1;
+.mobile-menu .dropdown-content {
+  position: static;
+  box-shadow: none;
+  background-color: #f19007;
 }
 
-/* Responsive Styles */
+/* Update the style for dropdown-toggle buttons to resemble links */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: #536535;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+/* Style for dropdown-toggle buttons on hover */
+.dropdown-toggle:hover {
+  text-decoration: underline;
+}
+
+
 @media (max-width: 768px) {
   .navigation-links {
-    display: none; /* Hide navigation links on smaller screens */
+    display: none;
   }
 
   .hamburger-menu {
-    display: block; /* Show hamburger menu on smaller screens */
+    display: block;
   }
 
-  .hamburger-menu .hamburger-dropdown {
-    display: flex; /* Show dropdown content when toggled */
+  .mobile-menu {
+    display: flex;
   }
 }
