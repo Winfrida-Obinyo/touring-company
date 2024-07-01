@@ -82,12 +82,16 @@ const Navbar = () => {
             className="dropdown" 
             onMouseEnter={() => handleMouseEnter(setShowImagineMenu)} 
             onMouseLeave={() => handleMouseLeave(setShowImagineMenu)} 
-            onClick={(e) => {
-              e.preventDefault();
-              handleDropdownToggle(setShowImagineMenu);
-            }}
           >
-            <button className="dropdown-toggle">IMAGINE-EXPERIENCE</button>
+            <button 
+              className="dropdown-toggle"
+              onClick={(e) => {
+                e.preventDefault();
+                handleDropdownToggle(setShowImagineMenu);
+              }}
+            >
+              IMAGINE-EXPERIENCE
+            </button>
             {showImagineMenu && (
               <div className="dropdown-content">
                 <a href="game-drives">GAME DRIVES</a>
@@ -109,12 +113,16 @@ const Navbar = () => {
             className="dropdown" 
             onMouseEnter={() => handleMouseEnter(setShowDestinationMenu)} 
             onMouseLeave={() => handleMouseLeave(setShowDestinationMenu)} 
-            onClick={(e) => {
-              e.preventDefault();
-              handleDropdownToggle(setShowDestinationMenu);
-            }}
           >
-            <button className="dropdown-toggle">DESTINATION</button>
+            <button 
+              className="dropdown-toggle"
+              onClick={(e) => {
+                e.preventDefault();
+                handleDropdownToggle(setShowDestinationMenu);
+              }}
+            >
+              DESTINATION
+            </button>
             {showDestinationMenu && (
               <div className="dropdown-content">
                 <a href="african-safaris">AFRICAN SAFARIS</a>
@@ -126,12 +134,16 @@ const Navbar = () => {
             className="dropdown" 
             onMouseEnter={() => handleMouseEnter(setShowExploreMenu)} 
             onMouseLeave={() => handleMouseLeave(setShowExploreMenu)} 
-            onClick={(e) => {
-              e.preventDefault();
-              handleDropdownToggle(setShowExploreMenu);
-            }}
           >
-            <button className="dropdown-toggle">EXPLORE</button>
+            <button 
+              className="dropdown-toggle"
+              onClick={(e) => {
+                e.preventDefault();
+                handleDropdownToggle(setShowExploreMenu);
+              }}
+            >
+              EXPLORE
+            </button>
             {showExploreMenu && (
               <div className="dropdown-content">
                 <a href="air-travel">AIR TRAVEL</a>
@@ -153,7 +165,12 @@ const Navbar = () => {
         <div className="mobile-menu">
           <a href="home">HOME</a>
           <div className="dropdown">
-            <button className="dropdown-toggle" onClick={() => handleDropdownToggle(setShowImagineMenu)}>IMAGINE-EXPERIENCE</button>
+            <button 
+              className="dropdown-toggle" 
+              onClick={() => handleDropdownToggle(setShowImagineMenu)}
+            >
+              IMAGINE-EXPERIENCE
+            </button>
             {showImagineMenu && (
               <div className="dropdown-content">
                 <a href="game-drives">GAME DRIVES</a>
@@ -172,7 +189,12 @@ const Navbar = () => {
             )}
           </div>
           <div className="dropdown">
-            <button className="dropdown-toggle" onClick={() => handleDropdownToggle(setShowDestinationMenu)}>DESTINATION</button>
+            <button 
+              className="dropdown-toggle" 
+              onClick={() => handleDropdownToggle(setShowDestinationMenu)}
+            >
+              DESTINATION
+            </button>
             {showDestinationMenu && (
               <div className="dropdown-content">
                 <a href="african-safaris">AFRICAN SAFARIS</a>
@@ -181,7 +203,12 @@ const Navbar = () => {
             )}
           </div>
           <div className="dropdown">
-            <button className="dropdown-toggle" onClick={() => handleDropdownToggle(setShowExploreMenu)}>EXPLORE</button>
+            <button 
+              className="dropdown-toggle" 
+              onClick={() => handleDropdownToggle(setShowExploreMenu)}
+            >
+              EXPLORE
+            </button>
             {showExploreMenu && (
               <div className="dropdown-content">
                 <a href="air-travel">AIR TRAVEL</a>
