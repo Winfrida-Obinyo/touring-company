@@ -40,7 +40,7 @@ const Home = () => {
 
     return () => {
       clearInterval(intervalId); 
-    };
+    };// eslint-disable-next-line
   }, [currentIndex]); 
 
   return (
