@@ -30,12 +30,11 @@
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text visibility */
   color: rgba(255, 255, 255, 0.8); /* Lighter text color */
   font-size: 24px;
-  font-weight:300;
+  font-weight: 300;
   z-index: 1000;
   text-align: center; /* Center text */
   width: 80%; /* Adjust width as needed */
 }
-
 
 .navigation {
   position: absolute;
@@ -73,7 +72,22 @@
   background: rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width: 414px) {
+/* Media queries for specified screen widths */
+@media 
+       (max-width: 912px),
+       (max-width: 820px),
+       (max-width: 853px),
+       (max-width: 758px),
+       (max-width: 540px),
+       (max-width: 430px) {
+  .home-container {
+    height: 60vh; /* Reduce height of container for specified screens */
+  }
+
+  .slide {
+    height: 60vh; /* Reduce height of slides for specified screens */
+  }
+
   .slide-text {
     font-size: 18px;  /* Adjust font size for better readability */
     padding: 15px;  /* Reduce padding for smaller viewports */

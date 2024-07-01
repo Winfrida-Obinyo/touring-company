@@ -101,10 +101,8 @@ const Navbar = () => {
                 <a href="sightseeing">SIGHTSEEING</a>
                 <a href="cultural-visits">CULTURAL VISITS</a>
                 <a href="historical-visits">HISTORICAL VISITS</a>
-                <a href="honeymooners">HONEYMOONERS</a>
                 <a href="gorilla-tracking">GORILLA TRACKING</a>
                 <a href="mountain-climbing">MOUNTAIN CLIMBING</a>
-                <a href="horse-riding">HORSE RIDING</a>
                 <a href="family-getaways">FAMILY GATEWAYS</a>
               </div>
             )}
@@ -180,10 +178,8 @@ const Navbar = () => {
                 <a href="sightseeing">SIGHTSEEING</a>
                 <a href="cultural-visits">CULTURAL VISITS</a>
                 <a href="historical-visits">HISTORICAL VISITS</a>
-                <a href="honeymooners">HONEYMOONERS</a>
                 <a href="gorilla-tracking">GORILLA TRACKING</a>
                 <a href="mountain-climbing">MOUNTAIN CLIMBING</a>
-                <a href="horse-riding">HORSE RIDING</a>
                 <a href="family-getaways">FAMILY GATEWAYS</a>
               </div>
             )}
