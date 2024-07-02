@@ -10,22 +10,28 @@
 }
 
 .left-section {
-  width: 40%; 
+  width: 40%;
 }
 
 .right-section {
-  width: 55%; 
+  width: 55%;
   padding-left: 20px;
-  
+  justify-content: center;
 }
-.price{
-  margin-left: 80px;
+
+.price {
+  margin-left: 0;
+  margin-top: 10px;
 }
-.through{
-  margin-left: 35px;
+
+.through {
+  margin-left: 0;
+  margin-top: 10px;
 }
-.journey{
-  margin-left: 80px;
+
+.journey {
+  margin-left: 0;
+  margin-top: 10px;
 }
 
 .separator {
@@ -81,10 +87,18 @@ p {
   .left-section,
   .right-section {
     width: 100%; 
+    padding-left: 0;
   }
   
   .separator {
     display: none; 
+  }
+  
+  .price,
+  .through,
+  .journey {
+    margin-left: 0;
+    margin-top: 20px;
   }
   
   .client-say-button {
@@ -101,4 +115,9 @@ p {
   p {
     font-size: 16px; 
   }
+  
+  .right-section {
+    padding-left: 0; /* Remove padding-left for small screens to ensure content is justified */
+  }
 }
+
