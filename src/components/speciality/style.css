@@ -1,5 +1,5 @@
 .specialty-container {
-    background-color: #f19007;
+    background-color: #FFFB73;
     text-align: center;
     padding: 20px;
 }
@@ -7,12 +7,12 @@
 .section-header {
     font-size: 24px;
     font-weight: bold;
-    color: white;
+    color: #536535;
 }
 
 .section-subheader {
     font-size: 20px;
-    color: white;
+    color: #536535;
     margin-bottom: 20px;
 }
 
@@ -32,7 +32,7 @@
 
 .subtopic h3 {
     font-size: 16px;
-    color: white;
+    color: #536535;
     margin-bottom: 10px;
     margin-left: 70px;
 }
@@ -47,11 +47,11 @@
 
 .subtopic-description {
     font-size: 14px;
-    color: white;
+    color: #536535;
 }
 .subtopic-button {
     background-color: rgba(0, 123, 255, 0); 
-    color: white;
+    color: #536535;
     border: 1px solid white; 
     padding: 12px 40px;
     border-radius: 5px;
