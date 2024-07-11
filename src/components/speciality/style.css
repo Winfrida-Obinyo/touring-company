@@ -61,7 +61,7 @@
     margin-left: 70px;
 }
 .subtopic-button:hover {
-    background-color: #536535;
+    background-color: white;
 }
 @media (max-width: 768px) {
     .subtopic {
