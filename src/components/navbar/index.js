@@ -111,7 +111,7 @@ const Navbar = () => {
                 handleDropdownToggle(setShowImagineMenu, showImagineMenu);
               }}
             >
-              IMAGINE-EXPERIENCE
+              JEWELA-EXPERIENCE
             </button>
             {showImagineMenu && (
               <div className="dropdown-content">
@@ -188,7 +188,7 @@ const Navbar = () => {
               className={`dropdown-toggle button-link ${showImagineMenu ? 'open' : ''}`} 
               onClick={() => handleDropdownToggle(setShowImagineMenu, showImagineMenu)}
             >
-              IMAGINE-EXPERIENCE
+              JEWELA-EXPERIENCE
             </button>
             {showImagineMenu && (
               <div className="dropdown-content">

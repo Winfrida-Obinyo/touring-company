@@ -4,21 +4,21 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const Home = () => {
   const images = [
-    '/images/image11.jpg',
-    '/images/image3.jpg',
-    '/images/image8.jpg',
+    '/images/beach_front_hotel2.jpg',
+    '/images/lions_drinking_water.jpeg',
+    '/images/elephants.jpg',
     '/images/image5.jpg',
-    '/images/image6.jpg',
-    '/images/image7.jpg',
+    '/images/fort_jesus.jpg',
+    '/images/beach_sunste.jpg',
     '/images/image17.jpg'
   ];
 
   const textContent = [
     "Tropical beach with sunbeds under swaying palm trees", // image11.jpg
-    "Lions intrigued by their reflection in a roadside puddle", // image3.jpg
+    "Lions intrigued by their reflection in a puddle", // image3.jpg
     "Majestic elephants roaming the African savanna", // image8.jpg
     "Beachside romance with two cozy chairs under twinkling city lights", // image5.jpg
-    "Awaiting adventure: Grand architecture bathed in warm light", // image6.jpg
+    "Awaiting adventure! Grand architecture bathed in warm light", // image6.jpg
     "Golden hour sunset painting the beach in a magical glow", // image7.jpg
     "Road trip adventure: Car cruising along a scenic highway", // image17.jpg
   ];

@@ -6,6 +6,7 @@ import Specialty from "./components/speciality";
 import Clients from "./components/clients";
 import Subscribers from "./components/subscribers";
 import Footer from "./components/footer";
+import Destinations from "./components/destinations";
 
 
 function App(){
@@ -18,6 +19,7 @@ function App(){
      <Clients/>
      <Subscribers/>
      <Footer/>
+     <Destinations/>
     
 
     

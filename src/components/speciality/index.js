@@ -10,7 +10,7 @@ const Specialty = () => {
             <div className="subtopics">
                 <Subtopic
                     title="AFRICAN SAFARIS"
-                    imagePath="/images/image13.jpg"
+                    imagePath="/images/Jewela_lions.jpeg"
                     description="Explore the wilderness of Africa on our thrilling safaris. Discover diverse wildlife and breathtaking landscapes. Join our expert guides for an unforgettable adventure."
                     buttonText="African Safaris"
                 />
@@ -22,7 +22,7 @@ const Specialty = () => {
                 />
                 <Subtopic
                     title="AIR TRAVELS"
-                    imagePath="/images/plane1.jpg"
+                    imagePath="/images/hot_air_baloon.jpg"
                     description="Fly with us to your dream destinations across the globe. Experience comfort and convenience with our top-notch airline services. Your journey begins with us."
                     buttonText="Air Travels"
                 />
