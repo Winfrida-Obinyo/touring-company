@@ -1,0 +1,43 @@
+.lets-help-section {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 50px;
+  }
+  
+  .content-container {
+    background: rgba(0, 0, 0, 0.5); /* Optional: adds a slight dark overlay to improve text readability */
+    padding: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    display: flex;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 15px 25px;
+    font-size: 1em;
+    color: white;
+    background-color: #536535;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px;
+    margin: 0; /* Center the button */
+  }

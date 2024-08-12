@@ -6,7 +6,12 @@ import Specialty from "./components/speciality";
 import Clients from "./components/clients";
 import Subscribers from "./components/subscribers";
 import Footer from "./components/footer";
+import Accommodation from "./components/accommodation";
 import Destinations from "./components/destinations";
+// import LetsHelp from "./components/letshelp";
+// import WhyChooseUs from "./components/whychooseus";
+
+
 
 
 function App(){
@@ -17,17 +22,13 @@ function App(){
      <GreenAdd/>
      <Specialty/>
      <Clients/>
+     <Destinations/>
+     {/* <WhyChooseUs/> 
+     <LetsHelp/>  */}
+
      <Subscribers/>
      <Footer/>
-     <Destinations/>
-    
-
-    
-
-     
-
-     
-     
+     <Accommodation/>     
 
     </div>
   );

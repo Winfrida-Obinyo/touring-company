@@ -1,0 +1,110 @@
+.accommodation-wrapper {
+  font-family: Arial, sans-serif;
+}
+
+.accommodation-background {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.accommodation-breadcrumb {
+  font-size: 14px;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.accommodation-title {
+  font-size: 36px;
+  margin: 0;
+}
+
+.accommodation-content {
+  display: flex;
+  padding: 20px;
+  position: relative; /* Ensure relative positioning for fixed elements */
+}
+
+.accommodation-left-section {
+  width: 30%;
+  padding-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow box */
+  background-color: #fff; /* Ensure background is white for better contrast */
+  padding: 20px; /* Optional padding inside the shadow box */
+  border-radius: 8px; /* Optional rounded corners for the shadow box */
+}
+
+.accommodation-header {
+  font-size: 24px;
+}
+
+.accommodation-country-section h3 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.accommodation-country-list {
+  list-style: none;
+  padding: 0;
+}
+
+.accommodation-country-list li {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.accommodation-country-list input[type="checkbox"] {
+  margin-right: 8px; /* Space between checkbox and label */
+}
+
+.accommodation-right-section {
+  width: 70%; /* Adjust to fit three images in a row */
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Stay fixed at the top */
+  height: calc(200vh - 40px); /* Match height of the left section, considering padding */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow box */
+  background-color: #fff; /* Ensure background is white for better contrast */
+  border-radius: 8px; /* Optional rounded corners for the shadow box */
+  padding: 20px; /* Padding inside the shadow box */
+}
+
+.accommodation-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensure three images per row */
+  gap: 10px;
+}
+
+.accommodation-image-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 350px; /* Set the height for the images */
+  width: 100%; /* Full width of the grid cell */
+}
+
+.accommodation-image-item img {
+  width: 100%;
+  height: 100%; /* Ensure the image fills the container */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  display: block;
+}
+
+.accommodation-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #00000080; /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.accommodation-image-item:hover .accommodation-overlay {
+  opacity: 1;
+}
