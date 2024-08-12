@@ -11,7 +11,7 @@ const Destinations = () => {
         backgroundRepeat: 'no-repeat',
         opacity: 1,
         width: '100%',
-        height: '70vh', // Ensuring the background covers the viewport height
+        height: '66.6vh', // Ensuring the background covers the viewport height
     };
 
     return (

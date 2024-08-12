@@ -6,10 +6,10 @@ import Specialty from "./components/speciality";
 import Clients from "./components/clients";
 import Subscribers from "./components/subscribers";
 import Footer from "./components/footer";
-import Accommodation from "./components/accommodation";
+import Accommodation from "./components/accomodation";
 import Destinations from "./components/destinations";
-// import LetsHelp from "./components/letshelp";
-// import WhyChooseUs from "./components/whychooseus";
+import LetsHelp from "./components/letshelp";
+import WhyChooseUs from "./components/whychooseus";
 
 
 
@@ -23,12 +23,25 @@ function App(){
      <Specialty/>
      <Clients/>
      <Destinations/>
-     {/* <WhyChooseUs/> 
-     <LetsHelp/>  */}
+     <WhyChooseUs/> 
+     <LetsHelp/> 
+    
 
      <Subscribers/>
      <Footer/>
-     <Accommodation/>     
+     <Accommodation/>
+     
+     
+     
+    
+    
+
+    
+
+     
+
+     
+     
 
     </div>
   );

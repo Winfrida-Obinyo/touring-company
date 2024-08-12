@@ -30,7 +30,7 @@
     margin-bottom: 20px;
   }
   
-  button {
+  button2 {
     padding: 15px 25px;
     font-size: 1em;
     color: white;
@@ -39,5 +39,66 @@
     border-radius: 5px;
     cursor: pointer;
     width: 300px;
-    margin: 0; /* Center the button */
+    margin-left: 400px;
   }
+  @media (max-width: 1024px) {
+    .lets-help-section {
+      padding: 40px;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    p {
+      font-size: 1.1em;
+    }
+  
+    button2 {
+      width: 250px;
+      margin-left: 0; /* Center the button */
+    }
+  }
+  
+  /* Small screens (mobile phones) */
+  @media (max-width: 768px) {
+    .lets-help-section {
+      padding: 30px;
+      background-attachment: scroll; /* Background attachment is scrollable on mobile */
+    }
+  
+    h1 {
+      font-size: 1.8em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    button2 {
+      width: 200px;
+      padding: 10px 20px;
+      margin-left: 0; /* Center the button */
+    }
+  }
+  
+  /* Extra small screens (very small mobile phones) */
+  @media (max-width: 480px) {
+    .lets-help-section {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 1.5em;
+    }
+  
+    p {
+      font-size: 0.9em;
+    }
+  
+    button2 {
+      width: 180px;
+      padding: 8px 16px;
+    }
+  }
+  

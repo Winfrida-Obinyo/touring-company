@@ -7,8 +7,7 @@
 
 .destinations-left {
     width: 30%; /* Reduced width for left and right sections */
-    /* margin: 10px; */
-    left: 0;
+    left: 50;
     position: relative;
     display: flex; /* Use Flexbox to fill height */
     flex-direction: column; /* Stack children vertically */
@@ -17,8 +16,8 @@
 }
 
 .destinations-left img {
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 102.1%;
     object-fit: cover; /* Ensure the image covers the entire area */
     position: absolute;
     top: 0;
@@ -118,13 +117,14 @@
     text-align: center;
     position: absolute;
     top: 0;
-    left: -12px;
+    left: -26px;
     right: 20px;
     bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 407px;
 }
 
 .destinations-bordered-content img {
@@ -169,4 +169,132 @@
     bottom: 10%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
     font-weight: 300; /* Lighter font weight for hover state */
+}
+/* Default styles (no changes) */
+
+/* Media Queries */
+
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+    .destinations-left {
+        width: 40%; /* Adjust width for medium screens */
+    }
+
+    .destinations-right {
+        width: 30%;
+    }
+
+    .destinations-center {
+        width: 50%; 
+    }
+
+    .destinations-content {
+        width: 50%; /* Adjust content width */
+    }
+
+    .destinations-countdown {
+        grid-template-columns: repeat(2, 1fr); /* Stack countdown boxes vertically */
+        grid-template-rows: repeat(2, 1fr); /* Two rows of one column each */
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+    .destinations-container {
+        flex-direction: column;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .destinations-left, .destinations-right, .destinations-center {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .destinations-content {
+        width: 100%;
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    .destinations-left img {
+        height: auto; /* Let image height adjust naturally */
+    }
+
+    .destinations-countdown {
+        grid-template-columns:repeat(2, 1fr); /* Single column for small screens */
+        grid-template-rows: repeat(2, 1fr); /* Stack all four boxes vertically */
+    }
+
+    .destinations-countdown-box {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra small screens (very small mobile phones) */
+@media (max-width: 480px) {
+    .destinations-content {
+        font-size: 0.875rem; /* Reduce font size for extra small screens */
+    }
+
+    .destinations-countdown-number {
+        font-size: 1rem; 
+    }
+
+    .destinations-countdown-label {
+        font-size: 0.75rem; 
+    }
+    @media (max-width: 768px) {
+        .destinations-container {
+            flex-direction: column;
+            height: auto; /* Allow height to adjust based on content */
+        }
+    
+        .destinations-left, .destinations-right, .destinations-center {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .destinations-content {
+            width: 100%;
+            padding: 5px; /* Adjust padding for smaller screens */
+        }
+    
+        .destinations-left img {
+            height: auto; /* Let image height adjust naturally */
+        }
+    
+        .destinations-countdown {
+            grid-template-columns: 2fr 1fr; /* Two columns */
+            grid-template-rows: repeat(2, 1fr); /* Two rows */
+        }
+    
+        .destinations-countdown-box {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    }
+    
+    /* Extra small screens (very small mobile phones) */
+    @media (max-width: 480px) {
+        .destinations-content {
+            font-size: 0.875rem; /* Reduce font size for extra small screens */
+        }
+    
+        .destinations-countdown-number {
+            font-size: 1rem; 
+        }
+    
+        .destinations-countdown-label {
+            font-size: 0.75rem; 
+        }
+    
+        .destinations-countdown {
+            grid-template-columns: repeat(2,1fr); /* Single column for extra small screens */
+            grid-template-rows: repeat(4, 1fr); /* Stack all four boxes vertically */
+        }
+    }
 }
