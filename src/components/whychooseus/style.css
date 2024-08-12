@@ -1,0 +1,225 @@
+.why-choose-us {
+    background-color: #536535;
+    padding: 2rem;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.reasons {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.reason {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 1rem; /* Add margin for small screens */
+}
+
+.reason-image {
+    width: 100%; /* Ensure images fill the container width */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crop the images to fit the dimensions */
+}
+
+.ratings {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-around; /* Space out the items evenly */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.rating-item {
+    text-align: center;
+    flex: 1; /* Allow items to grow equally */
+    margin: 0 1rem; /* Add horizontal spacing between items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for animations */
+}
+
+.rating-item:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhance the shadow on hover */
+}
+
+.rating-item h3 {
+    color: #536535; /* Set the header color for rating items */
+}
+
+.star-rating {
+    font-size: 1.5rem; /* Adjust star size */
+    color: #536535; /* Default star color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.star-rating:hover,
+.star-rating:hover ~ .star-rating {
+    color: #f39c12; /* Change star color on hover */
+}
+
+.star-rating.full {
+    color: #f39c12; /* Full star color */
+}
+
+.star-rating.pulse {
+    animation: pulse 1s infinite; /* Pulsing animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.call-to-action h2 {
+    font-size: 2rem;
+    color: #536535;
+}
+
+.call-to-action p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #536535;
+}
+
+.call-to-action button {
+    background-color: #536535;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for button color */
+}
+
+.call-to-action button:hover {
+    background-color: #3e4a27; /* Darken button color on hover */
+}
+
+/* Media Queries */
+
+/* Small screens (max-width: 600px) */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .reason {
+        width: 100%; /* Stack reasons vertically */
+    }
+
+    .ratings {
+        flex-direction: column; /* Stack rating items vertically */
+        padding: 1rem;
+    }
+
+    .rating-item {
+        margin-bottom: 1rem; /* Space between items */
+    }
+
+    .call-to-action h2 {
+        font-size: 1.5rem;
+    }
+
+    .call-to-action p {
+        font-size: 1rem;
+    }
+
+    .call-to-action button {
+        width: 100%; /* Full width button */
+        padding: 1rem;
+    }
+}
+
+/* Medium screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header h1 {
+        font-size: 2.25rem;
+    }
+
+    .header p {
+        font-size: 1.15rem;
+    }
+
+    .reason {
+        width: 45%; /* Adjust width for medium screens */
+    }
+
+    .ratings {
+        padding: 1.5rem;
+    }
+
+    .call-to-action h2 {
+        font-size: 1.75rem;
+    }
+
+    .call-to-action p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large screens (1025px and up) */
+@media (min-width: 1025px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.25rem;
+    }
+
+    .reason {
+        width: 30%; /* Original width */
+    }
+
+    .ratings {
+        padding: 2rem;
+    }
+
+    .call-to-action h2 {
+        font-size: 2rem;
+    }
+
+    .call-to-action p {
+        font-size: 1.25rem;
+    }
+}
