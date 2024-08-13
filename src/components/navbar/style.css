@@ -144,7 +144,7 @@
 
 .button-link:hover,
 .button-link:focus {
-  text-decoration: underline;
+  text-decoration: #FFFB73;
 }
 
 .button-link::after {

@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css'; 
 import { FaFacebook, FaWhatsapp, FaInstagram, FaBars } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+
+
 
 const Navbar = () => {
   const [showImagineMenu, setShowImagineMenu] = useState(false);
@@ -10,7 +12,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
+  
   const mobileMenuRef = useRef(null);
 
   useEffect(() => {
@@ -99,7 +101,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className={`navigation-links ${isMobileMenuOpen ? 'active' : ''}`}>
-          <a href="home">HOME</a>
+          <a href="/">HOME</a>
           <div 
             className="dropdown" 
             onMouseEnter={() => handleMouseEnter(setShowImagineMenu)} 
@@ -175,12 +177,7 @@ const Navbar = () => {
               </div>
             )}
             </div>
-            <div className='dropdown'>
-              <Link
-                className='button-link' to="/accommodation">
-                Accommodation
-              </Link>
-          </div>
+            <a href='/accommodation'>Accommodation</a>
         </div>
         <div className="hamburger-menu" onClick={handleMobileMenuToggle}>
           <FaBars />
