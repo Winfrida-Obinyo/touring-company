@@ -10,6 +10,8 @@ import Accommodation from "./components/accomodation";
 import Destinations from "./components/destinations";
 import LetsHelp from "./components/letshelp";
 import WhyChooseUs from "./components/whychooseus";
+import Cultural from "./components/cultural";
+import Historical from "./components/historical";
 
 
 
@@ -24,12 +26,13 @@ function App(){
      <Clients/>
      <Destinations/>
      <WhyChooseUs/> 
-     <LetsHelp/> 
-    
+     <LetsHelp/>   
 
      <Subscribers/>
      <Footer/>
      <Accommodation/>
+     <Cultural/>
+     <Historical/>
      
      
      

@@ -15,10 +15,6 @@ const Footer = () => {
                     <li>Zambia</li>
                     <li>Botswana</li>
                     <li>South Africa</li>
-                    <li>Egypt</li>
-                    <li>Morocco</li>
-                    <li>Ethiopia</li>
-                    <li>Mauritius</li>
                     <li>Seychelles</li>
                     <li>Outbound Holidays</li>
                     <li>African Packages</li>
