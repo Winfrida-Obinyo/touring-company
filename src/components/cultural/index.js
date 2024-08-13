@@ -2,10 +2,7 @@ import React from 'react';
 import './style.css';
 
 const Cultural = () => {
-    const images = [
-        '/images/beach_front_hotel2.jpg',
-        // Add paths to more images as needed
-    ];
+
 
     // Background image style
     const backgroundImage = 'images/beach_front_hotel2.jpg';
