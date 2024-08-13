@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css'; 
 import { FaFacebook, FaWhatsapp, FaInstagram, FaBars } from 'react-icons/fa';
-// import { Link } from 'react-router-dom';
-
-
 
 const Navbar = () => {
   const [showImagineMenu, setShowImagineMenu] = useState(false);
@@ -177,7 +174,7 @@ const Navbar = () => {
               </div>
             )}
             </div>
-            <a href='/accommodation'>Accommodation</a>
+            <a href="/accommodation">Accommodation</a>
         </div>
         <div className="hamburger-menu" onClick={handleMobileMenuToggle}>
           <FaBars />

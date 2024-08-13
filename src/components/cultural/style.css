@@ -1,0 +1,348 @@
+/* Cultural.css */
+
+/* General Container */
+.cultural-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+/* Header */
+.cultural-header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* Introduction Section */
+.cultural-intro {
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+    padding: 40px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center align text for a more uniform look */
+}
+
+.cultural-intro h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.cultural-intro p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+    font-family: 'Arial', sans-serif;
+}
+
+.cultural-intro::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #536535;
+    margin: 0 auto 20px auto; /* Center the line above the heading */
+    border-radius: 5px;
+}
+
+/* Cultural Highlights Section */
+.cultural-highlights {
+    padding: 40px 20px;
+}
+
+.cultural-highlights h2 {
+    text-align: center; /* Center align the header */
+    font-size: 2.5em; /* Adjust the font size as needed */
+    color: #333; /* Match the color with other headings */
+    margin-bottom: 20px; /* Add space below the header */
+    font-family: 'Arial', sans-serif; /* Ensure consistent font style */
+}
+
+.highlights-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-card {
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.highlight-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #536535;
+}
+
+.highlight-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-content {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Featured Cultural Sites Section */
+.cultural-sites {
+    padding: 40px 20px;
+    text-align: center; /* Center align the entire section */
+    margin-top: 0; /* Ensure it starts from the top */
+}
+
+.sites-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    justify-content: center; /* Center align carousel items */
+}
+
+.site-item {
+    min-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.site-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.site-info {
+    padding: 20px;
+}
+
+/* Local Experiences Section */
+.local-experiences {
+    padding: 40px 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.map-container {
+    flex: 2;
+    max-width: 100%;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    border: 0;
+}
+
+.experiences-details {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.testimonials-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-item img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial-item p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.testimonial-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* FAQs Section */
+.faqs {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.faqs h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.faq-accordion {
+    border-top: 2px solid #536535
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-title {
+    background-color: #536535;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.faq-title::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    font-size: 1.5em;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+.faq-title.open::after {
+    content: '-';
+}
+
+.faq-content {
+    padding: 15px;
+    background-color: #ffffff;
+    display: none;
+}
+
+.faq-content p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Call to Action Section */
+.cta {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #536535;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.cta-button:hover {
+    background-color: #536535;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .highlight-card {
+        width: calc(50% - 20px);
+    }
+
+    .sites-carousel {
+        flex-direction: column;
+    }
+
+    .site-item {
+        min-width: 100%;
+    }
+
+    .local-experiences {
+        flex-direction: column;
+    }
+
+    .map-container {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-card {
+        width: 100%;
+    }
+
+    .map-container iframe {
+        height: 200px; /* Adjust as needed */
+    }
+}
