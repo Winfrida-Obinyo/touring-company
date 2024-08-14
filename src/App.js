@@ -1,8 +1,6 @@
 import React from "react";
-// import Dhome from "./components/routes/routes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-// import Accomodation from "./components/accommodation";
 import Accommodation from "./components/accommodation";
 import GameDrive from './components/gamedrive';
 import BeachHolidays from './components/beachholidays';
