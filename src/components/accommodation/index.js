@@ -6,7 +6,7 @@ const Accommodation = () => {
   const [selectedPlace, setSelectedPlace] = useState(null);
 
   const backgroundStyle = {
-    backgroundImage: '/images/image14.jpg',
+    backgroundImage: 'images/image14.jpg',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '500px',

@@ -174,7 +174,7 @@ const Navbar = () => {
               </div>
             )}
             </div>
-            <a href="/accommodation">Accommodation</a>
+            <div><a  href="/accommodation">ACCOMMODATION</a></div>
         </div>
         <div className="hamburger-menu" onClick={handleMobileMenuToggle}>
           <FaBars />
