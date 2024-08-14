@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const GreenAdd = () => {
   return (
@@ -25,7 +26,8 @@ const GreenAdd = () => {
         <p>
           Immerse yourself in the vibrant culture and breathtaking landscapes of East Africa. Tukutane kwenye milima mirefu, maji ya bluu ya kung'aa, na miti mikubwa ya mvua. Kila safari yetu inaongozwa na wataalamu wenye uzoefu na upendo kwa mazingira. Unaweza kujifunza mengi kutoka kwa wenyeji na kushiriki katika shughuli za kusisimua.
         </p>
-        <button className="client-say-button">What Our Clients Say</button>
+        <Link to="/clients-say">
+        <button className="client-say-button">What Our Clients Say</button></Link>
       </div>
     </div>
   );
