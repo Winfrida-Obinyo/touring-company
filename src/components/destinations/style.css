@@ -1,4 +1,3 @@
-/* Base styles */
 .destinations-container {
     display: flex;
     justify-content: space-between;
@@ -7,34 +6,34 @@
 }
 
 .destinations-left {
-    width: 30%; /* Reduced width for left and right sections */
+    width: 30%; 
     left: 50;
     position: relative;
-    display: flex; /* Use Flexbox to fill height */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: flex-start; /* Center content vertically */
-    height: 100%; /* Ensure it takes full height of its parent */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    height: 100%; 
 }
 
 .destinations-left img {
     width: 110%;
     height: 102.1%;
-    object-fit: cover; /* Ensure the image covers the entire area */
+    object-fit: cover; 
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 0; /* Ensure the image is behind the text */
+    z-index: 0; 
 }
 
 .destinations-right {
-    width: 20%; /* Reduced width for left and right sections */
+    width: 20%; 
     position: relative;
     height: 70vh;
     left: 0;
 }
 
 .destinations-center {
-    width: 55%; /* Adjust center section width */
+    width: 55%; 
     display: flex;
     flex-direction: column;
     margin-left: 10px;
@@ -49,7 +48,7 @@
 .destinations-image-with-content {
     width: 48%;
     position: relative;
-    overflow: hidden; /* Ensure content stays within bounds */
+    overflow: hidden; 
 }
 
 .destinations-image-with-content img {
@@ -70,41 +69,37 @@
     padding: 10px;
     text-align: center;
     transition: all 0.35s ease-in-out;
-    font-weight: 300; /* Lighter font weight */
+    font-weight: 300;
 }
 
-/* Apply lighter font weight and color to headings in image sections */
 .destinations-image-with-content h2 {
-    font-weight: 300; /* Lighter font weight */
-    color: #f0f0f0; /* Light color for headings */
+    font-weight: 300; 
+    color: #f0f0f0; 
 }
 
-/* Reduce font size for specific location headings */
 .destinations-image-with-content h2 {
-    font-size: 1.2rem; /* Adjust this value as needed */
+    font-size: 1.2rem; 
 }
 
-/* Styling for specific locations */
 .destinations-left .destinations-content h2,
 .destinations-right .destinations-content h2 {
-    font-weight: 300; /* Lighter font weight */
-    color: #f0f0f0; /* Light color for headings */
+    font-weight: 300; 
+    color: #f0f0f0; 
 }
 
 .destinations-left .destinations-content {
     width: 60%;
 }
 
-/* Adjust font size for headings in the bordered content */
 .destinations-bordered-content h2 {
     margin-top: 0;
-    font-weight: 300; /* Lighter font weight */
-    color: #333; /* Adjust text color if needed */
-    font-size: 1.2rem; /* Adjust this value as needed */
+    font-weight: 300; 
+    color: #333; 
+    font-size: 1.2rem; 
 }
 
 .destinations-right img {
-    width: 90%; /* Ensure the image takes full width */
+    width: 90%; 
     height: auto;
     display: block;
     position: relative;
@@ -128,16 +123,15 @@
 }
 
 .destinations-bordered-content img {
-    width: 50px; /* Adjust the logo size as needed */
+    width: 50px;
     margin-bottom: 20px;
 }
 
-/* Countdown Styling */
 .destinations-countdown {
-    display: grid; /* Use grid layout for countdown boxes */
-    grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
-    gap: 10px; /* Space between boxes */
-    margin-top: 20px; /* Add space above countdown */
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    margin-top: 20px; 
 }
 
 .destinations-countdown-box {
@@ -148,34 +142,31 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    width: 80px; /* Adjust width as needed */
-    height: 80px; /* Adjust height as needed */
+    width: 80px; 
+    height: 80px; 
 }
 
 .destinations-countdown-number {
-    font-size: 1.5rem; /* Adjust size as needed */
+    font-size: 1.5rem; 
     font-weight: bold;
-    color: #333; /* Adjust color as needed */
+    color: #333; 
 }
 
 .destinations-countdown-label {
-    font-size: 0.875rem; /* Adjust size as needed */
-    color: #666; /* Adjust color as needed */
+    font-size: 0.875rem; 
+    color: #666; 
 }
 
-/* Hover Effect for Images (Optional) */
 .destinations-image-with-content:hover .destinations-content {
     bottom: 10%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 100%);
-    font-weight: 300; /* Lighter font weight for hover state */
+    font-weight: 300; 
 }
 
-/* Media Queries */
 
-/* Medium screens (tablets, small laptops) */
 @media (max-width: 1024px) {
     .destinations-left {
-        width: 40%; /* Adjust width for medium screens */
+        width: 40%; 
     }
 
     .destinations-right {
@@ -187,20 +178,19 @@
     }
 
     .destinations-content {
-        width: 50%; /* Adjust content width */
+        width: 50%;
     }
 
     .destinations-countdown {
-        grid-template-columns: repeat(2, 1fr); /* Stack countdown boxes vertically */
-        grid-template-rows: repeat(2, 1fr); /* Two rows of one column each */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, 1fr); 
     }
 }
 
-/* Small screens (mobile phones) */
 @media (max-width: 768px) {
     .destinations-container {
         flex-direction: column;
-        height: auto; /* Allow height to adjust based on content */
+        height: auto;
     }
 
     .destinations-left, .destinations-right, .destinations-center {
@@ -211,28 +201,28 @@
 
     .destinations-content {
         width: 100%;
-        padding: 5px; /* Adjust padding for smaller screens */
+        padding: 5px; 
     }
 
     .destinations-left img {
-        height: auto; /* Let image height adjust naturally */
+        height: auto; 
     }
 
     .destinations-right {
-        height: auto; /* Adjust height for content */
-        position: static; /* Remove absolute positioning */
-        margin-bottom: 10px; /* Add space below */
+        height: auto; 
+        position: static;
+        margin-bottom: 10px; 
     }
 
     .destinations-bordered-content {
-        padding: 10px; /* Adjust padding for smaller screens */
-        font-size: 0.875rem; /* Adjust font size for readability */
-        height: auto; /* Adjust height to fit content */
+        padding: 10px; 
+        font-size: 0.875rem; 
+        height: auto; 
     }
 
     .destinations-countdown {
-        grid-template-columns: repeat(2, 1fr); /* Single column for small screens */
-        grid-template-rows: repeat(2, 1fr); /* Stack all four boxes vertically */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: repeat(2, 1fr); 
     }
 
     .destinations-countdown-box {
@@ -242,10 +232,9 @@
     }
 }
 
-/* Extra small screens (very small mobile phones) */
 @media (max-width: 480px) {
     .destinations-content {
-        font-size: 0.875rem; /* Reduce font size for extra small screens */
+        font-size: 0.875rem; 
     }
 
     .destinations-countdown-number {
@@ -257,7 +246,7 @@
     }
 
     .destinations-countdown {
-        grid-template-columns: repeat(2,1fr); /* Single column for extra small screens */
-        grid-template-rows: repeat(4, 1fr); /* Stack all four boxes vertically */
+        grid-template-columns: repeat(2,1fr); 
+        grid-template-rows: repeat(4, 1fr); 
     }
 }

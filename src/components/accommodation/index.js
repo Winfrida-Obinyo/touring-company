@@ -83,7 +83,6 @@ const Accommodation = () => {
         <div className="accommodation-left-section accommodation-shadow-box">
           <h2 className="accommodation-header">Find Your Accommodation</h2>
           
-          {/* Kenya */}
           <div className="accommodation-country-section">
             <h3 className="accommodation-country-title">Kenya</h3>
             <ul className="accommodation-country-list">
@@ -104,7 +103,6 @@ const Accommodation = () => {
             </ul>
           </div>
 
-          {/* Tanzania */}
           <div className="accommodation-country-section">
             <h3 className="accommodation-country-title">Tanzania</h3>
             <ul className="accommodation-country-list">
@@ -117,7 +115,6 @@ const Accommodation = () => {
             </ul>
           </div>
 
-          {/* Uganda */}
           <div className="accommodation-country-section">
             <h3 className="accommodation-country-title">Uganda</h3>
             <ul className="accommodation-country-list">
@@ -129,7 +126,6 @@ const Accommodation = () => {
             </ul>
           </div>
 
-          {/* Rwanda */}
           <div className="accommodation-country-section">
             <h3 className="accommodation-country-title">Rwanda</h3>
             <ul className="accommodation-country-list">

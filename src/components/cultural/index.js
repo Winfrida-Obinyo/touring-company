@@ -4,7 +4,6 @@ import './style.css';
 const Cultural = () => {
 
 
-    // Background image style
     const backgroundImage = 'images/beach_front_hotel2.jpg';
     const backgroundStyle = {
         backgroundImage: `url(${backgroundImage})`,

@@ -52,14 +52,14 @@ const Navbar = () => {
   }, []);
 
   const handleMobileMenuToggle = () => {
-    setIsMobileMenuOpen(prevState => !prevState); // Toggle mobile menu state
+    setIsMobileMenuOpen(prevState => !prevState); 
   };
 
   const handleDropdownToggle = (setShowMenu, currentMenuState) => {
     if (currentMenuState === undefined) {
-      setShowMenu(true); // First click: open the menu
+      setShowMenu(true); 
     } else {
-      setShowMenu(!currentMenuState); // Toggle the menu state
+      setShowMenu(!currentMenuState); 
     }
   };
 

@@ -7,13 +7,13 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    justify-content: center; 
+    align-items: center; 
     padding: 50px;
   }
   
   .content-container {
-    background: rgba(0, 0, 0, 0.5); /* Optional: adds a slight dark overlay to improve text readability */
+    background: rgba(0, 0, 0, 0.5); 
     padding: 20px;
     border-radius: 10px;
     flex-direction: column;
@@ -56,15 +56,14 @@
   
     button2 {
       width: 250px;
-      margin-left: 0; /* Center the button */
+      margin-left: 0; 
     }
   }
   
-  /* Small screens (mobile phones) */
   @media (max-width: 768px) {
     .lets-help-section {
       padding: 30px;
-      background-attachment: scroll; /* Background attachment is scrollable on mobile */
+      background-attachment: scroll; 
     }
   
     h1 {
@@ -78,11 +77,10 @@
     button2 {
       width: 200px;
       padding: 10px 20px;
-      margin-left: 0; /* Center the button */
+      margin-left: 0; 
     }
   }
   
-  /* Extra small screens (very small mobile phones) */
   @media (max-width: 480px) {
     .lets-help-section {
       padding: 20px;

@@ -1,0 +1,291 @@
+/* General styles for the container */
+.hiking-climbing-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Header styles */
+  .header {
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+  }
+  
+  .header-content {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  .header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .header-content p {
+    font-size: 1.5rem;
+  }
+  
+  /* Introduction Section styles */
+  .introduction {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  
+  .introduction img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .intro-text {
+    max-width: 50%;
+  }
+  
+  .intro-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .intro-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Featured Trails and Peaks styles */
+  .featured {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .featured h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .featured-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .featured-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .featured-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover the space */
+  }
+  
+  .featured-item h3 {
+    font-size: 1.5rem;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .featured-item p {
+    font-size: 1rem;
+    margin: 0 10px 10px;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Gear and Preparation styles */
+  .gear-preparation {
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  .gear-preparation h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .gear-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .gear-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .gear-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gear-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Cover the space */
+  }
+  
+  .gear-item h3 {
+    font-size: 1.25rem;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .gear-item p {
+    font-size: 1rem;
+    margin: 0 10px 10px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .preparation-tips {
+    margin-top: 20px;
+  }
+  
+  .preparation-tips h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .preparation-tips p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  /* Preparation Tips styles */
+.preparation-tips {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .preparation-tips h3 {
+    font-size: 1.75rem; /* Slightly larger font size for subheadings */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Darker color for better readability */
+    text-align: center; /* Center-align the heading */
+  }
+  
+  .preparation-tips p {
+    font-size: 1rem;
+    line-height: 1.6; /* Improved line spacing for readability */
+    color: #666; /* Slightly lighter color for body text */
+    text-align: center; /* Center-align the text */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .preparation-tips ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .preparation-tips li {
+    background-color: white;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 15px; 
+    margin-bottom: 10px;
+    text-align: left; 
+  }
+  
+  .preparation-tips li h4 {
+    font-size: 1.25rem; 
+    margin-bottom: 10px; 
+    color: #333; 
+  }
+  
+  .preparation-tips li p {
+    font-size: 1rem;
+    color: #666; 
+    line-height: 1.6; 
+  }
+  
+  
+  .events {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .events h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .events ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .events li {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .events h3 {
+    font-size: 1.5rem;
+  }
+  
+  .events p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .cta {
+    background-color: #ff6347;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer .social-links {
+    margin-top: 10px;
+  }
+  
+  .footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer .social-links a:hover {
+    text-decoration: underline;
+  }
+  
