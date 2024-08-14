@@ -1,0 +1,72 @@
+.coming-soon-container {
+    text-align: center;
+    padding: 130px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  
+  .coming-soon-header {
+    font-size: 3rem;
+    color: #333;
+  }
+  
+  .construction-animation {
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    /* Add your animation styles here */
+  }
+
+  img {
+    z-index: -1;
+    max-height: 15rem;
+    max-width: 25rem;
+  }
+
+  .construction-animation {
+    animation: construction 2s 1;
+  }
+  
+  @keyframes construction {
+    0% {
+      transform: rotate(0deg) translateX(0px);
+    }
+    10% {
+      transform: rotate(-5deg) translateX(-5px);
+    }
+    20% {
+      transform: rotate(5deg) translateX(5px);
+    }
+    30% {
+      transform: rotate(-5deg) translateX(-5px);
+    }
+    40% {
+      transform: rotate(5deg) translateX(5px);
+    }
+    50% {
+      transform: rotate(0deg) translateX(0px);
+    }
+    60% {
+      transform: rotate(-5deg) translateX(-5px);
+    }
+    70% {
+      transform: rotate(5deg) translateX(5px);
+    }
+    80% {
+      transform: rotate(-5deg) translateX(-5px);
+    }
+    90% {
+      transform: rotate(5deg) translateX(5px);
+    }
+    100% {
+      transform: rotate(0deg) translateX(0px);
+    }
+  }
+  
+  
+  .coming-soon-message {
+    color: #666;
+  }
+  

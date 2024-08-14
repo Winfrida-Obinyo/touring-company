@@ -2,6 +2,10 @@
     background-color: #FFFB73;
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section-header {
@@ -16,6 +20,7 @@
     margin-bottom: 20px;
 }
 
+
 .subtopics {
     display: flex;
     justify-content: space-around;
@@ -27,7 +32,7 @@
     width: 30%; 
     margin-bottom: 20px;
     position: relative; 
-    text-align: left; 
+    text-align: center; 
 }
 
 .subtopic h3 {

@@ -45,15 +45,15 @@
 }
 
 .left-image img {
-  width: 10vw; 
-  height: 5vw;
+  width: 12vw; 
+  height: 4vw;
   margin-right: 10px;
   margin-top: 10px;
 }
 
 .right-image img {
-  width: 6vw; 
-  max-height: 6vw;
+  width: 4vw; 
+  height: 5vw;
   margin-right: 10px;
 }
 

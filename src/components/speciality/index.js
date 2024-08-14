@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const Specialty = () => {
     return (
@@ -13,7 +14,8 @@ const Specialty = () => {
                     imagePath="/images/Jewela_lions.jpeg"
                     description="Explore the wilderness of Africa on our thrilling safaris. Discover diverse wildlife and breathtaking landscapes. Join our expert guides for an unforgettable adventure."
                     buttonText="African Safaris"
-                />
+                    redirect="/destinations"
+                    />
                 <Subtopic
                     title="OUTBOUND HOLIDAYS"
                     imagePath="/images/dubai2.jpg"
@@ -31,13 +33,16 @@ const Specialty = () => {
     );
 };
 
-const Subtopic = ({ title, imagePath, description, buttonText }) => {
+const Subtopic = ({ title, imagePath, description, buttonText, redirect }) => {
     return (
         <div className="subtopic">
             <h3>{title}</h3>
             <img src={imagePath} alt={title} className="subtopic-image" />
             <p className="subtopic-description">{description}</p>
-            <button className="subtopic-button">{buttonText}</button>
+            {/* <button className="subtopic-button">{buttonText}</button> */}
+            <Link to={redirect}>
+                <button className="subtopic-button">{buttonText}</button>
+            </Link>
         </div>
     );
 };

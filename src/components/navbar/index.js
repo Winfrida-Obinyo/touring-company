@@ -115,17 +115,17 @@ const Navbar = () => {
             </button>
             {showImagineMenu && (
               <div className="dropdown-content">
-                <a href="game-drives">GAME DRIVES</a>
+                <a href="/game-drives">GAME DRIVES</a>
+                <a href="/beach-holidays">BEACH HOLIDAYS</a>
+                <a href="/cultural-visits">CULTURAL VISITS</a>
+                <a href="/historical-visits">HISTORICAL VISITS</a>
+                <a href="/mountain-climbing">MOUNTAIN CLIMBING</a>
+                <a href="sightseeing">SIGHTSEEING</a>
                 <a href="air-safaris">AIR SAFARIS</a>
                 <a href="balloon-tours">BALLOON TOURS</a>
-                <a href="beach-holidays">BEACH HOLIDAYS</a>
-                <a href="sightseeing">SIGHTSEEING</a>
-                <a href="cultural-visits">CULTURAL VISITS</a>
-                <a href="historical-visits">HISTORICAL VISITS</a>
                 <a href="honeymooners">HONEYMOONERS</a>
                 <a href="gorilla-tracking">GORILLA TRACKING</a>
-                <a href="mountain-climbing">MOUNTAIN CLIMBING</a>
-                <a href="family-getaways">FAMILY GATEWAYS</a>
+                <a href="family-getaways">FAMILY GETAWAY</a>
               </div>
             )}
           </div>

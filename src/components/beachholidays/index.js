@@ -1,6 +1,9 @@
 import React from 'react';
 import './style.css';
-import '@fortawesome/fontawesome-free/css/all.min.css'; 
+// import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVolleyballBall, faSwimmer } from '@fortawesome/free-solid-svg-icons';
+
 
 const backgroundImage = 'images/beach_front_hotel.jpg'; 
 
@@ -98,17 +101,18 @@ const BeachHolidays = () => {
             <p>Ride the waves and experience the thrill of the ocean.</p>
           </div>
           <div className="activity-block">
-            <i className="fas fa-volleyball-ball activity-icon"></i>
+            {/* <FontAwesomeIcon icon={faCanoe} className="fas fa-volleyball-ball activity-icon" /> */}
             <h3>Beach Volleyball</h3>
             <p>Get active with a game of beach volleyball with friends.</p>
           </div>
+
           <div className="activity-block">
-            <i className="fas fa-swimmer activity-icon"></i>
+            <FontAwesomeIcon icon={faSwimmer} className="fas fa-swimmer activity-icon" />
             <h3>Paddle Boarding</h3>
             <p>Glide across the water and enjoy the scenic views.</p>
           </div>
           <div className="activity-block">
-            <i className="fas fa-canoe activity-icon"></i>
+            <FontAwesomeIcon icon={faVolleyballBall} className="fas fa-canoe activity-icon" />
             <h3>Kayaking</h3>
             <p>Explore the coastline and hidden coves by kayak.</p>
           </div>
