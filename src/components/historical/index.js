@@ -3,8 +3,7 @@ import './style.css';
 
 const Historical = () => {
 
-    // Background image style
-    const backgroundImage = '/images/picnic2.jpg'; // Update to your background image
+    const backgroundImage = '/images/picnic2.jpg'; 
     const backgroundStyle = {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',

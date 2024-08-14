@@ -148,11 +148,11 @@
 }
 
 .button-link::after {
-  content: '\2303'; /* Unicode for upward-facing arrow */
+  content: '\2303'; 
   margin-left: 5px;
   transition: transform 0.3s;
   display: inline-block;
-  transform: rotate(0deg); /* Initial rotation is 0 degrees */
+  transform: rotate(0deg); 
 }
 
 .button-link.open::after {

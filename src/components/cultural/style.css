@@ -1,12 +1,8 @@
-/* Cultural.css */
-
-/* General Container */
 .cultural-container {
     background-color: #f8f8f8;
     padding: 20px;
 }
 
-/* Header */
 .cultural-header {
     position: relative;
     background-size: cover;
@@ -25,7 +21,6 @@
     border-radius: 8px;
 }
 
-/* Introduction Section */
 .cultural-intro {
     background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
     padding: 40px;
@@ -33,7 +28,7 @@
     margin: 20px auto;
     max-width: 1200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center align text for a more uniform look */
+    text-align: center; 
 }
 
 .cultural-intro h2 {
@@ -47,8 +42,8 @@
     font-size: 1.2em;
     color: #555;
     line-height: 1.6;
-    max-width: 800px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the paragraph */
+    max-width: 800px;
+    margin: 0 auto; 
     font-family: 'Arial', sans-serif;
 }
 
@@ -58,21 +53,20 @@
     width: 60px;
     height: 5px;
     background: #536535;
-    margin: 0 auto 20px auto; /* Center the line above the heading */
+    margin: 0 auto 20px auto; 
     border-radius: 5px;
 }
 
-/* Cultural Highlights Section */
 .cultural-highlights {
     padding: 40px 20px;
 }
 
 .cultural-highlights h2 {
-    text-align: center; /* Center align the header */
-    font-size: 2.5em; /* Adjust the font size as needed */
-    color: #333; /* Match the color with other headings */
-    margin-bottom: 20px; /* Add space below the header */
-    font-family: 'Arial', sans-serif; /* Ensure consistent font style */
+    text-align: center; 
+    font-size: 2.5em;
+    color: #333; 
+    margin-bottom: 20px; 
+    font-family: 'Arial', sans-serif; 
 }
 
 .highlights-grid {
@@ -108,11 +102,10 @@
     background-color: #ffffff;
 }
 
-/* Featured Cultural Sites Section */
 .cultural-sites {
     padding: 40px 20px;
-    text-align: center; /* Center align the entire section */
-    margin-top: 0; /* Ensure it starts from the top */
+    text-align: center; 
+    margin-top: 0; 
 }
 
 .sites-carousel {
@@ -120,7 +113,7 @@
     overflow-x: auto;
     gap: 20px;
     padding: 10px 0;
-    justify-content: center; /* Center align carousel items */
+    justify-content: center; 
 }
 
 .site-item {
@@ -141,7 +134,6 @@
     padding: 20px;
 }
 
-/* Local Experiences Section */
 .local-experiences {
     padding: 40px 20px;
     display: flex;
@@ -155,7 +147,7 @@
 
 .map-container iframe {
     width: 100%;
-    height: 300px; /* Adjust as needed */
+    height: 300px; 
     border: 0;
 }
 
@@ -167,7 +159,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Testimonials Section */
 .testimonials {
     padding: 40px 20px;
     background-color: #ffffff;
@@ -225,7 +216,6 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* FAQs Section */
 .faqs {
     padding: 40px 20px;
     background-color: #f4f4f4;
@@ -294,7 +284,6 @@
 }
 
 
-/* Call to Action Section */
 .cta {
     padding: 40px 20px;
     text-align: center;
@@ -314,7 +303,6 @@
     background-color: #536535;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .highlight-card {
         width: calc(50% - 20px);
@@ -343,6 +331,6 @@
     }
 
     .map-container iframe {
-        height: 200px; /* Adjust as needed */
+        height: 200px; 
     }
 }

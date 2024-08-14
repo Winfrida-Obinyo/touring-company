@@ -2,10 +2,8 @@ import React from 'react';
 import './style.css';
 
 const LetsHelp = () => {
-  // Define the background image URL
-  const backgroundImageUrl = 'url(/images/image1.jpg)'; // Update the path accordingly
+  const backgroundImageUrl = 'url(/images/image1.jpg)'; 
 
-  // Inline styles
   const sectionStyle = {
     backgroundImage: backgroundImageUrl,
     backgroundSize: 'cover',
@@ -17,8 +15,8 @@ const LetsHelp = () => {
     padding: '50px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center', // Center content vertically
-    alignItems: 'center' // Center content horizontally
+    justifyContent: 'center', 
+    alignItems: 'center'
   };
 
   return (

@@ -76,7 +76,6 @@ p {
   color: #4B850D;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .additional-content {
     flex-direction: column; 
@@ -117,7 +116,7 @@ p {
   }
   
   .right-section {
-    padding-left: 0; /* Remove padding-left for small screens to ensure content is justified */
+    padding-left: 0; 
   }
 }
 

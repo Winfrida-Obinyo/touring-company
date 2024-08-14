@@ -1,8 +1,8 @@
 import React from 'react';
-import './style.css'; // Assume this is where the styles will be
+import './style.css'; 
 
 const Destinations = () => {
-    const backgroundImage = 'images/Jewela_baobab.jpeg'; // Corrected image path
+    const backgroundImage = 'images/Jewela_baobab.jpeg'; 
 
     const backgroundStyle = {
         backgroundImage: `url(${backgroundImage})`,
@@ -11,12 +11,11 @@ const Destinations = () => {
         backgroundRepeat: 'no-repeat',
         opacity: 1,
         width: '100%',
-        height: '66.6vh', // Ensuring the background covers the viewport height
+        height: '66.6vh', 
     };
 
     return (
         <div className="destinations-container" style={backgroundStyle}>
-            {/* Left Section */}
             <div className="destinations-left">
                 <img src="images/Jewela_lions.jpeg" alt="Kenya" />
                 <div className="destinations-content">
@@ -25,7 +24,6 @@ const Destinations = () => {
                 </div>
             </div>
 
-            {/* Center Section */}
             <div className="destinations-center">
                 <div className="destinations-top">
                     <div className="destinations-image-with-content">
@@ -61,12 +59,10 @@ const Destinations = () => {
                 </div>
             </div>
 
-            {/* Right Section */}
             <div className="destinations-right">
                 <div className="destinations-bordered-content">
                     <img src="/images/jewelaremoved bg words_prev_ui.png" alt="Logo" />
                     <h2>Upcoming Holiday Tour Plan</h2>
-                    {/* Countdown Boxes */}
                     <div className="destinations-countdown">
                         <div className="destinations-countdown-row">
                             <div className="destinations-countdown-box">
@@ -90,7 +86,6 @@ const Destinations = () => {
                         </div>
                     </div>
 
-                    {/* Additional content can go here */}
                 </div>
             </div>
 
