@@ -18,7 +18,7 @@ const Destinations = () => {
         <div className="destinations-container" style={backgroundStyle}>
             {/* Left Section */}
             <div className="destinations-left">
-            <img src="images/Jewela_lions.jpeg" alt="Kenya" />
+                <img src="images/Jewela_lions.jpeg" alt="Kenya" />
                 <div className="destinations-content">
                     <h2>Kenya Destinations</h2>
                     <p>20 places</p>
@@ -68,27 +68,27 @@ const Destinations = () => {
                     <h2>Upcoming Holiday Tour Plan</h2>
                     {/* Countdown Boxes */}
                     <div className="destinations-countdown">
-    <div className="destinations-countdown-row">
-        <div className="destinations-countdown-box">
-            <span className="destinations-countdown-number">00</span>
-            <span className="destinations-countdown-label">Days</span>
-        </div>
-        <div className="destinations-countdown-box">
-            <span className="destinations-countdown-number">00</span>
-            <span className="destinations-countdown-label">Hours</span>
-        </div>
-    </div>
-    <div className="destinations-countdown-row">
-        <div className="destinations-countdown-box">
-            <span className="destinations-countdown-number">00</span>
-            <span className="destinations-countdown-label">Minutes</span>
-        </div>
-        <div className="destinations-countdown-box">
-            <span className="destinations-countdown-number">00</span>
-            <span className="destinations-countdown-label">Seconds</span>
-        </div>
-    </div>
-</div>
+                        <div className="destinations-countdown-row">
+                            <div className="destinations-countdown-box">
+                                <span className="destinations-countdown-number">00</span>
+                                <span className="destinations-countdown-label">Days</span>
+                            </div>
+                            <div className="destinations-countdown-box">
+                                <span className="destinations-countdown-number">00</span>
+                                <span className="destinations-countdown-label">Hours</span>
+                            </div>
+                        </div>
+                        <div className="destinations-countdown-row">
+                            <div className="destinations-countdown-box">
+                                <span className="destinations-countdown-number">00</span>
+                                <span className="destinations-countdown-label">Minutes</span>
+                            </div>
+                            <div className="destinations-countdown-box">
+                                <span className="destinations-countdown-number">00</span>
+                                <span className="destinations-countdown-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
 
                     {/* Additional content can go here */}
                 </div>

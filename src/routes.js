@@ -4,7 +4,6 @@ import GreenAdd from "./components/green";
 import Specialty from "./components/speciality";
 import Clients from "./components/clients";
 import Subscribers from "./components/subscribers";
-import Destinations from "./components/destinations";
 import LetsHelp from "./components/letshelp";
 import WhyChooseUs from "./components/whychooseus";
 import Cultural from "./components/cultural";
@@ -21,7 +20,6 @@ function Dhome(){
      <GreenAdd/>
      <Specialty/>
      <Clients/>
-     <Destinations/>
      <WhyChooseUs/> 
      <LetsHelp/> 
      <Subscribers/>

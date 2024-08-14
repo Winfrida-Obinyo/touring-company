@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Accommodation from './components/accommodation';
 import Layout from './components/Layout';
+import Destination from './components/destinations'
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/accommodation",  element: <Accommodation />},
+  {path: "/destinations", element: <Destination />},
 ]);
 
 

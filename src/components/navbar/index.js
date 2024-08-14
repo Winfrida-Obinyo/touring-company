@@ -145,7 +145,7 @@ const Navbar = () => {
             </button>
             {showDestinationMenu && (
               <div className="dropdown-content">
-                <a href="african-safaris">AFRICAN SAFARIS</a>
+                <a href="/destinations">AFRICAN SAFARIS</a>
                 <a href="outbound-holidays">OUTBOUND HOLIDAYS</a>
               </div>
             )}
