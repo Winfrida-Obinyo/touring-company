@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    font-family: fantasy;
 }
 
 .section-header {

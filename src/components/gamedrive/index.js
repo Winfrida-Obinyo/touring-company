@@ -45,35 +45,35 @@ const GameDrive = () => {
         <h2>Wildlife Highlights</h2>
         <div className="wildlife-grid">
           <div className="wildlife-item">
-            <img src="images/image1.jpg" alt="Lion" />
+            <img src="images/lion.jpg" alt="Lion" />
             <div className="wildlife-info">Lion</div>
           </div>
           <div className="wildlife-item">
-            <img src="images/image2.jpg" alt="Elephant" />
+            <img src="images/elephant.jpg" alt="Elephant" />
             <div className="wildlife-info">Elephant</div>
           </div>
           <div className="wildlife-item">
-            <img src="images/image3.jpg" alt="Giraffe" />
+            <img src="images/giraffe.jpg" alt="Giraffe" />
             <div className="wildlife-info">Giraffe</div>
           </div>
           <div className="wildlife-item">
-            <img src="images/image4.jpg" alt="Zebra" />
+            <img src="images/zebra1.jpg" alt="Zebra" />
             <div className="wildlife-info">Zebra</div>
           </div>
           <div className="wildlife-item">
-            <img src="images/image5.jpg" alt="Leopard" />
+            <img src="images/leopard.jpg" alt="Leopard" />
             <div className="wildlife-info">Leopard</div>
           </div>
           <div className="wildlife-item">
-            <img src="images/image6.jpg" alt="Buffalo" />
+            <img src="images/buffalo.jpg" alt="Buffalo" />
             <div className="wildlife-info">Buffalo</div>
           </div>
           <div className="wildlife-item">
-            <img src="images/image7.jpg" alt="Rhinoceros" />
+            <img src="images/rhino.jpg" alt="Rhinoceros" />
             <div className="wildlife-info">Rhinoceros</div>
           </div>
           <div className="wildlife-item">
-            <img src="images/image8.jpg" alt="Cheetah" />
+            <img src="images/cheetah.jpg" alt="Cheetah" />
             <div className="wildlife-info">Cheetah</div>
           </div>
         </div>
@@ -102,6 +102,10 @@ const GameDrive = () => {
         <h2>Ready to Start Your Adventure?</h2>
         <button className="cta-button">Book Now</button>
       </section>
+
+      <footer className="footer">
+        <p>&copy; 2024 GameDrive Adventures. All Rights Reserved.</p>
+      </footer>
       
     </div>
   );

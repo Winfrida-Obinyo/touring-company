@@ -1,6 +1,6 @@
 /* General styles for the container */
 .hiking-climbing-container {
-    font-family: Arial, sans-serif;
+    font-family: fantasy;
     color: #333;
   }
   
@@ -265,7 +265,7 @@
   }
   
   .footer {
-    background-color: #333;
+    background-color: #536535;
     color: white;
     text-align: center;
     padding: 20px;

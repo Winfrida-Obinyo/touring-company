@@ -4,7 +4,7 @@ import './style.css';
 const Cultural = () => {
 
 
-    const backgroundImage = 'images/beach_front_hotel2.jpg';
+    const backgroundImage = 'images/localcrafts.jpg';
     const backgroundStyle = {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -33,42 +33,42 @@ const Cultural = () => {
                 <h2>Cultural Highlights</h2>
                 <div className="highlights-grid">
                     <div className="highlight-card">
-                        <img src="images/image1.jpg" alt="Traditional Festivals" />
+                        <img src="images/traditional festivals.jpg" alt="Traditional Festivals" />
                         <div className="highlight-content">
                             <h3>Traditional Festivals</h3>
                             <p>Experience the vibrant celebrations and ceremonies that define local cultures.</p>
                         </div>
                     </div>
                     <div className="highlight-card">
-                        <img src="images/image2.jpg" alt="Historic Landmarks" />
+                        <img src="images/historicallandmarks.jpg" alt="Historic Landmarks" />
                         <div className="highlight-content">
                             <h3>Historic Landmarks</h3>
                             <p>Explore ancient ruins and historical sites that tell the story of our past.</p>
                         </div>
                     </div>
                     <div className="highlight-card">
-                        <img src="images/image3.jpg" alt="Local Crafts and Cuisine" />
+                        <img src="images/localcrafts.jpg" alt="Local Crafts and Cuisine" />
                         <div className="highlight-content">
                             <h3>Local Crafts and Cuisine</h3>
                             <p>Discover traditional crafts and savor authentic local dishes.</p>
                         </div>
                     </div>
                     <div className="highlight-card">
-                        <img src="images/image4.jpg" alt="Art and Music" />
+                        <img src="images/artand cultural.jpg" alt="Art and Music" />
                         <div className="highlight-content">
                             <h3>Art and Music</h3>
                             <p>Immerse yourself in the rich artistic traditions and musical heritage of the region.</p>
                         </div>
                     </div>
                     <div className="highlight-card">
-                        <img src="images/image5.jpg" alt="Religious Sites" />
+                        <img src="images/religious.jpg" alt="Religious Sites" />
                         <div className="highlight-content">
                             <h3>Religious Sites</h3>
                             <p>Visit sacred places and learn about the spiritual practices of local communities.</p>
                         </div>
                     </div>
                     <div className="highlight-card">
-                        <img src="images/image6.jpg" alt="Traditional Clothing" />
+                        <img src="images/traditionalclothing.jpg" alt="Traditional Clothing" />
                         <div className="highlight-content">
                             <h3>Traditional Clothing</h3>
                             <p>Explore the unique fashion and attire that reflect cultural identities and traditions.</p>

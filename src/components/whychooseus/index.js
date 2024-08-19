@@ -10,17 +10,17 @@ const WhyChooseUs = () => {
       </header>
       <section className="reasons">
         <div className="reason">
-          <img src="/images/image1.jpg" alt="Reason 1" className="reason-image" />
+          <img src="/images/personalize.jpg" alt="Reason 1" className="reason-image" />
           <h2>Personalized Experiences</h2>
           <p>We tailor our tours to your interests, ensuring a unique and memorable experience.</p>
         </div>
         <div className="reason">
-          <img src="/images/image2.jpg" alt="Reason 2" className="reason-image" />
+          <img src="/images/guides.jpg" alt="Reason 2" className="reason-image" />
           <h2>Local Guides</h2>
           <p>Our knowledgeable local guides provide insider tips and stories about each destination.</p>
         </div>
         <div className="reason">
-          <img src="/images/image5.jpg" alt="Reason 3" className="reason-image" />
+          <img src="/images/adventures.jpg" alt="Reason 3" className="reason-image" />
           <h2>Authentic Adventures</h2>
           <p>Experience the culture, cuisine, and traditions of each location beyond the tourist spots.</p>
         </div>

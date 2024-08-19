@@ -41,7 +41,7 @@ const Clients = () => {
     return () => clearInterval(intervalId);
   }, [testimonials.length]);
 
-  const backgroundImage = '/images/image16.jpg';
+  const backgroundImage = '/images/client4.jpg';
 
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,

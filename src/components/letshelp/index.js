@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 const LetsHelp = () => {
-  const backgroundImageUrl = 'url(/images/image1.jpg)'; 
+  const backgroundImageUrl = 'url(/images/image16.jpg)'; 
 
   const sectionStyle = {
     backgroundImage: backgroundImageUrl,

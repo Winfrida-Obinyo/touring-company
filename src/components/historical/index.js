@@ -3,7 +3,7 @@ import './style.css';
 
 const Historical = () => {
 
-    const backgroundImage = '/images/picnic2.jpg'; 
+    const backgroundImage = '/images/ancientruins.jpg'; 
     const backgroundStyle = {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -32,42 +32,42 @@ const Historical = () => {
                 <h2>Historical Highlights</h2>
                 <div className="historical-highlights-grid">
                     <div className="historical-highlight-card">
-                        <img src="images/image1.jpg" alt="Ancient Ruins" />
+                        <img src="images/ancientruins.jpg" alt="Ancient Ruins" />
                         <div className="historical-highlight-content">
                             <h3>Ancient Ruins</h3>
                             <p>Explore the remnants of ancient civilizations and their architectural marvels.</p>
                         </div>
                     </div>
                     <div className="historical-highlight-card">
-                        <img src="images/image2.jpg" alt="Historical Monuments" />
+                        <img src="images/historical.jpg" alt="Historical Monuments" />
                         <div className="historical-highlight-content">
                             <h3>Historical Monuments</h3>
                             <p>Visit iconic monuments that tell the story of significant historical events.</p>
                         </div>
                     </div>
                     <div className="historical-highlight-card">
-                        <img src="images/image3.jpg" alt="Museums and Exhibits" />
+                        <img src="images/museum.jpg" alt="Museums and Exhibits" />
                         <div className="historical-highlight-content">
                             <h3>Museums and Exhibits</h3>
                             <p>Discover artifacts and exhibits that bring history to life.</p>
                         </div>
                     </div>
                     <div className="historical-highlight-card">
-                        <img src="images/image4.jpg" alt="Historical Tours" />
+                        <img src="images/historicaltours.jpg" alt="Historical Tours" />
                         <div className="historical-highlight-content">
                             <h3>Historical Tours</h3>
                             <p>Join guided tours that provide in-depth knowledge of historical sites and stories.</p>
                         </div>
                     </div>
                     <div className="historical-highlight-card">
-                        <img src="images/image5.jpg" alt="Cultural Heritage" />
+                        <img src="images/cultural heritage.jpg" alt="Cultural Heritage" />
                         <div className="historical-highlight-content">
                             <h3>Cultural Heritage</h3>
                             <p>Learn about the cultural heritage and traditions that have shaped history.</p>
                         </div>
                     </div>
                     <div className="historical-highlight-card">
-                        <img src="images/image6.jpg" alt="Ancient Artifacts" />
+                        <img src="images/ancientart.jpg" alt="Ancient Artifacts" />
                         <div className="historical-highlight-content">
                             <h3>Ancient Artifacts</h3>
                             <p>Examine ancient artifacts and relics that offer a glimpse into past civilizations.</p>

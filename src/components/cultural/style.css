@@ -1,6 +1,7 @@
 .cultural-container {
     background-color: #f8f8f8;
     padding: 20px;
+    font-family: fantasy;
 }
 
 .cultural-header {
@@ -287,6 +288,8 @@
 .cta {
     padding: 40px 20px;
     text-align: center;
+   
+    
 }
 
 .cta-button {

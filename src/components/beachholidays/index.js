@@ -1,11 +1,10 @@
 import React from 'react';
 import './style.css';
-// import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVolleyballBall, faSwimmer } from '@fortawesome/free-solid-svg-icons';
+import { faWater, faSwimmer, faVolleyballBall} from '@fortawesome/free-solid-svg-icons';
 
 
-const backgroundImage = 'images/beach_front_hotel.jpg'; 
+const backgroundImage = 'images/beach_front_hotel2.jpg'; 
 
 const backgroundStyle = {
   backgroundImage: `url(${backgroundImage})`,
@@ -37,7 +36,7 @@ const BeachHolidays = () => {
             <p>We offer the best beach destinations where you can relax, enjoy, and create unforgettable memories.</p>
           </div>
           <div className="intro-images">
-            <img src="/images/beach_front_hotel.jpg" alt="Beach 1" />
+            <img src="/images/image1.jpg" alt="Beach 1" />
             <img src="/images/beach_front_hotel2.jpg" alt="Beach 2" />
             <img src="/images/dubai6.jpg" alt="Beach 3" />
             <img src="/images/picnic5.jpg" alt="Beach 4" />
@@ -50,35 +49,35 @@ const BeachHolidays = () => {
         <h2>Featured Beach Destinations</h2>
         <div className="destination-grid">
           <div className="destination-card">
-            <img src="/images/beach_front_hotel.jpg" alt="Beach Destination 1" />
+            <img src="/images/maldives.jpg" alt="Beach Destination 1" />
             <div className="destination-info">
               <h3>Maldives</h3>
               <p>Experience the crystal-clear waters and white sandy beaches.</p>
             </div>
           </div>
           <div className="destination-card">
-            <img src="/images/beach_front_hotel2.jpg" alt="Beach Destination 2" />
+            <img src="/images/bora.jpg" alt="Beach Destination 2" />
             <div className="destination-info">
               <h3>Bora Bora</h3>
               <p>A tropical paradise known for its turquoise lagoon.</p>
             </div>
           </div>
           <div className="destination-card">
-            <img src="/images/dubai6.jpg" alt="Beach Destination 3" />
+            <img src="/images/seychelles.jpg" alt="Beach Destination 3" />
             <div className="destination-info">
               <h3>Seychelles</h3>
               <p>Explore the untouched beaches and lush greenery.</p>
             </div>
           </div>
           <div className="destination-card">
-            <img src="/images/image14.jpg" alt="Beach Destination 4" />
+            <img src="/images/bahamas.jpg" alt="Beach Destination 4" />
             <div className="destination-info">
               <h3>Bahamas</h3>
               <p>Relax on pink sand beaches and swim with dolphins.</p>
             </div>
           </div>
           <div className="destination-card">
-            <img src="/images/image14.jpg" alt="Beach Destination 5" />
+            <img src="/images/hawaii.jpg" alt="Beach Destination 5" />
             <div className="destination-info">
               <h3>Hawaii</h3>
               <p>Enjoy the vibrant culture and stunning coastal views.</p>
@@ -87,92 +86,92 @@ const BeachHolidays = () => {
         </div>
       </section>
 
-      <section className="beach-activities">
-        <h2>Beach Activities</h2>
-        <div className="activities-grid">
-          <div className="activity-block">
-            <i className="fas fa-water activity-icon"></i>
-            <h3>Snorkeling</h3>
-            <p>Discover the underwater world and vibrant marine life.</p>
-          </div>
-          <div className="activity-block">
-            <i className="fas fa-surfing activity-icon"></i>
-            <h3>Surfing</h3>
-            <p>Ride the waves and experience the thrill of the ocean.</p>
-          </div>
-          <div className="activity-block">
-            {/* <FontAwesomeIcon icon={faCanoe} className="fas fa-volleyball-ball activity-icon" /> */}
-            <h3>Beach Volleyball</h3>
-            <p>Get active with a game of beach volleyball with friends.</p>
-          </div>
 
-          <div className="activity-block">
-            <FontAwesomeIcon icon={faSwimmer} className="fas fa-swimmer activity-icon" />
-            <h3>Paddle Boarding</h3>
-            <p>Glide across the water and enjoy the scenic views.</p>
-          </div>
-          <div className="activity-block">
-            <FontAwesomeIcon icon={faVolleyballBall} className="fas fa-canoe activity-icon" />
-            <h3>Kayaking</h3>
-            <p>Explore the coastline and hidden coves by kayak.</p>
-          </div>
-        </div>
-      </section>
+      <section className="beach-activities">
+  <h2>Beach Activities</h2>
+  <div className="activities-grid">
+    <div className="activity-block">
+      <FontAwesomeIcon icon={faWater} className="activity-icon" />
+      <h3>Snorkeling</h3>
+      <p>Discover the underwater world and vibrant marine life.</p>
+    </div>
+    {/* <div className="activity-block">
+      <FontAwesomeIcon icon={faWave} className="activity-icon" />
+      <h3>Surfing</h3>
+      <p>Ride the waves and experience the thrill of the ocean.</p>
+    </div> */}
+    <div className="activity-block">
+      <FontAwesomeIcon icon={faVolleyballBall} className="activity-icon" />
+      <h3>Beach Volleyball</h3>
+      <p>Get active with a game of beach volleyball with friends.</p>
+    </div>
+    <div className="activity-block">
+      <FontAwesomeIcon icon={faSwimmer} className="activity-icon" />
+      <h3>Paddle Boarding</h3>
+      <p>Glide across the water and enjoy the scenic views.</p>
+    </div>
+    {/* <div className="activity-block">
+      <FontAwesomeIcon icon={faKayak} className="activity-icon" />
+      <h3>Kayaking</h3>
+      <p>Explore the coastline and hidden coves by kayak.</p>
+    </div> */}
+  </div>
+</section>
 
       <section className="beach-moments">
         <h2>Beach Moments</h2>
         <div className="moments-grid">
           <div className="moment-card">
-            <img src="/images/image11.jpg" alt="Sunset Stroll" />
+            <img src="/images/sunsetstroll.jpg" alt="Sunset Stroll" />
             <div className="moment-info">
               <h3>Sunset Stroll</h3>
               <p>Experience the serene beauty of a sunset walk </p>
             </div>
           </div>
           <div className="moment-card">
-            <img src="/images/image12.jpg" alt="Tropical Paradise" />
+            <img src="/images/tropical.jpg" alt="Tropical Paradise" />
             <div className="moment-info">
               <h3>Tropical Paradise</h3>
               <p>Relax under the palm trees with a refreshing drink.</p>
             </div>
           </div>
           <div className="moment-card">
-            <img src="/images/image14.jpg" alt="Ocean Adventure" />
+            <img src="/images/ocean.jpg" alt="Ocean Adventure" />
             <div className="moment-info">
               <h3>Ocean Adventure</h3>
               <p>Embark on an exciting boat ride to explore hidden coves.</p>
             </div>
           </div>
           <div className="moment-card">
-            <img src="/images/image15.jpg" alt="Beachfront Dining" />
+            <img src="/images/beachdining.jpg" alt="Beachfront Dining" />
             <div className="moment-info">
               <h3>Beachfront Dining</h3>
               <p>Enjoy a gourmet meal with a view of the rolling waves.</p>
             </div>
           </div>
           <div className="moment-card">
-            <img src="/images/image16.jpg" alt="Seashell Collection" />
+            <img src="/images/seashell.jpg" alt="Seashell Collection" />
             <div className="moment-info">
               <h3>Seashell Collection</h3>
               <p>Collect unique seashells as a keepsake from your trip.</p>
             </div>
           </div>
           <div className="moment-card">
-            <img src="/images/image17.jpg" alt="Morning Yoga" />
+            <img src="/images/morningyoga.jpg" alt="Morning Yoga" />
             <div className="moment-info">
               <h3>Morning Yoga</h3>
               <p>Start your day with a peaceful yoga session on the sand.</p>
             </div>
           </div>
           <div className="moment-card">
-            <img src="/images/image18.jpg" alt="Sandcastle Fun" />
+            <img src="/images/sandcustle.jpg" alt="Sandcastle Fun" />
             <div className="moment-info">
               <h3>Sandcastle Fun</h3>
               <p>Build your dream castle with your family on the shore.</p>
             </div>
           </div>
           <div className="moment-card">
-            <img src="/images/image19.jpg" alt="Bonfire Nights" />
+            <img src="/images/bonfire.jpg" alt="Bonfire Nights" />
             <div className="moment-info">
               <h3>Bonfire Nights</h3>
               <p>End your day with a cozy bonfire under the stars.</p>

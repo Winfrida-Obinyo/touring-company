@@ -1,5 +1,5 @@
 .beach-holidays {
-    font-family: Arial, sans-serif;
+    font-family: fantasy;
   }  
 
   .hero-section {
@@ -153,10 +153,9 @@
   }
   
   .destination-info:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darken the overlay on hover */
+    background-color: rgba(0, 0, 0, 0.8); 
   }
   
-  /* Beach Activities */
   .beach-activities {
     padding: 4rem;
     background-color: #eef7fa;
@@ -295,7 +294,7 @@
 .cta-section {
     padding: 4rem;
     text-align: center;
-    background: linear-gradient(rgba(255, 127, 80, 0.9), rgba(255, 69, 0, 0.9));
+    background: linear-gradient(#536535(255, 127, 80, 0.9), #536535(255, 69, 0, 0.9));
     color: white;
     position: relative;
     overflow: hidden;
@@ -321,7 +320,7 @@
 
 .cta-section .cta-button {
     background-color: #ffffff;
-    color: #ff7f50;
+    color: #536535;
     padding: 1rem 2rem;
     border: none;
     cursor: pointer;
@@ -332,8 +331,8 @@
 }
 
 .cta-section .cta-button:hover {
-    background-color: #ff4500;
-    color: white;
+    background-color: #FFFB73;
+    color: #536535;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
 }

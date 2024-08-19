@@ -1,5 +1,5 @@
 .gameDrive-container {
-    font-family: Arial, sans-serif;
+    font-family: fantasy;
 }
 
 .hero-section {
@@ -71,19 +71,20 @@
 
 .icon:hover {
     transform: scale(1.2);
-    color: #d48813;
+    color: #536535;
 }
 
 .wildlife-section {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem; /* Reduced padding */
     background-color: #f9f9f9; 
     text-align: center;
+    margin-top: -2rem; /* Move the section up */
 }
 
 .wildlife-section h2 {
     font-size: 2.5rem;
     color: #333;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* Reduced margin */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -91,7 +92,7 @@
 .wildlife-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem; /* Reduced gap */
     justify-items: center;
 }
 
@@ -142,7 +143,6 @@
     opacity: 1;
 }
 
-
 .routes-section {
     padding: 4rem 2rem;
     background-color: #f0f0f0;
@@ -164,9 +164,8 @@
     margin-top: 1rem;
 }
 
-
 .cta-section {
-    background-color: #f5a623; 
+    background-color: #536535; 
     padding: 4rem 2rem;
     text-align: center;
     color: #fff;
@@ -204,11 +203,11 @@
     position: relative;
 }
 
-.cta-button {
-    background-color: #fff;
+.cta-section .cta-button {
+    background-color: #536535; /* Updated background color */
     border: none;
     padding: 1rem 2.5rem;
-    color: #f5a623;
+    color: #fff; /* White text color for better contrast */
     font-size: 1.25rem;
     cursor: pointer;
     border-radius: 5px;
@@ -219,15 +218,28 @@
     position: relative;
 }
 
-.cta-button:hover {
-    background-color: #f5a623;
+.cta-section .cta-button:hover {
+    background-color: #f5a623; /* Hover effect: change to the original button color */
     color: #fff;
 }
 
-.cta-button:focus {
+.cta-section .cta-button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.5);
+    box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.5); /* Retain focus styling */
 }
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
 @media (min-width: 600px) and (max-width: 900px) {
     .hero-section {
         height: 70vh;

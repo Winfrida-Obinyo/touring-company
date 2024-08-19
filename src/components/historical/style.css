@@ -2,6 +2,7 @@
 .historical-main-container {
     background-color: #f8f8f8;
     padding: 20px;
+    font-family: fantasy;
 }
 
 /* Header */
@@ -333,7 +334,7 @@
 }
 
 .historical-cta-button:hover {
-    background: #e68a00;
+    background: #FFFB73;
     transform: scale(1.05);
 }
 
@@ -342,7 +343,7 @@
 }
 
 .historical-cta-section a {
-    color: #ff9900; 
+    color: #536535; 
     text-decoration: underline;
 }
 
