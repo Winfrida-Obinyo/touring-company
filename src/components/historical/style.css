@@ -1,11 +1,10 @@
-/* General Container */
 .historical-main-container {
     background-color: #f8f8f8;
     padding: 20px;
     font-family: fantasy;
 }
 
-/* Header */
+
 .historical-header-section {
     position: relative;
     background-size: cover;
@@ -24,7 +23,7 @@
     border-radius: 8px;
 }
 
-/* Introduction Section */
+
 .historical-intro-section {
     background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
     padding: 40px;
@@ -45,7 +44,7 @@
     line-height: 1.6;
 }
 
-/* Highlights Section */
+
 .historical-highlights-section {
     padding: 40px 20px;
     background: #f8f8f8;
@@ -265,7 +264,9 @@
 }
 
 .historical-testimonials-slider {
-    scrollbar-width: none; 
+    overflow-y: scroll; 
+    -webkit-scrollbar-width: thin; 
+    scrollbar-width: thin; 
 }
 
 .historical-testimonial-card:nth-child(odd) {

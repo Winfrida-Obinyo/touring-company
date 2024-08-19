@@ -54,7 +54,9 @@ const Clients = () => {
       <div className="content-overlay">
         <div className="left-content">
           <h2>WHAT OUR CLIENTS SAY</h2>
-          <button className="read-more-button">Read More Testimonials</button>
+            <button className="read-more-button" onClick={() => window.location.href = '/client-testimonials'}>
+            Read More Testimonials
+            </button>
         </div>
         <div className="right-content">
           <div className="testimonial" style={{ animation: 'slideRightLeft 1s ease-in-out forwards' }}>
