@@ -5,7 +5,7 @@ const Accommodation = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlace, setSelectedPlace] = useState(null);
 
-  const backgroundImage = '/images/image16.jpg';
+  const backgroundImage = '/images/mombasa.jpg';
 
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
