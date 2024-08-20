@@ -77,31 +77,32 @@ const Cultural = () => {
                 </div>
             </section>
             <section className="cultural-sites">
-                <h2>Featured Cultural Sites</h2>
-                <div className="sites-carousel">
-                    <div className="site-item">
-                        <img src="images/image7.jpg" alt="Site 1" />
-                        <div className="site-info">
-                            <h3>Site Name 1</h3>
-                            <p>Brief description of the site. Why it’s significant and what visitors can expect.</p>
-                        </div>
-                    </div>
-                    <div className="site-item">
-                        <img src="images/image8.jpg" alt="Site 2" />
-                        <div className="site-info">
-                            <h3>Site Name 2</h3>
-                            <p>Brief description of the site. Why it’s significant and what visitors can expect.</p>
-                        </div>
-                    </div>
-                    <div className="site-item">
-                        <img src="images/image10.jpg" alt="Site 3" />
-                        <div className="site-info">
-                            <h3>Site Name 3</h3>
-                            <p>Brief description of the site. Why it’s significant and what visitors can expect.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <h2>Featured Cultural Sites</h2>
+    <div className="sites-carousel">
+        <div className="site-item">
+            <img src="images/zimbabwe.jpg" alt="Great Zimbabwe Ruins" />
+            <div className="site-info">
+                <h3>Great Zimbabwe Ruins, Zimbabwe</h3>
+                <p>Ancient stone city that was the capital of the Kingdom of Zimbabwe. Visitors can explore its majestic ruins, including the Great Enclosure and the Hill Complex.</p>
+            </div>
+        </div>
+        <div className="site-item">
+            <img src="images/ethiopia.jpg" alt="Lalibela Churches" />
+            <div className="site-info">
+                <h3>Lalibela Churches, Ethiopia</h3>
+                <p>Rock-hewn churches carved out of volcanic rock in the 12th century. These UNESCO World Heritage Sites offer a glimpse into Ethiopia's rich Christian history.</p>
+            </div>
+        </div>
+        <div className="site-item">
+            <img src="images/senegal.jpg" alt="Gorée Island" />
+            <div className="site-info">
+                <h3>Gorée Island, Senegal</h3>
+                <p>A small island with a big history, known for its role in the transatlantic slave trade. The House of Slaves and its Door of No Return are poignant reminders of the past.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
             <section className="local-experiences">
                 <div className="map-container">
                     <iframe src="https://maps.google.com/maps?q=cultural%20sites&t=&z=10&ie=UTF8&iwloc=&output=embed" title="Cultural Map"></iframe>

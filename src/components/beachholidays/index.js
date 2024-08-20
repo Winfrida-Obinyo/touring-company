@@ -30,20 +30,41 @@ const BeachHolidays = () => {
       </section>
 
       <section className="introduction-section">
-        <div className="introduction-content">
-          <div className="intro-text">
-            <h2>Explore Our Beach Destinations</h2>
-            <p>We offer the best beach destinations where you can relax, enjoy, and create unforgettable memories.</p>
-          </div>
-          <div className="intro-images">
-            <img src="/images/image1.jpg" alt="Beach 1" />
-            <img src="/images/beach_front_hotel2.jpg" alt="Beach 2" />
-            <img src="/images/dubai6.jpg" alt="Beach 3" />
-            <img src="/images/picnic5.jpg" alt="Beach 4" />
-            <img src="/images/image13.jpg" alt="Beach 5" />
-          </div>
-        </div>
-      </section>
+  <div className="introduction-content">
+    <div className="intro-text">
+      <h2>Explore Our Beach Destinations</h2>
+      <p>We offer the best beach destinations where you can relax, enjoy, and create unforgettable memories.</p>
+    </div>
+    <div className="intro-images">
+      <div className="image-container">
+        <img src="/images/beach_front_hotel.jpg" alt="Beach 1" />
+        <div className="caption">Luxurious Beach Front Hotel</div>
+      </div>
+      <div className="image-container">
+        <img src="/images/sunset.jpg" alt="Beach 2" />
+        <div className="caption">Sunset View at the Beach</div>
+      </div>
+      <div className="image-container">
+        <img src="images/dubai beaches.jpg" alt="Beach 3" />
+        <div className="caption">Dubai's Stunning Beaches</div>
+      </div>
+      <div className="image-container">
+        <img src="images/beach picnic.jpg" alt="Beach 4" />
+        <div className="caption">Perfect Beach Picnic</div>
+      </div>
+      <div className="image-container">
+        <img src="images/relax2.jpg" alt="Beach 5" />
+        <div className="caption">Relaxing by the Shore</div>
+      </div>
+      <div className="image-container">
+        <img src="images/family fun2.jpg" alt="Beach 6" />
+        <div className="caption">Family Fun at the Beach</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <section className="featured-destinations">
         <h2>Featured Beach Destinations</h2>

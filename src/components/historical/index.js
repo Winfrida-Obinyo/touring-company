@@ -76,31 +76,32 @@ const Historical = () => {
                 </div>
             </section>
             <section className="historical-sites-carousel">
-                <h2>Featured Historical Sites</h2>
-                <div className="historical-sites-carousel-items">
-                    <div className="historical-site-card">
-                        <img src="images/image7.jpg" alt="Site 1" />
-                        <div className="historical-site-info">
-                            <h3>Site Name 1</h3>
-                            <p>Brief description of the site. Why it’s significant and what visitors can expect.</p>
-                        </div>
-                    </div>
-                    <div className="historical-site-card">
-                        <img src="images/image8.jpg" alt="Site 2" />
-                        <div className="historical-site-info">
-                            <h3>Site Name 2</h3>
-                            <p>Brief description of the site. Why it’s significant and what visitors can expect.</p>
-                        </div>
-                    </div>
-                    <div className="historical-site-card">
-                        <img src="images/image1.jpg" alt="Site 3" />
-                        <div className="historical-site-info">
-                            <h3>Site Name 3</h3>
-                            <p>Brief description of the site. Why it’s significant and what visitors can expect.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <h2>Featured Historical Sites</h2>
+    <div className="historical-sites-carousel-items">
+        <div className="historical-site-card">
+            <img src="images/fort jesus.jpg" alt="Fort Jesus" />
+            <div className="historical-site-info">
+                <h3>Fort Jesus</h3>
+                <p>Fort Jesus in Mombasa is a UNESCO World Heritage Site, built by the Portuguese in the 16th century. It’s significant for its role in the trade routes and military history of the region.</p>
+            </div>
+        </div>
+        <div className="historical-site-card">
+            <img src="images/gedi ruins.jpg" alt="Gedi Ruins" />
+            <div className="historical-site-info">
+                <h3>Gedi Ruins</h3>
+                <p>The Gedi Ruins, located near Malindi, are the remnants of a Swahili town dating back to the 13th century. It showcases the sophisticated architecture and culture of the time.</p>
+            </div>
+        </div>
+        <div className="historical-site-card">
+            <img src="images/karen.jpg" alt="Karen Blixen Museum" />
+            <div className="historical-site-info">
+                <h3>Karen Blixen Museum</h3>
+                <p>The Karen Blixen Museum in Nairobi is the former home of the famous author, Karen Blixen, who wrote 'Out of Africa.' It offers insights into colonial history and her life in Kenya.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
             <section className="historical-local-experiences">
                 <div className="historical-map-container">
                     <iframe src="https://maps.google.com/maps?q=historical%20sites&t=&z=10&ie=UTF8&iwloc=&output=embed" title="Historical Map"></iframe>
