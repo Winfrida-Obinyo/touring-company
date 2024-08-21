@@ -21,13 +21,14 @@ const Specialty = () => {
                     imagePath="/images/dubai2.jpg"
                     description="Embark on unforgettable holidays to exotic destinations. From sandy beaches to bustling cities, our holiday packages offer relaxation and exploration."
                     buttonText="OutBond Holidays"
+                    redirect="/outbound_holidays"
                 />
                 <Subtopic
                     title="AIR TRAVELS"
                     imagePath="/images/hot_air_baloon.jpg"
                     description="Fly with us to your dream destinations across the globe. Experience comfort and convenience with our top-notch airline services. Your journey begins with us."
                     buttonText="Air Travels"
-                />
+                    redirect="/air_travels"                />
             </div>
         </div>
     );
