@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './style.css'; 
-import { FaFacebook, FaWhatsapp, FaInstagram, FaBars } from 'react-icons/fa';
+import './style.css';
+import { FaFacebook, FaWhatsapp, FaInstagram, FaBars, FaTimes } from 'react-icons/fa'; // Import FaTimes for close icon
 
 const Navbar = () => {
   const [showImagineMenu, setShowImagineMenu] = useState(false);
@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  
+
   const mobileMenuRef = useRef(null);
 
   useEffect(() => {
@@ -52,14 +52,15 @@ const Navbar = () => {
   }, []);
 
   const handleMobileMenuToggle = () => {
-    setIsMobileMenuOpen(prevState => !prevState); 
+    setIsMobileMenuOpen(prevState => !prevState);
+    document.body.classList.toggle('menu-active', !isMobileMenuOpen);
   };
 
   const handleDropdownToggle = (setShowMenu, currentMenuState) => {
     if (currentMenuState === undefined) {
-      setShowMenu(true); 
+      setShowMenu(true);
     } else {
-      setShowMenu(!currentMenuState); 
+      setShowMenu(!currentMenuState);
     }
   };
 
@@ -89,22 +90,24 @@ const Navbar = () => {
       </div>
 
       <div className="lower">
-        <div className="logos">
-          <div className="left-image">
-            <img src="/images/jewelaremoved bg words_prev_ui.png" alt="Logo" />
+        <a href="/">
+          <div className="logos">
+            <div className="left-image">
+              <img src="/images/jewelaremoved bg words_prev_ui.png" alt="Logo" />
+            </div>
+            <div className="right-image">
+              <img src="/images/jewelaremoved bg newafrica img-Photoroom.png" alt="Logo" />
+            </div>
           </div>
-          <div className="right-image">
-            <img src="/images/jewelaremoved bg newafrica img-Photoroom.png" alt="Logo" />
-          </div>
-        </div>
+        </a>
         <div className={`navigation-links ${isMobileMenuOpen ? 'active' : ''}`}>
           <a href="/">HOME</a>
-          <div 
-            className="dropdown" 
-            onMouseEnter={() => handleMouseEnter(setShowImagineMenu)} 
-            onMouseLeave={() => handleMouseLeave(setShowImagineMenu)} 
+          <div
+            className="dropdown"
+            onMouseEnter={() => handleMouseEnter(setShowImagineMenu)}
+            onMouseLeave={() => handleMouseLeave(setShowImagineMenu)}
           >
-            <button 
+            <button
               className={`dropdown-toggle button-link ${showImagineMenu ? 'open' : ''}`}
               onClick={(e) => {
                 e.preventDefault();
@@ -115,26 +118,28 @@ const Navbar = () => {
             </button>
             {showImagineMenu && (
               <div className="dropdown-content">
-                <a href="/game-drives">GAME DRIVES</a>
-                <a href="/beach-holidays">BEACH HOLIDAYS</a>
-                <a href="/cultural-visits">CULTURAL VISITS</a>
-                <a href="/historical-visits">HISTORICAL VISITS</a>
-                <a href="/mountain-climbing">MOUNTAIN CLIMBING</a>
-                <a href="sightseeing">SIGHTSEEING</a>
-                <a href="air-safaris">AIR SAFARIS</a>
-                <a href="balloon-tours">BALLOON TOURS</a>
-                <a href="honeymooners">HONEYMOONERS</a>
-                <a href="gorilla-tracking">GORILLA TRACKING</a>
-                <a href="family-getaways">FAMILY GETAWAY</a>
+                <ol>
+                  <li><a href="/game-drives">GAME DRIVES</a></li>
+                  <li><a href="/beach-holidays">BEACH HOLIDAYS</a></li>
+                  <li><a href="/cultural-visits">CULTURAL VISITS</a></li>
+                  <li><a href="/historical-visits">HISTORICAL VISITS</a></li>
+                  <li><a href="/mountain-climbing">MOUNTAIN CLIMBING</a></li>
+                  <li><a href="sightseeing">SIGHTSEEING</a></li>
+                  <li><a href="air-safaris">AIR SAFARIS</a></li>
+                  <li><a href="balloon-tours">BALLOON TOURS</a></li>
+                  <li><a href="honeymooners">HONEYMOONERS</a></li>
+                  <li><a href="gorilla-tracking">GORILLA TRACKING</a></li>
+                  <li><a href="family-getaways">FAMILY GETAWAY</a></li>
+                </ol>
               </div>
             )}
           </div>
-          <div 
-            className="dropdown" 
-            onMouseEnter={() => handleMouseEnter(setShowDestinationMenu)} 
-            onMouseLeave={() => handleMouseLeave(setShowDestinationMenu)} 
+          <div
+            className="dropdown"
+            onMouseEnter={() => handleMouseEnter(setShowDestinationMenu)}
+            onMouseLeave={() => handleMouseLeave(setShowDestinationMenu)}
           >
-            <button 
+            <button
               className={`dropdown-toggle button-link ${showDestinationMenu ? 'open' : ''}`}
               onClick={(e) => {
                 e.preventDefault();
@@ -145,17 +150,19 @@ const Navbar = () => {
             </button>
             {showDestinationMenu && (
               <div className="dropdown-content">
-                <a href="/destinations">AFRICAN SAFARIS</a>
-                <a href="outbound-holidays">OUTBOUND HOLIDAYS</a>
+                <ol>
+                  <li><a href="/destinations">AFRICAN SAFARIS</a></li>
+                  <li><a href="outbound-holidays">OUTBOUND HOLIDAYS</a></li>
+                </ol>
               </div>
             )}
           </div>
-          <div 
-            className="dropdown" 
-            onMouseEnter={() => handleMouseEnter(setShowExploreMenu)} 
-            onMouseLeave={() => handleMouseLeave(setShowExploreMenu)} 
+          <div
+            className="dropdown"
+            onMouseEnter={() => handleMouseEnter(setShowExploreMenu)}
+            onMouseLeave={() => handleMouseLeave(setShowExploreMenu)}
           >
-            <button 
+            <button
               className={`dropdown-toggle button-link ${showExploreMenu ? 'open' : ''}`}
               onClick={(e) => {
                 e.preventDefault();
@@ -166,18 +173,20 @@ const Navbar = () => {
             </button>
             {showExploreMenu && (
               <div className="dropdown-content">
-                <a href="air-travel">AIR TRAVEL</a>
-                <a href="special-offers">SPECIAL OFFERS</a>
-                <a href="sample-packages">SAMPLE PACKAGES</a>
-                <a href="testimonials">TESTIMONIALS</a>
-                <a href="enquiries">ENQUIRIES</a>
+                <ol>
+                  <li><a href="air-travel">AIR TRAVEL</a></li>
+                  <li><a href="special-offers">SPECIAL OFFERS</a></li>
+                  <li><a href="sample-packages">SAMPLE PACKAGES</a></li>
+                  <li><a href="testimonials">TESTIMONIALS</a></li>
+                  <li><a href="enquiries">ENQUIRIES</a></li>
+                </ol>
               </div>
             )}
-            </div>
-            <a href="/accommodation">ACCOMMODATION</a>
+          </div>
+          <a href="/accommodation">ACCOMMODATION</a>
         </div>
         <div className="hamburger-menu" onClick={handleMobileMenuToggle}>
-          <FaBars />
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />} {/* Toggle between bars and close icon */}
         </div>
       </div>
 
@@ -185,59 +194,66 @@ const Navbar = () => {
         <div className="mobile-menu" ref={mobileMenuRef}>
           <a href="home">HOME</a>
           <div className="dropdown">
-            <button 
-              className={`dropdown-toggle button-link ${showImagineMenu ? 'open' : ''}`} 
+            <button
+              className={`dropdown-toggle button-link ${showImagineMenu ? 'open' : ''}`}
               onClick={() => handleDropdownToggle(setShowImagineMenu, showImagineMenu)}
             >
               JEWELA-EXPERIENCE
             </button>
             {showImagineMenu && (
               <div className="dropdown-content">
-                <a href="game-drives">GAME DRIVES</a>
-                <a href="air-safaris">AIR SAFARIS</a>
-                <a href="balloon-tours">BALLOON TOURS</a>
-                <a href="beach-holidays">BEACH HOLIDAYS</a>
-                <a href="sightseeing">SIGHTSEEING</a>
-                <a href="cultural-visits">CULTURAL VISITS</a>
-                <a href="historical-visits">HISTORICAL VISITS</a>
-                <a href="honeymooners">HONEYMOONERS</a>
-                <a href="gorilla-tracking">GORILLA TRACKING</a>
-                <a href="mountain-climbing">MOUNTAIN CLIMBING</a>
-                <a href="family-getaways">FAMILY GATEWAYS</a>
+                <ol>
+                  <li><a href="game-drives">GAME DRIVES</a></li>
+                  <li><a href="air-safaris">AIR SAFARIS</a></li>
+                  <li><a href="balloon-tours">BALLOON TOURS</a></li>
+                  <li><a href="beach-holidays">BEACH HOLIDAYS</a></li>
+                  <li><a href="sightseeing">SIGHTSEEING</a></li>
+                  <li><a href="cultural-visits">CULTURAL VISITS</a></li>
+                  <li><a href="historical-visits">HISTORICAL VISITS</a></li>
+                  <li><a href="honeymooners">HONEYMOONERS</a></li>
+                  <li><a href="gorilla-tracking">GORILLA TRACKING</a></li>
+                  <li><a href="mountain-climbing">MOUNTAIN CLIMBING</a></li>
+                  <li><a href="family-getaways">FAMILY GATEWAYS</a></li>
+                </ol>
               </div>
             )}
           </div>
           <div className="dropdown">
-            <button 
-              className={`dropdown-toggle button-link ${showDestinationMenu ? 'open' : ''}`} 
+            <button
+              className={`dropdown-toggle button-link ${showDestinationMenu ? 'open' : ''}`}
               onClick={() => handleDropdownToggle(setShowDestinationMenu, showDestinationMenu)}
             >
               DESTINATION
             </button>
             {showDestinationMenu && (
               <div className="dropdown-content">
-                <a href="african-safaris">AFRICAN SAFARIS</a>
-                <a href="outbound-holidays">OUTBOUND HOLIDAYS</a>
+                <ol>
+                  <li><a href="/destinations">AFRICAN SAFARIS</a></li>
+                  <li><a href="outbound-holidays">OUTBOUND HOLIDAYS</a></li>
+                </ol>
               </div>
             )}
           </div>
           <div className="dropdown">
-            <button 
-              className={`dropdown-toggle button-link ${showExploreMenu ? 'open' : ''}`} 
+            <button
+              className={`dropdown-toggle button-link ${showExploreMenu ? 'open' : ''}`}
               onClick={() => handleDropdownToggle(setShowExploreMenu, showExploreMenu)}
             >
               EXPLORE
             </button>
             {showExploreMenu && (
               <div className="dropdown-content">
-                <a href="air-travel">AIR TRAVEL</a>
-                <a href="special-offers">SPECIAL OFFERS</a>
-                <a href="sample-packages">SAMPLE PACKAGES</a>
-                <a href="testimonials">TESTIMONIALS</a>
-                <a href="enquiries">ENQUIRIES</a>
+                <ol>
+                  <li><a href="air-travel">AIR TRAVEL</a></li>
+                  <li><a href="special-offers">SPECIAL OFFERS</a></li>
+                  <li><a href="sample-packages">SAMPLE PACKAGES</a></li>
+                  <li><a href="testimonials">TESTIMONIALS</a></li>
+                  <li><a href="enquiries">ENQUIRIES</a></li>
+                </ol>
               </div>
             )}
           </div>
+          <a href="/accommodation">ACCOMMODATION</a>
         </div>
       )}
     </nav>

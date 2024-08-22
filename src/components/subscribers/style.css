@@ -1,264 +1,121 @@
-/* Base Styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-    overflow-y: auto; 
-}
-
+/* General Styles */
 .subscribers-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 50px;
-    min-height: 70vh; 
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+  padding: 20px;
+  position: relative;
+  color: #fff;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-color: rgba(75, 133, 13, 0.384); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-.left-content {
-    position: relative;
-    flex: 1;
-    text-align: left;
-    padding: 40px; 
-    z-index: 1;
+.left-right{
+    z-index: 2;
+    top: 0; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
 }
 
-.left-content h2 {
-    margin-right: 20px;
-    white-space: nowrap; 
-    font-weight: 200; 
-    font-size: xx-large; 
-    margin-top: 20px; 
+.left-content, .right-content {
+  width: 60%;
+  z-index: 2;
+  padding: 20px;
 }
 
-.left-content p {
-    font-weight: 300; 
-    color: rgba(255, 255, 255, 0.9); 
-    margin-top: 20px; 
-    font-size: large; 
-    line-height: 1.5; 
+.left-content h2, .right-content h4 {
+  margin: 0 0 20px 0;
 }
 
 .separator-line {
-    width: 1cm;
-    height: 2px;
-    background-color: #fff;
-    margin: 10px 0;
-    margin-top: 30px; 
-    margin-left: 50px;
-}
-
-.right-content {
-    position: relative;
-    flex: 1;
-    text-align: left;
-    padding: 20px;
-    z-index: 4;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%; 
-    margin-bottom: 3.7rem;
-}
-
-.subscription-title {
-    margin-bottom: 20px; 
+  border: 1px solid #fff;
+  width: 48%;
+  margin: 10px 0;
 }
 
 .subscription-form {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: space-between; 
-    margin-left: -100px; 
-}
-
-.subscription-form h4 {
-    margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.7); 
-    font-weight: 100; 
-    text-align: center; 
-    font-size: large; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
 }
 
 .subscription-form input,
-.subscription-form select,
-.subscription-form button {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 300px; 
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid #ccc;
-    color: #333;
+.subscription-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
 }
 
 .subscription-form button {
-    background-color: #faf38e70;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%; 
-    max-width: 130px;
+  width: 100%;
+  padding: 10px;
+  background-color: #536535;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* margin-top: 0; */
 }
 
 .subscription-form button:hover {
-    background-color: #faf38e70;
+  background-color: #9bc25c;
 }
 
 /* Media Queries */
-
-/* Extra Small Screens (Up to 480px) */
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
     .subscribers-container {
-        flex-direction: column;
-        padding: 20px;
-        height: auto; 
-    }
-
-    .left-content,
-    .right-content {
-        padding: 10px;
-        text-align: center;
-        font-size: 16px; 
-    }
-
-    .left-content h2 {
-        font-size: 1.5rem; 
-        white-space: normal; 
-    }
-
-    .left-content p {
-        font-size: medium; 
-        line-height: 1.2; 
-    }
-
-    .subscription-form {
-        align-items: center;
-        margin-left: 0; 
-    }
-
-    .subscription-form input,
-    .subscription-form select,
-    .subscription-form button {
-        width: 100%; 
+        height: 65vh;
     }
 }
+@media (max-width: 768px) {
+  .subscribers-container {
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    padding: 20px;
+  
+  }
 
-/* Small Screens (481px to 767px) */
-@media (min-width: 481px) and (max-width: 767px) {
-    .subscribers-container {
-        flex-direction: column;
-        padding: 30px;
-        height: auto; 
-    }
+  .left-content, .right-content {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
 
-    .left-content,
-    .right-content {
-        text-align: center;
-        padding: 20px;
-    }
+  .separator-line {
+    margin: 20px auto;
+  }
 
-    .left-content h2 {
-        font-size: 1.75rem; 
-        white-space: normal; 
-    }
+  .subscription-form {
+    justify-content: flex-start;
+  }
 
-    .left-content p {
-        font-size: large;
-        line-height: 1.3; 
-    }
-
-    .subscription-form {
-        align-items: center;
-        margin-left: 0; 
-    }
-
-    .subscription-form input,
-    .subscription-form select,
-    .subscription-form button {
-        width: 100%; 
-    }
+  .subscription-form button {
+    margin-top: 10px;
+  }
 }
 
-/* Medium Screens (768px to 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .subscribers-container {
-        flex-direction: row;
-        padding: 40px;
-        height: auto; 
-    }
-
-    .left-content,
-    .right-content {
-        text-align: center;
-        padding: 30px;
-    }
-
-    .left-content h2 {
-        font-size: 2rem; 
-        white-space: normal; 
-    }
-
-    .left-content p {
-        font-size: larger; 
-        line-height: 1.4; 
-    }
-
-    .subscription-form {
-        align-items: center;
-        margin-left: 0; 
-    }
-
-    .subscription-form input,
-    .subscription-form select,
-    .subscription-form button {
-        width: 100%; 
-    }
-}
-
-/* Large Screens (1025px and above) */
-@media (min-width: 1025px) {
-    .subscribers-container {
-        flex-direction: row;
-        padding: 50px;
-    }
-
-    .left-content {
-        text-align: left;
-        padding: 20px;
-    }
-
-    .right-content {
-        text-align: left;
-        padding: 20px;
-    }
-
-    .subscription-form {
-        align-items: flex-start;
-        margin-left: 0; 
-    }
-
-    .subscription-form input,
-    .subscription-form select,
-    .subscription-form button {
-        width: calc(100% - 40px);  
-    }
+@media (max-width: 400px) {
+  .subscribers-container {
+    font-size: x-small;
+    padding: 0;
+    margin: 0;
+    height: 90vh;
+  }
 }

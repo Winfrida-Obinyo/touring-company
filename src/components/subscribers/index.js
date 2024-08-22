@@ -211,6 +211,7 @@ const Subscribers = () => {
   return (
     <div className="subscribers-container" style={backgroundStyle}>
       <div className="overlay"></div>
+      <div className="left-right">
       <div className="left-content">
         <h2>GET THE LATEST SPECIAL OFFERS TRAVEL NEWS</h2>
         <hr className="separator-line" />
@@ -234,6 +235,7 @@ const Subscribers = () => {
           </select>
           <button type="submit">Subscribe</button>
         </form>
+      </div>
       </div>
     </div>
   );
