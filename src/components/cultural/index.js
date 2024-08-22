@@ -20,6 +20,7 @@ const Cultural = () => {
     return (
         <div className="cultural-container">
             <header className="cultural-header" style={backgroundStyle}>
+            <div className="accommodation-breadcrumb"><a href="/">Home</a>/Cultural</div>
                 <div className="header-overlay">
                     <h1>Explore Cultural Wonders</h1>
                     <p>Experience the rich heritage and traditions of our diverse destinations.</p>

@@ -22,6 +22,7 @@ const BeachHolidays = () => {
   return (
     <div className="beach-holidays">
       <section className="hero-section" style={backgroundStyle}>
+      <div className="accommodation-breadcrumb"><a href="/">Home</a>/Beach Holidays</div>
         <div className="hero-content">
           <h1>Your Dream Beach Vacation Awaits</h1>
           <p>Relax, Unwind, and Enjoy the Sun</p>

@@ -19,6 +19,7 @@ const GameDrive = () => {
     <div className="gameDrive-container">
       
       <section className="hero-section" style={backgroundStyle}>
+      <div className="accommodation-breadcrumb"><a href="/">Home</a>/Game Drive</div>
         <div className="hero-overlay">
           <h1>Experience the Ultimate Game Drive</h1>
           <p>Discover the Wild in its Natural Habitat</p>

@@ -1,3 +1,4 @@
+/* Base Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -122,7 +123,10 @@ body, html {
     background-color: #faf38e70;
 }
 
-@media (max-width: 600px) {
+/* Media Queries */
+
+/* Extra Small Screens (Up to 480px) */
+@media (max-width: 480px) {
     .subscribers-container {
         flex-direction: column;
         padding: 20px;
@@ -154,11 +158,12 @@ body, html {
     .subscription-form input,
     .subscription-form select,
     .subscription-form button {
-        width: calc(100% - 20px);  
+        width: 100%; 
     }
 }
 
-@media (min-width: 601px) and (max-width: 900px) {
+/* Small Screens (481px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
     .subscribers-container {
         flex-direction: column;
         padding: 30px;
@@ -172,7 +177,7 @@ body, html {
     }
 
     .left-content h2 {
-        font-size: 2rem; 
+        font-size: 1.75rem; 
         white-space: normal; 
     }
 
@@ -189,13 +194,14 @@ body, html {
     .subscription-form input,
     .subscription-form select,
     .subscription-form button {
-        width: calc(100% - 30px);  
+        width: 100%; 
     }
 }
 
-@media (min-width: 901px) and (max-width: 1024px) {
+/* Medium Screens (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .subscribers-container {
-        flex-direction: column;
+        flex-direction: row;
         padding: 40px;
         height: auto; 
     }
@@ -207,7 +213,7 @@ body, html {
     }
 
     .left-content h2 {
-        font-size: 2.5rem; 
+        font-size: 2rem; 
         white-space: normal; 
     }
 
@@ -224,10 +230,11 @@ body, html {
     .subscription-form input,
     .subscription-form select,
     .subscription-form button {
-        width: calc(100% - 40px);  
+        width: 100%; 
     }
 }
 
+/* Large Screens (1025px and above) */
 @media (min-width: 1025px) {
     .subscribers-container {
         flex-direction: row;

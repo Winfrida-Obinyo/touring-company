@@ -90,6 +90,8 @@ const HikingAndClimbing = () => {
   return (
     <div className="hiking-climbing-container">
       <header className="header" style={backgroundStyle}>
+      <div className="accommodation-breadcrumb"><a href="/">Home</a>/Hiking and Mountain Climbing</div>
+
         <div className="header-content">
           <h1>Hiking and Climbing Adventures</h1>
           <p>Explore the world's most breathtaking trails and peaks.</p>

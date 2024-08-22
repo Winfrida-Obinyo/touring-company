@@ -19,6 +19,7 @@ const Historical = () => {
     return (
         <div className="historical-main-container">
             <header className="historical-header-section" style={backgroundStyle}>
+            <div className="accommodation-breadcrumb"><a href="/">Home</a>/Historical</div>
                 <div className="historical-header-overlay">
                     <h1>Discover Historical Wonders</h1>
                     <p>Uncover the rich tapestry of history through our curated historical tours.</p>

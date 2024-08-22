@@ -1,8 +1,9 @@
+/* Base Styles */
 .clients-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 60vh; 
+  height: 60vh;
   background-size: cover;
   background-position: center;
   opacity: 1;
@@ -18,7 +19,7 @@
   width: 2px;
   height: 100%;
   background-color: #fff;
-  margin-left: -1px; 
+  margin-left: -1px;
 }
 
 .content-overlay {
@@ -29,7 +30,7 @@
   align-items: center;
   padding: 50px;
   color: #fff;
-  margin-top: 70px; 
+  margin-top: 70px;
 }
 
 .navigation-arrow {
@@ -58,15 +59,16 @@
   right: 60px;
 }
 
-
-.left-content{
+.left-content {
   top: 0;
-  background: rgba(0, 0, 0, 0.26)80%;
+  background: rgba(0, 0, 0, 0.26) 80%;
 }
-.right-content{
+
+.right-content {
   max-height: 15rem;
-  background: rgba(0, 0, 0, 0.26)80%;
+  background: rgba(0, 0, 0, 0.26) 80%;
 }
+
 .left-content,
 .right-content {
   flex: 1;
@@ -125,9 +127,28 @@
   opacity: 1;
 }
 
+/* Media Queries */
+
+/* Large Screens (Desktops) */
+@media (max-width: 1440px) {
+  .content-overlay {
+    padding: 40px;
+  }
+
+  .navigation-arrow.previous {
+    left: 50px;
+  }
+
+  .navigation-arrow.next {
+    right: 50px;
+  }
+}
+
+/* Medium Screens (Tablets in Landscape) */
 @media (max-width: 1024px) {
   .content-overlay {
     padding: 30px;
+    margin-top: 50px;
   }
 
   .left-content,
@@ -144,16 +165,17 @@
   }
 
   .clients-container::after {
-    display: none; 
+    display: none;
   }
 }
 
+/* Small Screens (Tablets in Portrait) */
 @media (max-width: 768px) {
   .content-overlay {
     padding: 15px;
     flex-direction: column;
     align-items: center;
-    margin-top: 0;
+    margin-top: 30px;
   }
 
   .left-content,
@@ -173,6 +195,52 @@
 
   .clients-container::after {
     display: none;
+  }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+/* Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+  .content-overlay {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .navigation-arrow {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .navigation-arrow.previous {
+    left: 20px;
+  }
+
+  .navigation-arrow.next {
+    right: 20px;
+  }
+
+  .left-content,
+  .right-content {
+    flex: 100%;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .read-more-button {
+    padding: 8px 15px;
+  }
+
+  .testimonial-navigation {
+    bottom: 5px;
+  }
+
+  .testimonial {
+    margin-bottom: 5px;
+  }
+
+  /* Moving the "Subscribe" header upwards */
+  .subscribe-header {
+    margin-top: -10px; /* Adjust this value to move the header upwards */
   }
 }
 
