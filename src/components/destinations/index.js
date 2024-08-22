@@ -11,7 +11,7 @@ const Destinations = () => {
         backgroundRepeat: 'no-repeat',
         opacity: 1,
         width: '100%',
-        height: '66.6vh', 
+        height: '100vh', 
     };
 
     return (
