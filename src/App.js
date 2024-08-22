@@ -8,7 +8,7 @@ import HikingAndClimbing from './components/hikingandclimbing';
 import Cultural from './components/cultural';
 import Historical from './components/historical';
 import ComingSoon from './components/Comingsoon';
-import Destination from './components/destinations';
+import Safaris from './pages/safaris';
 
 
 function App(){
@@ -23,7 +23,7 @@ function App(){
           <Route path="/mountain-climbing" element={<HikingAndClimbing />}/>
           <Route path="/cultural-visits" element={<Cultural />}/>
           <Route path="/historical-visits" element={<Historical />}/>
-          <Route path="/destinations" element={<Destination />}/>
+          <Route path="/safaris" element={<Safaris />}/>
           <Route path="*" element={<ComingSoon />}/>
         </Routes>
       </BrowserRouter>     

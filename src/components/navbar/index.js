@@ -151,7 +151,7 @@ const Navbar = () => {
             {showDestinationMenu && (
               <div className="dropdown-content">
                 <ol>
-                  <li><a href="/destinations">AFRICAN SAFARIS</a></li>
+                  <li><a href="/safaris">AFRICAN SAFARIS</a></li>
                   <li><a href="outbound-holidays">OUTBOUND HOLIDAYS</a></li>
                 </ol>
               </div>
