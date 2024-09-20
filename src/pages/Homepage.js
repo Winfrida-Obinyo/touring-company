@@ -9,6 +9,8 @@ import LetsHelp from "../components/letshelp";
 import Subscribers from "../components/subscribers";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import Testimonials from "../components/testimonials";
+import ContactUs from "../components/contactUs";
 // import "./style.css";
 
 
@@ -25,7 +27,9 @@ export default function Homepage() {
             <LetsHelp />
             <Clients /> 
             <Subscribers />  
-            <Footer />         
+            <Footer />  
+            <Testimonials/> 
+            <ContactUs/>     
         </div>
     )
 }

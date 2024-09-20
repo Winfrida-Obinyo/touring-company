@@ -84,8 +84,8 @@ const Footer = () => {
 
             <div className="footerSection">
                 <h2>Contact Us</h2>
-                <p>Phone: +123 456 7890</p>
-                <p>Email: info@example.com</p>
+                <p>Phone: +254 727 066 383</p>
+                <p>Email: info@jewelavacations.com</p>
                 <p>Address: 123 Main St, Anytown, USA</p>
             </div>
         </footer>
