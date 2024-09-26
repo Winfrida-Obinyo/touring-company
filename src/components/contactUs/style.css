@@ -26,7 +26,7 @@
     flex-wrap: wrap;
   }
   
-  .contact-form, .contact-info {
+  .contact-form {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -106,7 +106,7 @@
   @media (max-width: 768px) {
     .contact-wrapper {
       flex-direction: column;
-      align-items: center;
+      /* align-items: center; */
     }
   
     .contact-form, .contact-info {

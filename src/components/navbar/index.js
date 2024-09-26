@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FaFacebook, FaWhatsapp, FaInstagram, FaBars, FaTimes } from 'react-icons/fa'; // Import FaTimes for close icon
 
 const Navbar = () => {
@@ -80,12 +82,12 @@ const Navbar = () => {
     <nav className="navbar">
       <div className={`upper ${isScrolled ? 'hidden' : ''}`}>
         <div className="contact-info">
-          <span>Get in touch: +1 123 456 7890</span>
+          <span><i className='fab fa-BlenderPhone'></i> +254 745829828</span>
         </div>
         <div className="social-links">
-          <a href="facebook"><FaFacebook /></a>
-          <a href="whatsapp"><FaWhatsapp /></a>
-          <a href="instagram"><FaInstagram /></a>
+          <a href="https://facebook.com"><FaFacebook /></a>
+          <a href="https://wa.me/+254745829828"><FaWhatsapp /></a>
+          <a href="https://instagram.com"><FaInstagram /></a>
         </div>
       </div>
 
@@ -115,6 +117,7 @@ const Navbar = () => {
               }}
             >
               JEWELA-EXPERIENCE
+              <span><FontAwesomeIcon icon={faAngleDown} /></span>
             </button>
             {showImagineMenu && (
               <div className="dropdown-content">
@@ -147,6 +150,7 @@ const Navbar = () => {
               }}
             >
               DESTINATION
+              <span><FontAwesomeIcon icon={faAngleDown} /></span>
             </button>
             {showDestinationMenu && (
               <div className="dropdown-content">
@@ -170,6 +174,7 @@ const Navbar = () => {
               }}
             >
               EXPLORE
+              <span><FontAwesomeIcon icon={faAngleDown} /></span>
             </button>
             {showExploreMenu && (
               <div className="dropdown-content">
@@ -177,7 +182,7 @@ const Navbar = () => {
                   <li><a href="air-travel">AIR TRAVEL</a></li>
                   <li><a href="special-offers">SPECIAL OFFERS</a></li>
                   <li><a href="sample-packages">SAMPLE PACKAGES</a></li>
-                  <li><a href="testimonials">TESTIMONIALS</a></li>
+                  <li><a href="/client-testimonial">TESTIMONIALS</a></li>
                   <li><a href="enquiries">ENQUIRIES</a></li>
                 </ol>
               </div>
@@ -199,6 +204,7 @@ const Navbar = () => {
               onClick={() => handleDropdownToggle(setShowImagineMenu, showImagineMenu)}
             >
               JEWELA-EXPERIENCE
+              <span><FontAwesomeIcon icon={faAngleDown} /></span>
             </button>
             {showImagineMenu && (
               <div className="dropdown-content">
@@ -224,6 +230,7 @@ const Navbar = () => {
               onClick={() => handleDropdownToggle(setShowDestinationMenu, showDestinationMenu)}
             >
               DESTINATION
+              <span><FontAwesomeIcon icon={faAngleDown} /></span>
             </button>
             {showDestinationMenu && (
               <div className="dropdown-content">
@@ -240,6 +247,7 @@ const Navbar = () => {
               onClick={() => handleDropdownToggle(setShowExploreMenu, showExploreMenu)}
             >
               EXPLORE
+              <span><FontAwesomeIcon icon={faAngleDown} /></span>
             </button>
             {showExploreMenu && (
               <div className="dropdown-content">
@@ -247,7 +255,7 @@ const Navbar = () => {
                   <li><a href="air-travel">AIR TRAVEL</a></li>
                   <li><a href="special-offers">SPECIAL OFFERS</a></li>
                   <li><a href="sample-packages">SAMPLE PACKAGES</a></li>
-                  <li><a href="testimonials">TESTIMONIALS</a></li>
+                  <li><a href="/client-testimonial">TESTIMONIALS</a></li>
                   <li><a href="enquiries">ENQUIRIES</a></li>
                 </ol>
               </div>

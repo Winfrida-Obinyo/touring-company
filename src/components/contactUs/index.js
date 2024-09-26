@@ -97,15 +97,15 @@ const ContactUs = () => {
         <div className="contact-info">
           <h2>Contact Information</h2>
           <p><strong>Email:</strong> info@jewelavacations.com</p>
-          <p><strong>Phone:</strong> +254 727 066 383</p>
-          <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+          <p><strong>Phone:</strong> +254 745 829 828</p>
+          <p><strong>Address:</strong> Moi ave, Nairobi, Kenaya</p>
           <p>Feel free to drop by our office or contact us through email or phone!</p>
 
           <div className="social-icons">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
-            <a href="#"><i className="fab fa-whatsapp"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://x.com"><i className="fab fa-twitter"></i></a>
+            <a href="https://wa.me/+254745829828"><i className="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>

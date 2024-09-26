@@ -227,17 +227,6 @@
     outline: none;
     box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.5); /* Retain focus styling */
 }
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-}
-
-.footer p {
-    margin: 0;
-}
 
 
 @media (min-width: 600px) and (max-width: 900px) {

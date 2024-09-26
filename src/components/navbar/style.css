@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 6px 55px;
   background-color: #536535;
 }
 
@@ -46,7 +46,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+  padding: 5px 55px;
   background-color: #FFFB73;
 }
 
@@ -213,5 +213,14 @@ body {
       transform: translateX(0);
       opacity: 1;
     }
+  }
+}
+
+@media (max-width: 530px) {
+  .upper {
+    padding: 0 20px;
+  }
+  .lower {
+    padding: 5px 20px;
   }
 }

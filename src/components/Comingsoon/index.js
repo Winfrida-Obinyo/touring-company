@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style.css'; // Import your CSS file
 
 function ComingSoon() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="coming-soon-container">
       <header>
-      <div className="coming-soon-breadcrumb"><a href="/">Go Back</a></div>
+        <div className="coming-soon-breadcrumb"><a href="/">Go Back</a></div>
       </header>
       <h1 className="coming-soon-header">Coming Soon!</h1>
       <div className="construction-animation">

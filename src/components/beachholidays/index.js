@@ -26,7 +26,9 @@ const BeachHolidays = () => {
         <div className="hero-content">
           <h1>Your Dream Beach Vacation Awaits</h1>
           <p>Relax, Unwind, and Enjoy the Sun</p>
+          <a href='/contact'>
           <button className="cta-button">Plan Your Trip</button>
+          </a>
         </div>
       </section>
 

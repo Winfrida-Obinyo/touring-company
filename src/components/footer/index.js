@@ -1,5 +1,8 @@
 import React from 'react';
-import './style.css'; 
+import './style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 const Footer = () => {
     return (
@@ -75,19 +78,31 @@ const Footer = () => {
                 <div className="connect">
                     <h2>Let's Connect</h2>
                     <div className="socialIcons">
-                        <a href="#facebook">Facebook</a>
-                        <a href="#twitter">Twitter</a>
-                        <a href="#instagram">Instagram</a>
+                        <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com"><i className="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/+254745829828"><i className="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
 
             <div className="footerSection">
                 <h2>Contact Us</h2>
-                <p>Phone: +254 727 066 383</p>
-                <p>Email: info@jewelavacations.com</p>
-                <p>Address: 123 Main St, Anytown, USA</p>
+                <p className='contactus-font'>
+                    <FontAwesomeIcon icon={faPhone} /> <span> +254 745 829 828</span>
+                </p>
+                <p className='contactus-font'>
+                    <FontAwesomeIcon icon={faEnvelope} /> <span> info@jewelavacations.com</span>
+                </p>
+                <p className='contactus-font'>
+                    <FontAwesomeIcon icon={faMapMarkerAlt} /> <span>  Moi ave, Nairobi, Kenya</span>
+                </p>
             </div>
+
+            {/* <div className="copyright-footer">
+                <p>&copy; 2024 <a href='/'>jewelavacations.com</a> All Rights Reserved.</p>
+            </div> */}
+
         </footer>
     );
 };

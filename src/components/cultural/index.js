@@ -155,8 +155,8 @@ const Cultural = () => {
                 </div>
             </section>
             <section className="cta">
-                <a href="/book" className="cta-button">Book Your Cultural Visit</a>
-                <p>For more information, contact us at <a href="mailto:info@example.com">info@example.com</a>.</p>
+                <a href="/contact" className="cta-button">Book Your Cultural Visit</a>
+                <p>For more information, contact us at <a href="mailto:info@jewelavacations.com">info@jewelavacations.com</a>.</p>
             </section>
         </div>
     );
