@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import { FaTiktok} from 'react-icons/fa'
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -102,10 +102,11 @@ const ContactUs = () => {
           <p>Feel free to drop by our office or contact us through email or phone!</p>
 
           <div className="social-icons">
-            <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
-            <a href="https://x.com"><i className="fab fa-twitter"></i></a>
             <a href="https://wa.me/+254745829828"><i className="fab fa-whatsapp"></i></a>
             <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com"><FaTiktok /></a>
+            <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://x.com"><i className="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import { FaFacebook, FaWhatsapp, FaInstagram, FaBars, FaTimes } from 'react-icons/fa'; // Import FaTimes for close icon
+import { faAngleDown, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FaFacebook, FaWhatsapp, FaInstagram, FaBars, FaTimes, FaTiktok } from 'react-icons/fa'; // Import FaTimes for close icon
 
 const Navbar = () => {
   const [showImagineMenu, setShowImagineMenu] = useState(false);
@@ -82,12 +82,13 @@ const Navbar = () => {
     <nav className="navbar">
       <div className={`upper ${isScrolled ? 'hidden' : ''}`}>
         <div className="contact-info">
-          <span><i className='fab fa-BlenderPhone'></i> +254 745829828</span>
+          <span><FontAwesomeIcon icon={faPhone} /> +254 745829828</span>
         </div>
-        <div className="social-links">
-          <a href="https://facebook.com"><FaFacebook /></a>
+        <div className="social-links">          
           <a href="https://wa.me/+254745829828"><FaWhatsapp /></a>
+          <a href="https://tiktok.com"><FaTiktok /></a>
           <a href="https://instagram.com"><FaInstagram /></a>
+          <a href="https://facebook.com"><FaFacebook /></a>
         </div>
       </div>
 
@@ -183,7 +184,7 @@ const Navbar = () => {
                   <li><a href="special-offers">SPECIAL OFFERS</a></li>
                   <li><a href="sample-packages">SAMPLE PACKAGES</a></li>
                   <li><a href="/client-testimonial">TESTIMONIALS</a></li>
-                  <li><a href="enquiries">ENQUIRIES</a></li>
+                  <li><a href="/contact">ENQUIRIES</a></li>
                 </ol>
               </div>
             )}
@@ -256,7 +257,7 @@ const Navbar = () => {
                   <li><a href="special-offers">SPECIAL OFFERS</a></li>
                   <li><a href="sample-packages">SAMPLE PACKAGES</a></li>
                   <li><a href="/client-testimonial">TESTIMONIALS</a></li>
-                  <li><a href="enquiries">ENQUIRIES</a></li>
+                  <li><a href="/contact">ENQUIRIES</a></li>
                 </ol>
               </div>
             )}

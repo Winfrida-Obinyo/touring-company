@@ -1,204 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
+import countriesData from './countries.json'; 
 
 const Subscribers = () => {
-  const countries = [
-    "Afghanistan",
-    "Albania",
-    "Algeria",
-    "Andorra",
-    "Angola",
-    "Antigua and Barbuda",
-    "Argentina",
-    "Armenia",
-    "Australia",
-    "Austria",
-    "Azerbaijan",
-    "Bahamas",
-    "Bahrain",
-    "Bangladesh",
-    "Barbados",
-    "Belarus",
-    "Belgium",
-    "Belize",
-    "Benin",
-    "Bhutan",
-    "Bolivia",
-    "Bosnia and Herzegovina",
-    "Botswana",
-    "Brazil",
-    "Brunei",
-    "Bulgaria",
-    "Burkina Faso",
-    "Burundi",
-    "Cabo Verde",
-    "Cambodia",
-    "Cameroon",
-    "Canada",
-    "Central African Republic",
-    "Chad",
-    "Chile",
-    "China",
-    "Colombia",
-    "Comoros",
-    "Congo",
-    "Costa Rica",
-    "Croatia",
-    "Cuba",
-    "Cyprus",
-    "Czech Republic",
-    "Denmark",
-    "Djibouti",
-    "Dominica",
-    "Dominican Republic",
-    "Ecuador",
-    "Egypt",
-    "El Salvador",
-    "Equatorial Guinea",
-    "Eritrea",
-    "Estonia",
-    "Eswatini",
-    "Ethiopia",
-    "Fiji",
-    "Finland",
-    "France",
-    "Gabon",
-    "Gambia",
-    "Georgia",
-    "Germany",
-    "Ghana",
-    "Greece",
-    "Grenada",
-    "Guatemala",
-    "Guinea",
-    "Guinea-Bissau",
-    "Guyana",
-    "Haiti",
-    "Honduras",
-    "Hungary",
-    "Iceland",
-    "India",
-    "Indonesia",
-    "Iran",
-    "Iraq",
-    "Ireland",
-    "Israel",
-    "Italy",
-    "Jamaica",
-    "Japan",
-    "Jordan",
-    "Kazakhstan",
-    "Kenya",
-    "Kiribati",
-    "Korea, North",
-    "Korea, South",
-    "Kosovo",
-    "Kuwait",
-    "Kyrgyzstan",
-    "Laos",
-    "Latvia",
-    "Lebanon",
-    "Lesotho",
-    "Liberia",
-    "Libya",
-    "Liechtenstein",
-    "Lithuania",
-    "Luxembourg",
-    "Madagascar",
-    "Malawi",
-    "Malaysia",
-    "Maldives",
-    "Mali",
-    "Malta",
-    "Marshall Islands",
-    "Mauritania",
-    "Mauritius",
-    "Mexico",
-    "Micronesia",
-    "Moldova",
-    "Monaco",
-    "Mongolia",
-    "Montenegro",
-    "Morocco",
-    "Mozambique",
-    "Myanmar",
-    "Namibia",
-    "Nauru",
-    "Nepal",
-    "Netherlands",
-    "New Zealand",
-    "Nicaragua",
-    "Niger",
-    "Nigeria",
-    "North Macedonia",
-    "Norway",
-    "Oman",
-    "Pakistan",
-    "Palau",
-    "Palestine",
-    "Panama",
-    "Papua New Guinea",
-    "Paraguay",
-    "Peru",
-    "Philippines",
-    "Poland",
-    "Portugal",
-    "Qatar",
-    "Romania",
-    "Russia",
-    "Rwanda",
-    "Saint Kitts and Nevis",
-    "Saint Lucia",
-    "Saint Vincent and the Grenadines",
-    "Samoa",
-    "San Marino",
-    "Sao Tome and Principe",
-    "Saudi Arabia",
-    "Senegal",
-    "Serbia",
-    "Seychelles",
-    "Sierra Leone",
-    "Singapore",
-    "Slovakia",
-    "Slovenia",
-    "Solomon Islands",
-    "Somalia",
-    "South Africa",
-    "South Sudan",
-    "Spain",
-    "Sri Lanka",
-    "Sudan",
-    "Suriname",
-    "Sweden",
-    "Switzerland",
-    "Syria",
-    "Taiwan",
-    "Tajikistan",
-    "Tanzania",
-    "Thailand",
-    "Timor-Leste",
-    "Togo",
-    "Tonga",
-    "Trinidad and Tobago",
-    "Tunisia",
-    "Turkey",
-    "Turkmenistan",
-    "Tuvalu",
-    "Uganda",
-    "Ukraine",
-    "United Arab Emirates",
-    "United Kingdom",
-    "United States",
-    "Uruguay",
-    "Uzbekistan",
-    "Vanuatu",
-    "Vatican City",
-    "Venezuela",
-    "Vietnam",
-    "Yemen",
-    "Zambia",
-    "Zimbabwe"
-  ];
+  const countries = countriesData; 
+
+
   const backgroundImage = '/images/dubai5.jpg';
 
   const backgroundStyle = {
@@ -208,34 +15,155 @@ const Subscribers = () => {
     opacity: 1,
   };
 
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [country, setCountry] = useState('');
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    switch (name) {
+      case 'firstName':
+        setFirstName(value);
+        break;
+      case 'lastName':
+        setLastName(value);
+        break;
+      case 'email':
+        setEmail(value);
+
+        break;
+      case 'phoneNumber':
+        setPhoneNumber(value);
+        break;
+      case 'country':
+        setCountry(value);
+        break;
+      default:
+        break;
+
+    }
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Validate input data (optional but recommended)
+
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      country,
+    };
+
+    try {
+      const response = await fetch('http://localhost:3000/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+
+      });
+
+      if (!response.ok) {
+        throw new Error('Error subscribing');
+      }
+
+      const data = await response.json();
+      console.log(data);
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setPhoneNumber('');
+      setCountry('');
+      
+      // Optionally, you can show a confirmation message or perform other actions here
+      // alert('Subscription successful!');
+    } catch (error) {
+      console.error(error);
+      // Handle error (e.g., display error message)
+    }
+  };
+
   return (
     <div className="subscribers-container" style={backgroundStyle}>
       <div className="overlay"></div>
       <div className="left-right">
-      <div className="left-content">
-        <h2>GET THE LATEST SPECIAL OFFERS TRAVEL NEWS</h2>
-        <hr className="separator-line" />
-        <p>SUBSCRIBE TO OUR NEWSLETTER</p>
-      </div>
-      <div className="right-content">
-        <div className="subscription-title">
-          <h4>SUBSCRIBE HERE</h4>
+        <div className="left-content">
+          <h2>GET THE LATEST SPECIAL OFFERS TRAVEL NEWS</h2>
+          <hr className="separator-line" />
+          <p>SUBSCRIBE TO OUR NEWSLETTER</p>
         </div>
-        <form className="subscription-form">
-          <input type="text" placeholder="First Name" required />
-          <input type="text" placeholder="Last Name" required />
-          <input type="email" placeholder="Your Email Address" required />
-
-          <input type="tel" placeholder="Phone Number" required />
-          <select required>
-            <option value="" disabled selected>Select Your Country</option>
-            {countries.map((country) => (
-              <option key={country} value={country}>{country}</option>
-            ))}
-          </select>
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
+        <div className="right-content">
+          <div className="subscription-title">
+            <h4>SUBSCRIBE HERE</h4>
+          </div>
+          <form className="subscription-form" onSubmit={handleSubmit}>
+            <label htmlFor="firstName">
+              First Name:
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Enter your first name"
+                name="firstName"
+                value={firstName}
+                onChange={handleInputChange}
+                required
+              />
+            </label>
+            <label htmlFor="lastName">
+              Last Name:
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Enter your last name"
+                name="lastName"
+                value={lastName}
+                onChange={handleInputChange}
+                required
+              />
+            </label>
+            <label htmlFor="email">
+              Email Address:
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email address"
+                name="email"
+                value={email}
+                onChange={handleInputChange}
+                required
+              />
+            </label>
+            <label htmlFor="phoneNumber">
+              Phone Number:
+              <input
+                type="tel"
+                id="phoneNumber"
+                placeholder="Enter your phone number"
+                name="phoneNumber"
+                value={phoneNumber}
+                onChange={handleInputChange}
+                required
+              />
+            </label>
+            <label htmlFor="country">
+              Country:
+              <select name="country" id="country" value={country} onChange={handleInputChange} required>
+                <option value="" disabled selected>Select Your Country</option>
+                {countries.map((country) => (
+                  <option key={country} value={country}>{country}</option>
+                ))}
+              </select>
+            </label>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
     </div>
   );

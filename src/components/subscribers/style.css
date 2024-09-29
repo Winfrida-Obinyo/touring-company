@@ -1,11 +1,7 @@
 /* General Styles */
 .subscribers-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   height: 70vh;
-  padding: 20px;
+  padding: 20px 20px;
   position: relative;
   color: #fff;
 }
@@ -21,7 +17,6 @@
 }
 
 .left-right{
-    z-index: 2;
     top: 0; 
     display: flex;
     flex-wrap: wrap;
@@ -30,13 +25,17 @@
 }
 
 .left-content, .right-content {
-  width: 60%;
+  max-width: 45%;
+  max-height: max-content;
   z-index: 2;
   padding: 20px;
 }
 
-.left-content h2, .right-content h4 {
-  margin: 0 0 20px 0;
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .separator-line {
@@ -46,11 +45,8 @@
 }
 
 .subscription-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%;
+  position: relative;
+  width: 50%;
 }
 
 .subscription-form input,
@@ -63,14 +59,13 @@
 }
 
 .subscription-form button {
-  width: 100%;
+  width: 70%;
   padding: 10px;
   background-color: #536535;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* margin-top: 0; */
 }
 
 .subscription-form button:hover {
@@ -80,9 +75,10 @@
 /* Media Queries */
 @media (max-width: 1024px) {
     .subscribers-container {
-        height: 65vh;
+        height: max-content;
     }
 }
+
 @media (max-width: 768px) {
   .subscribers-container {
     flex-direction: column;
@@ -104,18 +100,30 @@
 
   .subscription-form {
     justify-content: flex-start;
+    width: 60%;
   }
 
   .subscription-form button {
     margin-top: 10px;
   }
+
+  .subscribers-container {
+    max-height: max-content;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 540px) {
+  .left-right {
+    flex-direction: column;
+  }
+.left-content, .right-content {
+  max-width: 100%;
+}
+
   .subscribers-container {
     font-size: x-small;
     padding: 0;
     margin: 0;
-    height: 90vh;
+    height: max-content;
   }
 }
